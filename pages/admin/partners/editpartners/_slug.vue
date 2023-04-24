@@ -88,7 +88,7 @@
             </ValidationObserver>
         </div>
     </div>
-  </template>
+</template>
 
 <script>
 import {  mapActions, mapState, } from "vuex";

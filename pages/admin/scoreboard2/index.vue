@@ -1,6 +1,6 @@
 <template>
     <div class="px-24 w-12/12">
-      <div class="bg-white w-full  h-[85vh] p-4">
+      <div class="bg-white w-full  p-4">
         <div class="flex py-8 items-baseline justify-between px-4">
           <div class="flex">
             <h3 class="text-sm font-medium text-dark pb-5">ТАБЛО</h3>
@@ -24,7 +24,6 @@
         <div>
           <Pagination :currentPage="page" :totalPage="Number(meta)" @pageChangeHandler="pageChangeHandler"/>
         </div>
-        <AddButton addButton="Начислено бонусов" link="scoreboard"/>
       </div>
     </div>
   </template>

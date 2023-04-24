@@ -1,6 +1,6 @@
 <template>
   <div class="px-24 w-12/12">
-    <div class="grid px-8 py-10 grid-cols-2 bg-white ">
+    <div class="grid px-8 py-10 grid-cols-2 bg-white h-[85vh] ">
       <ValidationObserver v-slot="{ handleSubmit }">
         <h3 class="text-sm font-medium text-dark pb-10">НАСТРОЙКИ</h3>
         <form

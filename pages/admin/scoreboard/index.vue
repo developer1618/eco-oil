@@ -1,6 +1,6 @@
 <template>
   <div class="px-24 w-12/12">
-    <div class="bg-white w-full  h-[85vh] p-4">
+    <div class="bg-white w-full p-4">
       <div class="flex py-8 items-baseline justify-between px-4">
         <div class="flex">
           <h3 class="text-sm font-medium text-dark pb-5">ТАБЛО</h3>
@@ -27,17 +27,17 @@
           :bodies="user"
           :isIcon="false"
           :keys="[
-            'liter',
-            'total',
-            'bonus',
-            'liter',
-            'total',
-            'bonus',
-            'liter',
-            'total',
-            'bonus',
-            'bonus',
-            'bonus',
+            'amount',
+            'fuel_type',
+            'payment_type',
+            'station_id',
+            'staff_id',
+            'client_id',
+            'station',
+            'total_bonus',
+            'client_data',
+            'amount_per_liter',
+            'client_bonus',
           ]"
         />
       </div>
@@ -103,7 +103,7 @@ export default {
 
     async getScoreboard() {
       let payload = {
-        request: `/scoreboard?type=1&page=${this.page}`,
+        request: `/Board?type=1&page=${this.page}`,
         form: {
           liter: this.liter,
         },
