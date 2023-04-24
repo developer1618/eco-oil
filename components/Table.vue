@@ -28,12 +28,15 @@
                 <div class="flex items-center flex justify-center">
                   <!-- <div class="ml-1 flex justify-between"> -->
                   <div class="text-sm leading-5 font-medium text-gray-900">
-                    <p>
+                    <p v-if="!Array.isArray(key)">
                       {{
                         key === "created_at"
                           ? $moment(title[key]).format("DD/MM/YYYY")
                           : (key === 'status' && title[key] === 1) ? 'Активен' : (key === 'status' && title[key] === 0) ? 'Неактивен' : title[key]
                       }}
+                    </p>
+                    <p v-else>
+                      {{ title[key[0]][key[1]] }}
                     </p>
                     <!-- </div> -->
                   </div>

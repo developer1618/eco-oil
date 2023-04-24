@@ -1,6 +1,7 @@
 export const state = () => ({
   client: [],
   stuff: [],
+  scoreboard:[],
   modal: false,
   meta: null,
   station: [],

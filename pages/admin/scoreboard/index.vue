@@ -24,20 +24,19 @@
       <div class="pb-4">
         <Table
           :titles="thead"
-          :bodies="user"
+          :bodies="scoreboard"
           :isIcon="false"
           :keys="[
             'amount',
             'fuel_type',
-            'payment_type',
+            ['client_data','full_name'],
             'station_id',
             'staff_id',
-            'client_id',
-            'station',
-            'total_bonus',
-            'client_data',
+            'payment_type',
             'amount_per_liter',
-            'client_bonus',
+            'payment_type',
+            'total_bonus',
+            ['client_data','registration_date '],
           ]"
         />
       </div>
@@ -87,7 +86,7 @@ export default {
   },
   computed: {
     ...mapState({
-      user: (state) => state.api.data,
+      scoreboard: (state) => state.api.scoreboard,
       meta: (state) => state.api.meta,
     }),
     minSelectableDate() {
@@ -107,6 +106,7 @@ export default {
         form: {
           liter: this.liter,
         },
+        key:"scoreboard"
       };
       await this.get_page(payload);
     },
