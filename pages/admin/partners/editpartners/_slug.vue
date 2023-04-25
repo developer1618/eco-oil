@@ -26,7 +26,6 @@
                         </ValidationProvider>
                     </div>
                     <div class="col-span-2">
-                        <ValidationProvider rules="required" v-slot="{ errors }">
                             <div class="relative">
                                 <label for="password" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Пароль <span class="text-red-600"></span></label>
                                 <input :type="typePassword ? 'password' : 'text'" id="password" name="password" v-model="form.password" placeholder="••••••••" class="bg-white border border-gray-300 text-[#4D5D7D] sm:text-sm rounded-lg  block w-full p-2.5">
@@ -34,12 +33,9 @@
                                 <img src="/img/eye-pass-on.svg" v-if="typePassword" @click="typePassword = !typePassword" alt="on" class="cursor-pointer">
                                 <img src="/img/eye-pass-off.svg" v-else alt="off" @click="typePassword = !typePassword" class="cursor-pointer">
                                 </div>                            
-                                <p class="text-red-600 pb-4 absolute">{{errors[0]}}</p>
                             </div>
-                        </ValidationProvider>
                     </div>
                     <div class="col-span-2">
-                        <ValidationProvider rules="required" v-slot="{ errors }">
                             <div class="relative">
                                 <label for="password" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Повторите пароль <span class="text-red-600"></span></label>
                                 <input :type="typePassword ? 'password' : 'text'" id="password2" name="password" v-model="password" placeholder="••••••••" class="bg-white border border-gray-300 text-[#4D5D7D] sm:text-sm rounded-lg  block w-full p-2.5">
@@ -47,9 +43,7 @@
                                 <img src="/img/eye-pass-on.svg" v-if="typePassword" @click="typePassword = !typePassword" alt="on" class="cursor-pointer">
                                 <img src="/img/eye-pass-off.svg" v-else alt="off" @click="typePassword = !typePassword" class="cursor-pointer">
                                 </div>
-                                <p class="text-red-600 pb-4 absolute">{{errors[0]}}</p>
                             </div>
-                        </ValidationProvider>
                     </div>
                     <div class="flex flex-wrap">
                         <div class="flex items-center pb-4">

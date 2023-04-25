@@ -212,12 +212,10 @@
                     class="cursor-pointer"
                   />
                 </div>
-                <p class="text-red-600 pb-4 absolute">{{ errors[0] }}</p>
               </div>
             </ValidationProvider>
           </div>
           <div class="col-span-2">
-            <ValidationProvider rules="required" v-slot="{ errors }">
               <div class="relative">
                 <label
                   for="password2"
@@ -250,9 +248,7 @@
                     class="cursor-pointer"
                   />
                 </div>
-                <p class="text-red-600 pb-4 absolute">{{ errors[0] }}</p>
               </div>
-            </ValidationProvider>
           </div>
           <div class="flex flex-wrap">
             <div class="flex items-center pb-4">

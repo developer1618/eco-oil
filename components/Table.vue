@@ -22,7 +22,7 @@
           <tbody class="bg-white">
             <tr v-for="(title, i) in bodies" class="border-b border-gray-200">
               <td
-                class="text-center border"
+                class="text-center border py-3"
                 v-for="key in Object.values(keys)"
               >
                 <div class="flex items-center flex justify-center">
