@@ -23,9 +23,6 @@
   "Loader": {
     "description": "Auto imported from components/Loader.vue"
   },
-  "Map": {
-    "description": "Auto imported from components/Map.vue"
-  },
   "NuxtLogo": {
     "description": "Auto imported from components/NuxtLogo.vue"
   },

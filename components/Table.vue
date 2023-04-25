@@ -3,7 +3,7 @@
     <DeleteModal />
     <div class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
       <div
-        class="align-middle inline-block min-w-full shadow overflow-hidden border-b border-gray-200"
+        class="align-middle inline-block min-w-full shadow overflow-hidden border-b border-gray-200 overflow-x-auto"
       >
         <table class="min-w-full">
           <thead>
@@ -22,7 +22,7 @@
           <tbody class="bg-white">
             <tr v-for="(title, i) in bodies" class="border-b border-gray-200">
               <td
-                class="text-center border py-3"
+                class="text-center border py-4"
                 v-for="key in Object.values(keys)"
               >
                 <div class="flex items-center flex justify-center">

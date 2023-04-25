@@ -14,7 +14,6 @@ You can directly use them in pages and other components without the need to impo
 - `<ExitModal>` | `<exit-modal>` (components/ExitModal.vue)
 - `<Footer>` | `<footer>` (components/Footer.vue)
 - `<Loader>` | `<loader>` (components/Loader.vue)
-- `<Map>` | `<map>` (components/Map.vue)
 - `<NuxtLogo>` | `<nuxt-logo>` (components/NuxtLogo.vue)
 - `<Pagination>` | `<pagination>` (components/Pagination.vue)
 - `<PartnerMenu>` | `<partner-menu>` (components/PartnerMenu.vue)

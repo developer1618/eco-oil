@@ -36,6 +36,7 @@
               >
               <input
                 type="number"
+                step="any"
                 v-model="form.ai95"
                 id="helper-text"
                 aria-describedby="helper-text-explanation"
@@ -54,6 +55,7 @@
               >
               <input
                 type="number"
+                step="any"
                 v-model="form.ai92"
                 id="helper-text"
                 aria-describedby="helper-text-explanation"
@@ -72,6 +74,7 @@
               >
               <input
                 type="number"
+                step="any"
                 v-model="form.disel"
                 id="helper-text"
                 aria-describedby="helper-text-explanation"
@@ -91,6 +94,7 @@
               <input
                 type="number"
                 v-model="form.gas"
+                step="any"
                 id="helper-text"
                 aria-describedby="helper-text-explanation"
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
