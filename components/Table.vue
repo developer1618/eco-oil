@@ -36,7 +36,7 @@
                       }}
                     </p>
                     <p v-else>
-                      {{ title[key[0]][key[1]] }}
+                      {{ !title[key[0]][key[1]] ? `${title[key[0]]} ${title[key[1]]}` : title[key[0]][key[1]] }}
                     </p>
                     <!-- </div> -->
                   </div>

@@ -47,7 +47,7 @@
           deleted="editstaff"
           :bodies="stuff"
           :isIcon="true"
-          :keys="['name', 'date_of_birth', 'gender', 'phone','station_address','status',]"
+          :keys="[['name','surname'], 'date_of_birth', 'gender', 'phone','station_address','status',]"
         />
       </div>
       <div>

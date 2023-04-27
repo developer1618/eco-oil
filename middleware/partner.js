@@ -1,5 +1,5 @@
 export default async function ({ $auth, redirect }) {
-    if ($auth?.user?.type !== 1) {
-            return redirect("/partner");
+    if ($auth?.loggedIn) {
+            return redirect("admin/scoreboard");
     }
   }
