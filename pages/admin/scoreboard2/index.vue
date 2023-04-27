@@ -8,7 +8,7 @@
           <div class="flex items-baseline">
             <CalendarInput />
             <div class="pl-4 w-64">
-              <select id="bonus" class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 w-56 ml-4">
+              <select id="bonus" class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 h-10 focus:border-blue-500 block w-full p-2.5 w-56 ml-4">
                 <option value="del">Снято из бонусов</option>
                 <option value="add">Начислено бонусов</option>
               </select>

@@ -10,13 +10,13 @@
           <div class="pl-4 w-64">
             <select
               id="bonus"
-              class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 w-56 ml-4"
+              class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 h-10 focus:border-blue-500 block w-full p-2.5 w-56 ml-4"
             >
               <option value="add">Начислено бонусов</option>
               <option value="del">Снято из бонусов</option>
             </select>
           </div>
-          <div class="flex pl-4 w-64">
+          <div class="flex pl-4 w-72">
             <Search @onChange="onSearch" searchPlaceholder="Найти ..." />
           </div>
         </div>
@@ -30,7 +30,7 @@
             ['client_data','plate_number'],
             ['client_data','card_number'],
             ['client_data','full_name'],
-            'station_id',
+            ['station','station_address'],
             'staff_id',
             'fuel_type',
             'amount_per_liter',

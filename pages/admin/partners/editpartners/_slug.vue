@@ -2,7 +2,7 @@
     <div class="px-24 w-12/12">
         <div class="grid px-8 py-10 grid-cols-4 bg-white  ">
             <ValidationObserver v-slot="{handleSubmit}">
-            <h3 class="text-sm font-medium text-dark pb-10">ПАРТНЁРЫ / ДОБАВЛЕНИЕ ПАРТНЁРА</h3>
+            <h3 class="text-sm font-medium text-dark pb-10">ПАРТНЁРЫ / РЕДАКТИРОВАНИЕ ПАРТНЁРА</h3>
                 <form class="grid grid-cols-2 gap-8" @submit.prevent="handleSubmit(editPartner)">
                     <div class="col-span-2">
                         <ValidationProvider rules="required" v-slot="{ errors }">
@@ -38,10 +38,10 @@
                     <div class="col-span-2">
                             <div class="relative">
                                 <label for="password" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Повторите пароль <span class="text-red-600"></span></label>
-                                <input :type="typePassword ? 'password' : 'text'" id="password2" name="password" v-model="password" placeholder="••••••••" class="bg-white border border-gray-300 text-[#4D5D7D] sm:text-sm rounded-lg  block w-full p-2.5">
+                                <input :type="typePassword2 ? 'password' : 'text'" id="password2" name="password" v-model="form.password2" placeholder="••••••••" class="bg-white border border-gray-300 text-[#4D5D7D] sm:text-sm rounded-lg  block w-full p-2.5">
                                 <div class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 mb-[-25px]">
-                                <img src="/img/eye-pass-on.svg" v-if="typePassword" @click="typePassword = !typePassword" alt="on" class="cursor-pointer">
-                                <img src="/img/eye-pass-off.svg" v-else alt="off" @click="typePassword = !typePassword" class="cursor-pointer">
+                                <img src="/img/eye-pass-on.svg" v-if="typePassword2" @click="typePassword2 = !typePassword2" alt="on" class="cursor-pointer">
+                                <img src="/img/eye-pass-off.svg" v-else alt="off" @click="typePassword2 = !typePassword2" class="cursor-pointer">
                                 </div>
                             </div>
                     </div>
@@ -90,14 +90,15 @@ export default {
     layout:"admin",
     data() {
         return {
-            typePassword: false,
-            typePassword: false,
+            typePassword: true,
+            typePassword2: true,
             form: {
                 username: '',
                 address: '',
                 status:null,
                 name: '',
                 password: '',
+                password2: '',
          },
        };
     },

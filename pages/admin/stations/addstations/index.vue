@@ -37,6 +37,7 @@
               <input
                 type="number"
                 step="any"
+                min="0"
                 v-model="form.ai95"
                 id="helper-text"
                 aria-describedby="helper-text-explanation"
@@ -56,6 +57,7 @@
               <input
                 type="number"
                 step="any"
+                min="0"
                 v-model="form.ai92"
                 id="helper-text"
                 aria-describedby="helper-text-explanation"
@@ -75,6 +77,7 @@
               <input
                 type="number"
                 step="any"
+                min="0"
                 v-model="form.disel"
                 id="helper-text"
                 aria-describedby="helper-text-explanation"

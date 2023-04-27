@@ -8,13 +8,13 @@
         <div class="flex items-baseline">
           <CalendarInput />
           <div class="pl-4 w-64">
-            <select id="countries" class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 w-48 ml-4">
+            <select id="countries" class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 w-56 ml-4">
               <option value="US">Сумма (TJS)</option>
               <option value="CA">Сумма (ЛИТРЫ)</option>
               <option value="CA">Сумма (БОНУСЫ)</option>
             </select>
           </div>
-          <div class="flex pl-4 w-64">
+          <div class="flex pl-4 w-72">
             <Search @onChange="onSearch" searchPlaceholder="Найти ..." />
           </div>
           <div class="btn">

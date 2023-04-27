@@ -78,7 +78,7 @@
               >
                 <option value="Выберите пол" disabled>Выберите пол</option>
                 <option value="M">Мужской</option>
-                <option value="Ж">Женский</option>
+                <option value="F">Женский</option>
               </select>
               <p class="text-red-600">{{ errors[0] }}</p>
             </ValidationProvider>
@@ -137,7 +137,7 @@
                 v-model="form.job"
                 class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 text-white focus:ring-blue-500 focus:border-blue-500"
               >
-                <option value="0" disabled>Выберите должность</option>
+                <option value="" disabled selected>Выберите должность</option>
                 <option value="1">Кассир</option>
                 <option value="2">Администратор</option>
               </select>
@@ -179,7 +179,7 @@
             </ValidationProvider>
           </div>
           <div class="col-span-2">
-            <ValidationProvider rules="required" v-slot="{ errors }">
+            <ValidationProvider v-slot="{ errors }">
               <div class="relative">
                 <label
                   for="password"
@@ -218,13 +218,13 @@
           <div class="col-span-2">
               <div class="relative">
                 <label
-                  for="password2"
+                  for="password"
                   class="block mb-2 text-sm font-medium text-[#4D5D7D]"
                   >Повторите пароль <span class="text-red-600"></span></label
                 >
                 <input
-                  :type="typePassword ? 'password' : 'text'"
-                  id="password2"
+                  :type="typePassword2 ? 'password' : 'text'"
+                  id="password"
                   v-model="form.password2"
                   name="password"
                   placeholder="••••••••"
@@ -235,8 +235,8 @@
                 >
                   <img
                     src="/img/eye-pass-on.svg"
-                    v-if="typePassword"
-                    @click="typePassword = !typePassword"
+                    v-if="typePassword2"
+                    @click="typePassword2 = !typePassword2"
                     alt="on"
                     class="cursor-pointer"
                   />
@@ -244,7 +244,7 @@
                     src="/img/eye-pass-off.svg"
                     v-else
                     alt="off"
-                    @click="typePassword = !typePassword"
+                    @click="typePassword2 = !typePassword2"
                     class="cursor-pointer"
                   />
                 </div>
@@ -324,8 +324,8 @@ export default {
   layout: "admin",
   data() {
     return {
-      typePassword: false,
-      typePassword: false,
+      typePassword: true,
+      typePassword2: true,
       form: {
         username: "",
         password: "",

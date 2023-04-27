@@ -49,8 +49,11 @@
                   v-if="isIcon"
                   :to="`${$route.path}${path}/${title.id}`"
                   class="text-indigo-600 hover:text-indigo-900 focus:outline-none focus:underline flex"
-                  ><img src="/img/edit.svg" alt="Edit" class="pr-5 w-10"
-                /></nuxt-link>
+                  >
+                  <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.33322 3.83334H3.99988C3.2635 3.83334 2.66655 4.43029 2.66655 5.16667V12.5C2.66655 13.2364 3.2635 13.8333 3.99988 13.8333H11.3332C12.0696 13.8333 12.6665 13.2364 12.6665 12.5V9.16667M11.7237 2.89052C12.2444 2.36983 13.0887 2.36983 13.6094 2.89052C14.1301 3.41122 14.1301 4.25544 13.6094 4.77614L7.8855 10.5H5.99988L5.99988 8.61438L11.7237 2.89052Z" stroke="#121212" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  </nuxt-link>
                 <!-- <div
                   v-if="isIcon"
                   class="text-indigo-600 hover:text-indigo-900 focus:outline-none focus:underline flex cursor-pointer"

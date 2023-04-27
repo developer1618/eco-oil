@@ -77,7 +77,7 @@
               >
                 <option value="Выберите пол" disabled>Выберите пол</option>
                 <option value="M">Мужской</option>
-                <option value="Ж">Женский</option>
+                <option value="F">Женский</option>
               </select>
               <p class="text-red-600">{{ errors[0] }}</p>
             </ValidationProvider>
@@ -234,13 +234,13 @@
             <ValidationProvider rules="required" v-slot="{ errors }">
               <div class="relative">
                 <label
-                  for="password2"
+                  for="password"
                   class="block mb-2 text-sm font-medium text-[#4D5D7D]"
                   >Повторите пароль <span class="text-red-600"></span></label
                 >
                 <input
-                  :type="typePassword ? 'password' : 'text'"
-                  id="password2"
+                  :type="typePassword2 ? 'password' : 'text'"
+                  id="password"
                   name="password"
                   v-model="form.password2"
                   placeholder="••••••••"
@@ -251,8 +251,8 @@
                 >
                   <img
                     src="/img/eye-pass-on.svg"
-                    v-if="typePassword"
-                    @click="typePassword = !typePassword"
+                    v-if="typePassword2"
+                    @click="typePassword2 = !typePassword2"
                     alt="on"
                     class="cursor-pointer"
                   />
@@ -260,7 +260,7 @@
                     src="/img/eye-pass-off.svg"
                     v-else
                     alt="off"
-                    @click="typePassword = !typePassword"
+                    @click="typePassword2 = !typePassword2"
                     class="cursor-pointer"
                   />
                 </div>
@@ -314,8 +314,8 @@ export default {
   layout: "admin",
   data() {
     return {
-      typePassword: false,
-      typePassword: false,
+      typePassword: true,
+      typePassword2: true,
       form: {
         username: "",
         password: "",
