@@ -1,7 +1,7 @@
 <template>
   <div class="px-24 w-12/12">
     <DeleteModal :request="`/StaffRegistration/${$route.params.slug}`" />
-    <div class="grid px-8 py-10 grid-cols-2 bg-white h-[85vh]   ">
+    <div class="grid px-8 py-10 grid-cols-2 bg-white">
       <ValidationObserver v-slot="{ handleSubmit }">
         <h3 class="text-sm font-medium text-dark pb-10">
           СОТРУДНИКИ / РЕДАКТИРОВАНИЕ СОТРУДНИКА
@@ -13,14 +13,14 @@
           <div class="col-span-2">
             <ValidationProvider rules="required" v-slot="{ errors }">
               <label
-                for="helper-text"
+                for="helper-text1"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
                 >Имя<span class="text-red-600"></span></label
               >
               <input
                 type="text"
                 v-model="form.name"
-                id="helper-text"
+                id="helper-text1"
                 v-on:keypress="isLetter($event)"
                 aria-describedby="helper-text-explanation"
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
@@ -32,14 +32,14 @@
           <div class="col-span-2">
             <ValidationProvider rules="required" v-slot="{ errors }">
               <label
-                for="helper-text"
+                for="helper-text2"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
                 >Фамилия<span class="text-red-600"></span></label
               >
               <input
                 type="text"
                 v-model="form.surname"
-                id="helper-text"
+                id="helper-text2"
                 v-on:keypress="isLetter($event)"
                 aria-describedby="helper-text-explanation"
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
@@ -51,14 +51,14 @@
           <div class="col-span-2">
             <ValidationProvider rules="required" v-slot="{ errors }">
               <label
-                for="helper-text"
+                for="helper-text3"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
                 >Дата рождения<span class="text-red-600"></span></label
               >
               <input
                 type="date"
-                v-model="form.date_of_birth"
-                id="helper-text"
+                :max="minDate"
+                id="helper-text3"
                 aria-describedby="helper-text-explanation"
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Введите дату"
@@ -69,12 +69,12 @@
           <div class="col-span-2">
             <ValidationProvider rules="required" v-slot="{ errors }">
               <label
-                for="helper-text"
+                for="helper-text4"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
                 >Пол <span class="text-red-600"></span></label
               >
               <select
-                id="countries"
+                id="helper-text4"
                 v-model="form.gender"
                 class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 text-white focus:ring-blue-500 focus:border-blue-500"
               >
@@ -88,14 +88,14 @@
           <div class="col-span-2">
             <ValidationProvider rules="required" v-slot="{ errors }">
               <label
-                for="helper-text"
+                for="helper-text5"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
                 >Адрес проживания<span class="text-red-600"></span></label
               >
               <input
                 type="text"
                 v-model="form.address"
-                id="helper-text"
+                id="helper-text5"
                 aria-describedby="helper-text-explanation"
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Введите адрес"
@@ -130,12 +130,12 @@
           <div class="col-span-2">
             <ValidationProvider rules="required" v-slot="{ errors }">
               <label
-                for="helper-text"
+                for="helper-text6"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
                 >Должность <span class="text-red-600"></span></label
               >
               <select
-                id="countries"
+                id="helper-text6"
                 v-model="form.job"
                 class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 text-white focus:ring-blue-500 focus:border-blue-500"
               >
@@ -149,12 +149,12 @@
           <div class="col-span-2">
             <ValidationProvider rules="required" v-slot="{ errors }">
               <label
-                for="helper-text"
+                for="helper-text7"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
                 >Станция регистрации <span class="text-red-600"></span></label
               >
               <select
-                id="countries"
+                id="helper-text7"
                 v-model="form.station"
                 class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 text-white focus:ring-blue-500 focus:border-blue-500"
               >
@@ -347,6 +347,15 @@ export default {
     ...mapState({
       toast: (state) => state.api.toast,
     }),
+    maxDate() {
+      const now = new Date();
+      const maxDob = new Date(
+        now.getFullYear() - 18,
+        now.getMonth(),
+        now.getDate()
+      );
+      return maxDob.toISOString().slice(0, 10);
+    }
   },
   methods: {
     ...mapMutations({
@@ -385,6 +394,7 @@ export default {
 
   mounted() {
     this.getStuff();
+    console.log(this.minDate);
   },
 };
 </script>

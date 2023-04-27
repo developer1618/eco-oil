@@ -56,6 +56,7 @@
               >
               <input
                 type="date"
+                :max="maxDate"
                 v-model="form.date_of_birth"
                 id="helper-text"
                 aria-describedby="helper-text-explanation"
@@ -339,6 +340,15 @@ export default {
     ...mapState({
       toast: (state) => state.api.toast,
     }),
+    maxDate() {
+      const now = new Date();
+      const maxDob = new Date(
+        now.getFullYear() - 18,
+        now.getMonth(),
+        now.getDate()
+      );
+      return maxDob.toISOString().slice(0, 10);
+    }
   },
   methods: {
     isLetter(e) {
