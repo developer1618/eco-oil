@@ -2,7 +2,7 @@
   <div class="px-24 w-12/12">
     <div class="grid px-8 py-10 grid-cols-2 bg-white h-[85vh] ">
       <ValidationObserver v-slot="{ handleSubmit }">
-        <h3 class="text-sm font-medium text-dark pb-10">НАСТРОЙКИ</h3>
+        <h3 class="text-sm font-medium text-dark pb-10">КЛИЕНТЫ (АВТО) / РЕДАКТИРОВАНИЕ КЛИЕНТА</h3>
         <form
           class="grid grid-cols-4 gap-8"
           @submit.prevent="handleSubmit(editClient)"
@@ -18,6 +18,7 @@
                 type="text"
                 v-model="form.full_name"
                 id="helper-text"
+                v-on:keypress="isLetter($event)"
                 aria-describedby="helper-text-explanation"
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Введите имя"
@@ -237,6 +238,11 @@ export default {
     }),
   },
   methods: {
+    isLetter(e) {
+        let char = String.fromCharCode(e.keyCode);
+        if(/^[A-Za-z,А-Яа-я]+$/.test(char)) return true;
+        else e.preventDefault();
+        },
     ...mapActions({
       edit: "api/edit",
       get_page: "api/get_page",

@@ -20,6 +20,7 @@
                 type="text"
                 v-model="form.name"
                 id="helper-text"
+                v-on:keypress="isLetter($event)"
                 aria-describedby="helper-text-explanation"
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Введите имя"
@@ -38,6 +39,7 @@
                 type="text"
                 v-model="form.surname"
                 id="helper-text"
+                v-on:keypress="isLetter($event)"
                 aria-describedby="helper-text-explanation"
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Введите имя"
@@ -339,6 +341,11 @@ export default {
     }),
   },
   methods: {
+    isLetter(e) {
+        let char = String.fromCharCode(e.keyCode);
+        if(/^[A-Za-z,А-Яа-я]+$/.test(char)) return true;
+        else e.preventDefault();
+        },
     ...mapActions({
       store: "api/store",
     }),
