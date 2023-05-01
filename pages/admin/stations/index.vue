@@ -32,7 +32,7 @@
       <div>
         <Pagination
           :currentPage="page"
-          :totalPage="Number(meta)"
+          :totalPage="Number(station.count)"
           @pageChangeHandler="pageChangeHandler"
         />
       </div>
@@ -72,7 +72,7 @@ export default {
     }),
     async getStations() {
       let payload = {
-        request: `/Station`,
+        request: `/Station?page=${this.page}`,
         body: [],
         key: "station",
       };
