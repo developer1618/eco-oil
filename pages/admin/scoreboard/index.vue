@@ -24,7 +24,7 @@
       <div class="pb-4">
         <Table
           :titles="thead"
-          :bodies="scoreboard"
+          :bodies="scoreboard.results"
           :isIcon="false"
           :keys="[
             ['client_data','plate_number'],
@@ -113,7 +113,7 @@ export default {
     },
     async onSearch(val) {
       let payload = {
-        request: `/searchUsers?query=${val}`,
+        request: `/SearchInBoard?query=${val}`,
         body: [],
       };
       await this.get_page(payload);

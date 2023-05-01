@@ -27,7 +27,7 @@
       <div class="pb-4">
         <Table
           :titles="thead"
-          :bodies="clients"
+          :bodies="clients.results"
           path="/editclients"
           deleted="editclients"
           :isIcon="true"

@@ -24,7 +24,7 @@
           :titles="thead"
           deleted="consults"
           path="/editstations"
-          :bodies="station"
+          :bodies="station.results"
           :isIcon="true"
           :keys="['station_address', 'ai95', 'ai92', 'disel', 'gas']"
         />

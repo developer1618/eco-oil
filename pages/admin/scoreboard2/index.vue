@@ -19,7 +19,7 @@
           </div>
         </div>
         <div class="pb-4">
-          <Table :titles="thead" :bodies="user" :isIcon="false" :keys="['liter','total','bonus','liter','total','bonus','liter','total','bonus','bonus','bonus']"/>
+          <Table :titles="thead" :bodies="user.results" :isIcon="false" :keys="['liter','total','bonus','liter','total','bonus','liter','total','bonus','bonus','bonus']"/>
         </div>
         <div>
           <Pagination :currentPage="page" :totalPage="Number(meta)" @pageChangeHandler="pageChangeHandler"/>
