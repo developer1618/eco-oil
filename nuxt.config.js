@@ -65,7 +65,7 @@ export default {
             url: "http://1319152-cd48417.tw1.ru/api/Login",
           },
           logout: {
-            url: "http://1319152-cd48417.tw1.ru/api/logout",
+            url: "http://1319152-cd48417.tw1.ru/api/Logout",
           },
           user: {
             url: "http://1319152-cd48417.tw1.ru/api/UserDetailView",
