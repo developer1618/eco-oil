@@ -45,7 +45,7 @@
           :titles="thead"
           path="/editstaff"
           deleted="editstaff"
-          :bodies="stuff"
+          :bodies="stuff.results"
           :isIcon="true"
           :keys="[['name','surname'], 'date_of_birth', 'gender', 'phone','station_address','status',]"
         />

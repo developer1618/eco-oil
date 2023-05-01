@@ -18,7 +18,7 @@
         </div>
       </div>
       <div class="pb-4">
-        <Table :titles="thead" :bodies="partners" deleted="partners" path="/editpartners" :isIcon="true" :keys="['name', 'address', 'registration_date', 'balance', 'status',]"/>
+        <Table :titles="thead" :bodies="partners.results" deleted="partners" path="/editpartners" :isIcon="true" :keys="['name', 'address', 'registration_date', 'balance', 'status',]"/>
       </div>
       <div>
         <Pagination :currentPage="page" :totalPage="Number(meta)" @pageChangeHandler="pageChangeHandler"/>
