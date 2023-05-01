@@ -71,7 +71,7 @@ export default{
     },
     computed:{
       total(){
-        return Math.floor(this.totalPage / 10);
+        return Math.ceil(this.totalPage / 10);
       }
     }
   
