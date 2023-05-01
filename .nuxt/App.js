@@ -2,17 +2,17 @@ import Vue from 'vue'
 import { decode, parsePath, withoutBase, withoutTrailingSlash, normalizeURL } from 'ufo'
 
 import { getMatchedComponentsInstances, getChildrenComponentInstancesUsingFetch, promisify, globalHandleError, urlJoin, sanitizeComponent } from './utils'
-import NuxtError from '../layouts/error.vue'
+import NuxtError from '..\\layouts\\error.vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
-import '../node_modules/@nuxtjs/tailwindcss/dist/runtime/tailwind.css'
+import '..\\node_modules\\@nuxtjs\\tailwindcss\\dist\\runtime\\tailwind.css'
 
-import '../assets/css/main.css'
+import '..\\assets\\css\\main.css'
 
-import _77068119 from '../layouts/admin.vue'
-import _77a66d33 from '../layouts/login.vue'
-import _37d5dfdc from '../layouts/partner.vue'
+import _77068119 from '..\\layouts\\admin.vue'
+import _77a66d33 from '..\\layouts\\login.vue'
+import _37d5dfdc from '..\\layouts\\partner.vue'
 import _6f6c098b from './layouts/default.vue'
 
 const layouts = { "_admin": sanitizeComponent(_77068119),"_login": sanitizeComponent(_77a66d33),"_partner": sanitizeComponent(_37d5dfdc),"_default": sanitizeComponent(_6f6c098b) }

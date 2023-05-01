@@ -115,6 +115,7 @@ export default {
       let payload = {
         request: `/SearchInBoard?query=${val}`,
         body: [],
+        key:"scoreboard"
       };
       await this.get_page(payload);
     },
