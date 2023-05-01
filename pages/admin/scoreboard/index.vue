@@ -44,7 +44,7 @@
       <div>
         <Pagination
           :currentPage="page"
-          :totalPage="Number(meta)"
+          :totalPage="Number(scoreboard.count)"
           @pageChangeHandler="pageChangeHandler"
         />
       </div>
@@ -119,6 +119,7 @@ export default {
       await this.get_page(payload);
     },
     pageChangeHandler(selected) {
+      alert()
       this.page = selected;
       this.getScoreboard();
     },

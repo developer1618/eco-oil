@@ -48,8 +48,9 @@
 <template>
     <div class="flex justify-end">
         <sliding-pagination
+              v-if="total > 1"
               :current="currentPage"
-              :total="totalPage"
+              :total="total"
               @page-change="pageChangeHandler"
         ></sliding-pagination>
     </div>
@@ -67,6 +68,11 @@ export default{
         pageChangeHandler(selected){
             this.$emit('pageChangeHandler',selected)
         }
+    },
+    computed:{
+      total(){
+        return Math.floor(this.totalPage / 10);
+      }
     }
   
 }
