@@ -44,7 +44,6 @@
         <Table
           :titles="thead"
           path="/editstaff"
-          deleted="editstaff"
           :bodies="stuff.results"
           :isIcon="true"
           :keys="[['name','surname'], 'date_of_birth', 'gender', 'phone','station_address','status',]"
@@ -96,16 +95,19 @@ export default {
     }),
     async getStuff() {
       let payload = {
-        request: `/StaffRegistration`,
-        body: [],
+        request: `/StaffRegistration?type=1&page=${this.page}`,
+        form: {
+          liter: this.liter,
+        },
         key: "stuff",
       };
       await this.get_page(payload);
     },
     async onSearch(val) {
       let payload = {
-        request: `/searchArticles?query=${val}`,
+        request: `/SearchInStaff?query=${val}`,
         body: [],
+        key: "stuff",
       };
       await this.get_page(payload);
     },

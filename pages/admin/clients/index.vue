@@ -29,7 +29,6 @@
           :titles="thead"
           :bodies="clients.results"
           path="/editclients"
-          deleted="editclients"
           :isIcon="true"
           :keys="[
             'full_name',
@@ -53,7 +52,7 @@
       <div>
         <Pagination
           :currentPage="page"
-          :totalPage="Number(meta)"
+          :totalPage="Number(clients.count)"
           @pageChangeHandler="pageChangeHandler"
         />
       </div>
@@ -103,16 +102,19 @@ export default {
     }),
     async getClient() {
       let payload = {
-        request: `/Client`,
-        body: [],
+        request: `/Client?type=1&page=${this.page}`,
+        form: {
+          liter: this.liter,
+        },
         key: "client",
       };
       await this.get_page(payload);
     },
     async onSearch(val) {
       let payload = {
-        request: `/searchHelpCenters?query=${val}`,
+        request: `/SearchInClient?query=${val}`,
         body: [],
+        key:"client"
       };
       await this.get_page(payload);
     },

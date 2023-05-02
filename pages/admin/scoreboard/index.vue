@@ -120,7 +120,6 @@ export default {
       await this.get_page(payload);
     },
     pageChangeHandler(selected) {
-      alert()
       this.page = selected;
       this.getScoreboard();
     },

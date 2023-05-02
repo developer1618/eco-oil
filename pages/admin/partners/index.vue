@@ -57,8 +57,10 @@ export default {
       async getPartner(){
         let payload = {
           // request:`/PartnerRegistration=${this.page}`,
-          request:`/PartnerRegistration`,
-          body:[],
+          request:`/PartnerRegistration?type=1&page=${this.page}`,
+          form: {
+            liter: this.liter,
+           },
           key: 'partners',
         }
         await this.get_page(payload);
@@ -67,8 +69,10 @@ export default {
 
       async onSearch(val){
         let payload = {
-          request:`/searchVideos?query=${val}`,
-          body:[]
+          request:`/SearchInPartner?query=${val}`,
+          body:[],
+          key: 'partners',
+
         }
         console.log(payload); // add this line to check the payload being sent
         await this.get_page(payload);

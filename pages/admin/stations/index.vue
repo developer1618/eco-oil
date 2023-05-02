@@ -22,7 +22,6 @@
       <div class="pb-4">
         <Table
           :titles="thead"
-          deleted="consults"
           path="/editstations"
           :bodies="station.results"
           :isIcon="true"
@@ -72,16 +71,19 @@ export default {
     }),
     async getStations() {
       let payload = {
-        request: `/Station?page=${this.page}`,
-        body: [],
+        request: `/Station?type=1&page=${this.page}`,
+        form: {
+          liter: this.liter,
+        },
         key: "station",
       };
       await this.get_page(payload);
     },
     async onSearch(val) {
       let payload = {
-        request: `/searchConsults?query=${val}`,
+        request: `/SearchInStation?query=${val}`,
         body: [],
+        key:"station"
       };
       await this.get_page(payload);
     },
