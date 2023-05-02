@@ -47,9 +47,8 @@ export default function (ctx, inject) {
     "property": "access_token",
     "maxAge": 86400
   },
-  "refresh": {
-    "property": "refresh_token",
-    "maxAge": 86400
+  "refreshToken": {
+    "property": "refresh_token"
   },
   "user": {
     "property": "user"
@@ -57,6 +56,9 @@ export default function (ctx, inject) {
   "endpoints": {
     "login": {
       "url": "http://1319152-cd48417.tw1.ru/api/Login"
+    },
+    "refresh": {
+      "url": "http://1319152-cd48417.tw1.ru/token/refresh/"
     },
     "logout": {
       "url": "http://1319152-cd48417.tw1.ru/api/Logout"

@@ -53,9 +53,8 @@ export default {
           property: "access_token",
           maxAge: 86400,
         },
-        refresh: {
+        refreshToken: {
           property: "refresh_token",
-          maxAge: 86400,
         },
         user: {
           property: "user",
@@ -64,6 +63,7 @@ export default {
           login: {
             url: "http://1319152-cd48417.tw1.ru/api/Login",
           },
+          refresh: { url: 'http://1319152-cd48417.tw1.ru/token/refresh/' },
           logout: {
             url: "http://1319152-cd48417.tw1.ru/api/Logout",
           },
