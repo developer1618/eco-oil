@@ -174,8 +174,8 @@
                   Шохмансур, Дустии Халкҳо 35
                 </option>
                 <!-- <option   :value="cityList.id" v-for="cityList in cities">
-                                    {{ cityList.name_ru }}
-                                </option> -->
+                      {{ cityList.name_ru }}
+                  </option> -->
               </select>
               <p class="text-red-600">{{ errors[0] }}</p>
             </ValidationProvider>
@@ -340,6 +340,7 @@ export default {
         status: null,
         address: "",
         station: null,
+        role: 1,
       },
     };
   },

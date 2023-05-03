@@ -61,7 +61,7 @@
                 id="helper-text"
                 aria-describedby="helper-text-explanation"
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Введите дату"
+                value="MM/DD/YYYY"
               />
               <!-- <CalendarInput /> -->
             </ValidationProvider>
@@ -331,6 +331,7 @@ export default {
         status: 1,
         address: "",
         station: null,
+        role: 1,
         min: 9,
         max: 9,
       },

@@ -22,62 +22,80 @@
           </div>
         </div>
       </div>
-        <div class="pb-4">
-          <Table :titles="thead" :bodies="user" :isIcon="false" :keys="['name_ru','phone']" />
-        </div>
-        <div>
-          <Pagination :currentPage="page" :totalPage="Number(meta)" @pageChangeHandler="pageChangeHandler"  />
-        </div>
+      <div class="pb-4">
+        <Table
+          :titles="thead"
+          path="/editstaff"
+          :bodies="stuff.results"
+          :keys="['station_address',['name','surname'],'phone','last_login', 'last_logout',]"
+        />
+      </div>
+      <div>
+        <Pagination
+          :currentPage="page"
+          :totalPage="Number(meta)"
+          @pageChangeHandler="pageChangeHandler"
+        />
+      </div>
       </div>
     </div>
   </template>
   <script>
-  import {mapState,mapActions} from "vuex";
+  import { mapState, mapActions } from "vuex";
   export default {
-    name: 'IndexPage',
     layout: "admin",
+    name: "IndexPage",
     head: {
-      title: "МОНИТОРИНГ / СОТРУДНИКИ",
+      title: "СОТРУДНИКИ",
     },
     data() {
       return {
-        page:1,
-        icon: false,
-        search:"",
-        thead: ['СТАНЦИЯ', 'КАССИР', 'ТЕЛЕФОН', 'ДАТА ВХОДА', 'ДАТА ВЫХОДА',],
-      }
+        page: 1,
+        search: "",
+        thead: [
+          "СТАНЦИЯ",
+          "КАССИР",
+          "ТЕЛЕФОН",
+          "ДАТА ВХОДА",
+          "ДАТА ВЫХОДА",
+        ],
+      };
     },
-    computed:{
+    computed: {
       ...mapState({
-        user:(state) => state.api.data,
-        meta:(state) => state.api.meta,
-      })
-    },
-    methods:{
-      ...mapActions({
-        get_page:"api/get_page"
+        stuff: (state) => state.api.stuff,
+        meta: (state) => state.api.meta,
       }),
-      async getScoreboard(){
+    },
+    methods: {
+      ...mapActions({
+        get_page: "api/get_page",
+      }),
+      async getStuff() {
         let payload = {
-          request:`/scoreboard?type=1&page=${this.page}`,
-          body:[],
-        }
+          request: `/StaffRegistration?type=1&page=${this.page}`,
+          form: {
+            liter: this.liter,
+          },
+          key: "stuff",
+        };
         await this.get_page(payload);
       },
-      async onSearch(val){
+      async onSearch(val) {
         let payload = {
-          request:`/searchUsers?query=${val}`,
-          body:[]
-        }
-        await this.get_page(payload)
+          request: `/SearchInStaff?query=${val}`,
+          body: [],
+          key: "stuff",
+        };
+        await this.get_page(payload);
       },
-      pageChangeHandler(selected){
+      pageChangeHandler(selected) {
         this.page = selected;
-        this.getScoreboard();
-      }
-    } ,
-    mounted(){
-      this.getScoreboard();
+        this.getStuff();
+      },
     },
-  }
+    mounted() {
+      this.getStuff();
+    },
+  };
   </script>
