@@ -35,9 +35,11 @@
             </tr>
           </thead>
           <tbody class="bg-white">
-            <tr v-for="(item, i) in card?.results" class="border-b border-gray-200">
+            <template v-for="(cards) in card">
+              <tr v-for="(item,i) in  cards" class="border-b border-gray-200">
               <td
-              v-if="i === 0" :rowspan="card?.results.length"
+                v-if="i === 0"
+                :rowspan="cards.length"
                 class="text-center border py-4"
               >
                 {{ item.station_address }}
@@ -58,12 +60,15 @@
                 {{ item.sold_card }}
               </td>
               <td
-              v-if="i === 0" :rowspan="card?.results.length"
+              v-if="i === 0"
+              :rowspan="cards.length"
               class="text-center border py-4"
               >
               {{ item.total_sold_cards}}
               </td>
             </tr>
+            </template>
+        
           </tbody>
         </table>
       </div>
@@ -78,7 +83,7 @@
     </div>
   </template>
   <script>
-  import { mapState, mapActions } from "vuex";
+  import { mapState, mapActions,mapGetters} from "vuex";
   export default
   {
     props: ["bodies", "titles", "isIcon", "keys", "path", "deleted"],
@@ -102,9 +107,9 @@
       };
     },
     computed: {
-      ...mapState({
-        card: (state) => state.api.card,
-      }),
+      ...mapGetters({
+        card:"api/cardFilter",
+      })
     },
     methods: {
       ...mapActions({
@@ -113,7 +118,7 @@
       }),
       async getCard() {
         let payload = {
-          request: `/StaffRegistration?type=1&page=${this.page}`,
+          request: `/StaffRegistration?type=3&page=${this.page}`,
           key: "card",
         };
         await this.get_page(payload);
