@@ -39,7 +39,7 @@
             'phone',
             'registration_date',
             'bonus',
-            'station_address',
+            'full_name',
             'status',
           ]"
         />
@@ -114,7 +114,7 @@ export default {
       let payload = {
         request: `/SearchInClient?query=${val}`,
         body: [],
-        key:"client"
+        key: "client",
       };
       await this.get_page(payload);
     },
