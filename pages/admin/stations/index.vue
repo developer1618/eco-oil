@@ -35,10 +35,6 @@
           @pageChangeHandler="pageChangeHandler"
         />
       </div>
-      <!-- <div class="flex">
-        <AddButton addButton="Добавить" link="stations/addstations" />
-        <AddButton addButton="Редактировать" link="stations/editstations" />
-      </div> -->
     </div>
   </div>
 </template>

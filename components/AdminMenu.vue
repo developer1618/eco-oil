@@ -93,6 +93,7 @@ export default {
           children: [
             { title: "Cотрудники", url: "/admin/monitoring" },
             { title: "Карты", url: "/admin/cards" },
+            { title: "Устройство", url: "/admin/device" },
           ],
         },
         {

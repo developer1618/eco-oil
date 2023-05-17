@@ -10,6 +10,7 @@ const _4a1665c0 = () => interopDefault(import('../pages/partner/index.vue' /* we
 const _377bb317 = () => interopDefault(import('../pages/admin/bonus/index.vue' /* webpackChunkName: "pages/admin/bonus/index" */))
 const _6e76355b = () => interopDefault(import('../pages/admin/cards/index.vue' /* webpackChunkName: "pages/admin/cards/index" */))
 const _0d195300 = () => interopDefault(import('../pages/admin/clients/index.vue' /* webpackChunkName: "pages/admin/clients/index" */))
+const _45eb5ef4 = () => interopDefault(import('../pages/admin/device/index.vue' /* webpackChunkName: "pages/admin/device/index" */))
 const _3aa13634 = () => interopDefault(import('../pages/admin/monitoring/index.vue' /* webpackChunkName: "pages/admin/monitoring/index" */))
 const _143cbb6e = () => interopDefault(import('../pages/admin/partners/index.vue' /* webpackChunkName: "pages/admin/partners/index" */))
 const _4de304e1 = () => interopDefault(import('../pages/admin/profile/index.vue' /* webpackChunkName: "pages/admin/profile/index" */))
@@ -21,12 +22,14 @@ const _78b59898 = () => interopDefault(import('../pages/admin/staff/index.vue' /
 const _0e85c25d = () => interopDefault(import('../pages/admin/stations/index.vue' /* webpackChunkName: "pages/admin/stations/index" */))
 const _f8caf794 = () => interopDefault(import('../pages/partner/employees/index.vue' /* webpackChunkName: "pages/partner/employees/index" */))
 const _23f330e8 = () => interopDefault(import('../pages/partner/settings/index.vue' /* webpackChunkName: "pages/partner/settings/index" */))
+const _3f277ec8 = () => interopDefault(import('../pages/admin/device/adddevice/index.vue' /* webpackChunkName: "pages/admin/device/adddevice/index" */))
 const _4248b474 = () => interopDefault(import('../pages/admin/partners/addpartners/index.vue' /* webpackChunkName: "pages/admin/partners/addpartners/index" */))
 const _4e1f7e68 = () => interopDefault(import('../pages/admin/staff/addstaff/index.vue' /* webpackChunkName: "pages/admin/staff/addstaff/index" */))
 const _3d3067ee = () => interopDefault(import('../pages/admin/stations/addstations/index.vue' /* webpackChunkName: "pages/admin/stations/addstations/index" */))
 const _8fe5905a = () => interopDefault(import('../pages/partner/employees/addemployees/index.vue' /* webpackChunkName: "pages/partner/employees/addemployees/index" */))
 const _63b0f200 = () => interopDefault(import('../pages/admin/path/to/flowbite/dist/flowbite.min.js' /* webpackChunkName: "pages/admin/path/to/flowbite/dist/flowbite.min" */))
 const _98c867b2 = () => interopDefault(import('../pages/admin/clients/editclients/_slug.vue' /* webpackChunkName: "pages/admin/clients/editclients/_slug" */))
+const _9cf9c804 = () => interopDefault(import('../pages/admin/device/editpartners/_slug.vue' /* webpackChunkName: "pages/admin/device/editpartners/_slug" */))
 const _2bb5aac9 = () => interopDefault(import('../pages/admin/partners/editpartners/_slug.vue' /* webpackChunkName: "pages/admin/partners/editpartners/_slug" */))
 const _1a87f7da = () => interopDefault(import('../pages/admin/profile/forgotPassword/_slug.vue' /* webpackChunkName: "pages/admin/profile/forgotPassword/_slug" */))
 const _2c8d8217 = () => interopDefault(import('../pages/admin/staff/editstaff/_slug.vue' /* webpackChunkName: "pages/admin/staff/editstaff/_slug" */))
@@ -69,6 +72,10 @@ export const routerOptions = {
     path: "/admin/clients",
     component: _0d195300,
     name: "admin-clients"
+  }, {
+    path: "/admin/device",
+    component: _45eb5ef4,
+    name: "admin-device"
   }, {
     path: "/admin/monitoring",
     component: _3aa13634,
@@ -114,6 +121,10 @@ export const routerOptions = {
     component: _23f330e8,
     name: "partner-settings"
   }, {
+    path: "/admin/device/adddevice",
+    component: _3f277ec8,
+    name: "admin-device-adddevice"
+  }, {
     path: "/admin/partners/addpartners",
     component: _4248b474,
     name: "admin-partners-addpartners"
@@ -137,6 +148,10 @@ export const routerOptions = {
     path: "/admin/clients/editclients/:slug?",
     component: _98c867b2,
     name: "admin-clients-editclients-slug"
+  }, {
+    path: "/admin/device/editpartners/:slug?",
+    component: _9cf9c804,
+    name: "admin-device-editpartners-slug"
   }, {
     path: "/admin/partners/editpartners/:slug?",
     component: _2bb5aac9,

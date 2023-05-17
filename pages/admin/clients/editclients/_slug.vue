@@ -73,37 +73,6 @@
               <label
                 for="helper-text"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Станция регистрации <span class="text-red-600"></span></label
-              >
-              <select
-                id="countries"
-                v-model="form.registration_date"
-                class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 text-white focus:ring-blue-500 focus:border-blue-500"
-              >
-                <option value="Шохмансур, Дустии Халкҳо 31">
-                  Шохмансур, Дустии Халкҳо 31
-                </option>
-                <option value="Шохмансур, Дустии Халкҳо 32">
-                  Шохмансур, Дустии Халкҳо 32
-                </option>
-                <option value="Шохмансур, Дустии Халкҳо 33">
-                  Шохмансур, Дустии Халкҳо 33
-                </option>
-                <option value="Шохмансур, Дустии Халкҳо 34">
-                  Шохмансур, Дустии Халкҳо 34
-                </option>
-                <option value="Шохмансур, Дустии Халкҳо 35">
-                  Шохмансур, Дустии Халкҳо 35
-                </option>
-              </select>
-              <p class="text-red-600">{{ errors[0] }}</p>
-            </ValidationProvider>
-          </div>
-          <div class="col-span-2">
-            <ValidationProvider rules="required" v-slot="{ errors }">
-              <label
-                for="helper-text"
-                class="block mb-2 text-sm font-medium text-[#4D5D7D]"
                 >Номер автомобиля<span class="text-red-600"></span></label
               >
               <input
@@ -135,7 +104,7 @@
               <p class="text-red-600">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
-          <div class="flex flex-wrap">
+          <div class="col-span-4">
             <div class="flex items-center pb-4">
               <label class="text-sm font-medium text-[#6B7280]">Статус</label>
             </div>
@@ -174,20 +143,6 @@
                   >Неактивный</label
                 >
               </div>
-              <!-- <div class="flex items-center mr-4">
-                <input
-                  id="green-radio"
-                  type="radio"
-                  value=""
-                  name="colored-radio"
-                  class="w-4 h-4 bg-gray-100 border-gray-300"
-                />
-                <label
-                  for="green-radio"
-                  class="ml-2 text-sm font-medium text-gray-500"
-                  >Неактивный</label
-                >
-              </div> -->
             </div>
           </div>
           <div class="col-span-4 navbtn">

@@ -7,7 +7,7 @@
                     <div class="col-span-2">
                         <ValidationProvider rules="required" v-slot="{ errors }">
                             <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Партнёр<span class="text-red-600"></span></label>
-                            <input type="text" v-model="form.name" id="helper-text" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500" placeholder="Введите имя партнёра">
+                            <input type="text" v-model="form.username" id="helper-text" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500" placeholder="Введите имя партнёра">
                             <p class="text-red-600">{{errors[0]}}</p>
                         </ValidationProvider>
                     </div>
@@ -21,7 +21,7 @@
                     <div class="col-span-2">
                         <ValidationProvider rules="required" v-slot="{ errors }">
                             <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Логин<span class="text-red-600"></span></label>
-                            <input type="text" v-model="form.username" id="helper-text" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500" placeholder="Введите логин">
+                            <input type="text" v-model="form.name" id="helper-text" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500" placeholder="Введите логин">
                             <p class="text-red-600">{{errors[0]}}</p>
                         </ValidationProvider>
                     </div>
@@ -99,6 +99,7 @@ export default {
                 name: '',
                 password: '',
                 password2: '',
+                role: 3,
          },
        };
     },

@@ -102,6 +102,7 @@ export default {
             name: '',
             password: '',
             password2: '',
+            role: 3,
         },
     };
 },
