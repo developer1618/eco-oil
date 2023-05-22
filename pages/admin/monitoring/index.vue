@@ -6,7 +6,6 @@
           <h3 class="text-sm font-medium text-dark pb-5">МОНИТОРИНГ / СОТРУДНИКИ</h3>
         </div>
         <div class="flex items-baseline">
-          <CalendarInput />
           <div class="pl-4 w-64">
             <select id="countries" class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 w-56 ml-4">
               <option value="US">Выберите станцию</option>
