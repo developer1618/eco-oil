@@ -1,8 +1,8 @@
 export const state = () => ({
   client: [],
   stuff: [],
-  scoreboard:[],
-  card:[],
+  scoreboard: [],
+  card: [],
   modal: false,
   meta: null,
   station: [],
@@ -14,18 +14,22 @@ export const state = () => ({
   partners: [],
 });
 
-
 export const getters = {
-  cardFilter(state){
-    return state.card?.results && Object.values(state.card?.results?.reduce((acc, obj) => {
-      if (!acc[obj.station]) {
-        acc[obj.station] = [obj];
-      } else {
-        acc[obj.station].push(obj);
-      }
-      return acc;
-    }, {}));
-  }
+  cardFilter(state) {
+    return (
+      state.card?.results &&
+      Object.values(
+        state.card?.results?.reduce((acc, obj) => {
+          if (!acc[obj.station]) {
+            acc[obj.station] = [obj];
+          } else {
+            acc[obj.station].push(obj);
+          }
+          return acc;
+        }, {})
+      )
+    );
+  },
 };
 
 export const mutations = {
@@ -49,8 +53,6 @@ export const mutations = {
   },
 };
 
-
-
 export const actions = {
   async get_page({ commit }, payload) {
     try {
@@ -61,7 +63,7 @@ export const actions = {
 
   async store({ dispatch, commit }, payload) {
     try {
-      await this.$axios
+      return await this.$axios
         .post(payload.request, payload.form, {
           headers: {
             "Content-Type": "application/json",
