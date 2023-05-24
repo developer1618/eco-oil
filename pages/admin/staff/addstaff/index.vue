@@ -379,7 +379,7 @@ export default {
     async addStuff() {
       let payload = {
         text: "Сотрудник добавлено!",
-        request: "/StaffRegistration",
+        request: "/Staff",
         form: this.form,
       };
       await this.store(payload).then(() => {

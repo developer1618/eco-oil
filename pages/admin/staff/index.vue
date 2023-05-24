@@ -33,10 +33,7 @@
             <Search @onChange="onSearch" searchPlaceholder="Найти ..." />
           </div>
           <div class="btn">
-            <AddButton
-              addButton="Добавить +"
-              link="/admin/staff/addstaff"
-            />
+            <AddButton addButton="Добавить +" link="/admin/staff/addstaff" />
           </div>
         </div>
       </div>
@@ -46,7 +43,14 @@
           path="/editstaff"
           :bodies="stuff.results"
           :isIcon="true"
-          :keys="[['name','surname'], 'date_of_birth', 'gender', 'phone','station_address','status',]"
+          :keys="[
+            ['name', 'surname'],
+            'date_of_birth',
+            'gender',
+            'phone',
+            'station_address',
+            'status',
+          ]"
         />
       </div>
       <div>
@@ -95,7 +99,7 @@ export default {
     }),
     async getStuff() {
       let payload = {
-        request: `/StaffRegistration?type=1&page=${this.page}`,
+        request: `/Staff?page=${this.page}`,
         form: {
           liter: this.liter,
         },
