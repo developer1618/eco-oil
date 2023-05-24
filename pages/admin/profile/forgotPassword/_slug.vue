@@ -11,7 +11,7 @@
                     <div class="col-span-2">
                         <ValidationProvider rules="required" v-slot="{ errors }">
                             <div class="relative">
-                                <label for="password" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Старый пароль <span class="text-red-600"></span></label>
+                                <label for="password" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Старый пароль <span class="text-red-600 absolute"></span></label>
                                 <input :type="typePassword ? 'password' : 'text'" id="password" name="password" v-model="password" placeholder="••••••••" class="bg-white border border-gray-300 text-[#4D5D7D] sm:text-sm rounded-lg  block w-full p-2.5">
                                 <div class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 mb-[-25px]">
                                 <img src="/img/eye-pass-on.svg" v-if="typePassword" @click="typePassword = !typePassword" alt="on" class="cursor-pointer">
@@ -24,7 +24,7 @@
                     <div class="col-span-2">
                         <ValidationProvider rules="required" v-slot="{ errors }">
                             <div class="relative">
-                                <label for="password" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Новый пароль <span class="text-red-600"></span></label>
+                                <label for="password" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Новый пароль <span class="text-red-600 absolute"></span></label>
                                 <input :type="typePassword ? 'password' : 'text'" id="password1" name="password" v-model="password1" placeholder="••••••••" class="bg-white border border-gray-300 text-[#4D5D7D] sm:text-sm rounded-lg  block w-full p-2.5">
                                 <div class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 mb-[-25px]">
                                 <img src="/img/eye-pass-on.svg" v-if="typePassword" @click="typePassword = !typePassword" alt="on" class="cursor-pointer">
@@ -37,7 +37,7 @@
                     <div class="col-span-2">
                         <ValidationProvider rules="required" v-slot="{ errors }">
                             <div class="relative">
-                                <label for="password" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Повторит новый пароль <span class="text-red-600"></span></label>
+                                <label for="password" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Повторит новый пароль <span class="text-red-600 absolute"></span></label>
                                 <input :type="typePassword ? 'password' : 'text'" id="password2" name="password" v-model="password2" placeholder="••••••••" class="bg-white border border-gray-300 text-[#4D5D7D] sm:text-sm rounded-lg  block w-full p-2.5">
                                 <div class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 mb-[-25px]">
                                 <img src="/img/eye-pass-on.svg" v-if="typePassword" @click="typePassword = !typePassword" alt="on" class="cursor-pointer">

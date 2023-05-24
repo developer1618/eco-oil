@@ -14,7 +14,7 @@
               <label
                 for="helper-text"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Название станции<span class="text-red-600"></span
+                >Название станции<span class="text-red-600 absolute"></span
               ></label>
               <input
                 type="text"
@@ -24,7 +24,7 @@
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Введите название"
               />
-              <p class="text-red-600">{{ errors[0] }}</p>
+              <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span">
@@ -32,7 +32,7 @@
               <label
                 for="helper-text"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >АИ — 95<span class="text-red-600"></span
+                >АИ — 95<span class="text-red-600 absolute"></span
               ></label>
               <input
                 type="number"
@@ -44,7 +44,7 @@
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Введите цену"
               />
-              <p class="text-red-600">{{ errors[0] }}</p>
+              <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span">
@@ -52,7 +52,7 @@
               <label
                 for="helper-text"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >АИ — 92<span class="text-red-600"></span
+                >АИ — 92<span class="text-red-600 absolute"></span
               ></label>
               <input
                 type="number"
@@ -64,7 +64,7 @@
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Введите цену"
               />
-              <p class="text-red-600">{{ errors[0] }}</p>
+              <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span">
@@ -72,7 +72,7 @@
               <label
                 for="helper-text"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >ДТ<span class="text-red-600"></span
+                >ДТ<span class="text-red-600 absolute"></span
               ></label>
               <input
                 type="number"
@@ -84,7 +84,7 @@
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Введите цену"
               />
-              <p class="text-red-600">{{ errors[0] }}</p>
+              <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span">
@@ -92,7 +92,7 @@
               <label
                 for="helper-text"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >ГАЗ<span class="text-red-600"></span
+                >ГАЗ<span class="text-red-600 absolute"></span
               ></label>
               <input
                 type="number"
@@ -103,7 +103,7 @@
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Введите цену"
               />
-              <p class="text-red-600">{{ errors[0] }}</p>
+              <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span navbtn">

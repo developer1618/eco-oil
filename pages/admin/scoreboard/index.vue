@@ -29,7 +29,7 @@
             ['client_data','plate_number'],
             ['client_data','card_number'],
             ['client_data','full_name'],
-            'staff_id',
+            'staff_name',
             ['station','station_address'],
             'fuel_type',
             'amount_per_liter',

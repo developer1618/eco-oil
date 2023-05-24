@@ -95,7 +95,7 @@ export default {
     }),
     async getStuff() {
       let payload = {
-        request: `/StaffRegistration?type=1&page=${this.page}`,
+        request: `/Staff?type=1&page=${this.page}`,
         form: {
           liter: this.liter,
         },

@@ -117,7 +117,7 @@
                   +992
                 </span>
                 <input
-                  type="number"
+                  type="tel"
                   v-model="form.phone"
                   id="website-admin"
                   class="rounded-none rounded-r-lg border text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5"
@@ -345,7 +345,7 @@ export default {
         status: null,
         address: "",
         station: null,
-        role: 1,
+        role: 2,
         min: 9,
         max: 9,
       },
@@ -379,7 +379,7 @@ export default {
     async addStuff() {
       let payload = {
         text: "Сотрудник добавлено!",
-        request: "/StaffRegistration",
+        request: "/Staff",
         form: this.form,
       };
       await this.store(payload).then(() => {

@@ -1,7 +1,7 @@
 <template>
   <div class="px-24 w-12/12">
-    <DeleteModal :request="`/StaffRegistration/${$route.params.slug}`" />
-    <div class="grid px-8 py-10 grid-cols-2 bg-white">
+    <DeleteModal :request="`/Staff/${$route.params.slug}`" />
+    <div class="grid px-8 py-10 grid-cols-2 bg-white h-[85vh]">
       <ValidationObserver v-slot="{ handleSubmit }">
         <h3 class="text-sm font-medium text-dark pb-10">
           СОТРУДНИКИ / РЕДАКТИРОВАНИЕ СОТРУДНИКА
@@ -15,7 +15,7 @@
               <label
                 for="helper-text1"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Имя<span class="text-red-600"></span></label
+                >Имя<span class="text-red-600 absolute"></span></label
               >
               <input
                 type="text"
@@ -26,7 +26,7 @@
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Введите имя"
               />
-              <p class="text-red-600">{{ errors[0] }}</p>
+              <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span-2">
@@ -34,7 +34,7 @@
               <label
                 for="helper-text2"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Фамилия<span class="text-red-600"></span></label
+                >Фамилия<span class="text-red-600 absolute"></span></label
               >
               <input
                 type="text"
@@ -45,7 +45,7 @@
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Введите имя"
               />
-              <p class="text-red-600">{{ errors[0] }}</p>
+              <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span-2">
@@ -53,7 +53,7 @@
               <label
                 for="helper-text3"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Дата рождения<span class="text-red-600"></span></label
+                >Дата рождения<span class="text-red-600 absolute"></span></label
               >
               <input
                 type="date"
@@ -63,7 +63,7 @@
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Введите дату"
               />
-              <p class="text-red-600">{{ errors[0] }}</p>
+              <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span-2">
@@ -71,7 +71,7 @@
               <label
                 for="helper-text4"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Пол <span class="text-red-600"></span></label
+                >Пол <span class="text-red-600 absolute"></span></label
               >
               <select
                 id="helper-text4"
@@ -82,7 +82,7 @@
                 <option value="M">Мужской</option>
                 <option value="F">Женский</option>
               </select>
-              <p class="text-red-600">{{ errors[0] }}</p>
+              <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span-2">
@@ -90,7 +90,7 @@
               <label
                 for="helper-text5"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Адрес проживания<span class="text-red-600"></span></label
+                >Адрес проживания<span class="text-red-600 absolute"></span></label
               >
               <input
                 type="text"
@@ -100,7 +100,7 @@
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Введите адрес"
               />
-              <p class="text-red-600">{{ errors[0] }}</p>
+              <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span-2">
@@ -108,7 +108,7 @@
               <label
                 for="website-admin"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Номер телефона <span class="text-red-600"></span></label
+                >Номер телефона <span class="text-red-600 absolute"></span></label
               >
               <div class="flex">
                 <span
@@ -117,14 +117,14 @@
                   +992
                 </span>
                 <input
-                  type="number"
+                  type="tel"
                   v-model="form.phone"
                   id="website-admin"
                   class="rounded-none rounded-r-lg border text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5"
                   placeholder="Введите Номер телефона"
                 />
               </div>
-              <p class="text-red-600">{{ errors[0] }}</p>
+              <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span-2">
@@ -132,7 +132,7 @@
               <label
                 for="helper-text6"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Должность <span class="text-red-600"></span></label
+                >Должность <span class="text-red-600 absolute"></span></label
               >
               <select
                 id="helper-text6"
@@ -143,7 +143,7 @@
                 <option value="1">Кассир</option>
                 <option value="2">Администратор</option>
               </select>
-              <p class="text-red-600">{{ errors[0] }}</p>
+              <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span-2">
@@ -151,7 +151,7 @@
               <label
                 for="helper-text7"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Станция регистрации <span class="text-red-600"></span></label
+                >Станция регистрации <span class="text-red-600 absolute"></span></label
               >
               <select
                 id="helper-text7"
@@ -177,7 +177,7 @@
                       {{ cityList.name_ru }}
                   </option> -->
               </select>
-              <p class="text-red-600">{{ errors[0] }}</p>
+              <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span-2">
@@ -186,7 +186,7 @@
                 <label
                   for="password"
                   class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                  >Пароль <span class="text-red-600"></span></label
+                  >Пароль <span class="text-red-600 absolute"></span></label
                 >
                 <input
                   :type="typePassword ? 'password' : 'text'"
@@ -222,7 +222,7 @@
                 <label
                   for="password"
                   class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                  >Повторите пароль <span class="text-red-600"></span></label
+                  >Повторите пароль <span class="text-red-600 absolute"></span></label
                 >
                 <input
                   :type="typePassword2 ? 'password' : 'text'"
@@ -340,7 +340,7 @@ export default {
         status: null,
         address: "",
         station: null,
-        role: 1,
+        role: 2,
       },
     };
   },
@@ -374,7 +374,7 @@ export default {
     }),
     async getStuff() {
       let request = await this.$axios.get(
-        `/StaffRegistration/${this.$route.params.slug}`
+        `/Staff/${this.$route.params.slug}`
       );
       return Object.keys(this.form).map((item) => {
         this.form[item] = request.data[item];
@@ -383,7 +383,7 @@ export default {
     async editStuff() {
       let payload = {
         text: "Сотрудник изменено!",
-        request: `/StaffRegistration/${this.$route.params.slug}`,
+        request: `/Staff/${this.$route.params.slug}`,
         form: this.form,
       };
       await this.edit(payload);

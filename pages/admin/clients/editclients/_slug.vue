@@ -12,7 +12,7 @@
               <label
                 for="helper-text"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Ф.И.О<span class="text-red-600"></span></label
+                >Ф.И.О<span class="text-red-600 absolute"></span></label
               >
               <input
                 type="text"
@@ -23,7 +23,7 @@
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Введите имя"
               />
-              <p class="text-red-600">{{ errors[0] }}</p>
+              <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span-2">
@@ -31,7 +31,7 @@
               <label
                 for="helper-text"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Дата рождения<span class="text-red-600"></span></label
+                >Дата рождения<span class="text-red-600 absolute"></span></label
               >
               <input
                 type="date"
@@ -41,7 +41,7 @@
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Введите дату"
               />
-              <p class="text-red-600">{{ errors[0] }}</p>
+              <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span-2">
@@ -49,7 +49,7 @@
               <label
                 for="website-admin"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Номер телефона <span class="text-red-600"></span></label
+                >Номер телефона <span class="text-red-600 absolute"></span></label
               >
               <div class="flex">
                 <span
@@ -58,14 +58,14 @@
                   +992
                 </span>
                 <input
-                  type="number"
+                  type="tel"
                   v-model="form.phone" 
                   id="website-admin"
                   class="rounded-none rounded-r-lg border text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5"
                   placeholder="Введите Номер телефона"
                 />
               </div>
-              <p class="text-red-600">{{ errors[0] }}</p>
+              <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span-2">
@@ -73,7 +73,7 @@
               <label
                 for="helper-text"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Номер автомобиля<span class="text-red-600"></span></label
+                >Номер автомобиля<span class="text-red-600 absolute"></span></label
               >
               <input
                 type="text"
@@ -83,7 +83,7 @@
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Введите номер автомобиля"
               />
-              <p class="text-red-600">{{ errors[0] }}</p>
+              <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span-2">
@@ -91,7 +91,7 @@
               <label
                 for="helper-text"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Номер карты<span class="text-red-600"></span></label
+                >Номер карты<span class="text-red-600 absolute"></span></label
               >
               <input
                 type="text"
@@ -101,7 +101,7 @@
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Введите номер карты"
               />
-              <p class="text-red-600">{{ errors[0] }}</p>
+              <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span-4">
