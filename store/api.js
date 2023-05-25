@@ -2,6 +2,7 @@ export const state = () => ({
   client: [],
   stuff: [],
   scoreboard: [],
+  report: [],
   card: [],
   modal: false,
   meta: null,

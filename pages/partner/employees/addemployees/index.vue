@@ -6,42 +6,42 @@
                 <form class="grid grid-cols-4 gap-8" @submit.prevent="handleSubmit(getStations)">
                     <div class="col-span-2">
                         <ValidationProvider rules="required" v-slot="{ errors }">
-                            <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Ф. И. О. <span class="text-red-600"></span></label>
+                            <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Ф. И. О. <span class="text-red-600 absolute"></span></label>
                             <input type="text" v-model="name_ru" id="helper-text" v-on:keypress="isLetter($event)" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500" placeholder="Введите Ф. И. О.">
-                            <p class="text-red-600">{{errors[0]}}</p>
+                            <p class="text-red-600 absolute">{{errors[0]}}</p>
                         </ValidationProvider>
                     </div>
                     <div class="col-span-2">
                         <ValidationProvider rules="required" v-slot="{ errors }">
-                            <label for="website-admin" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Номер телефона <span class="text-red-600"></span></label>
+                            <label for="website-admin" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Номер телефона <span class="text-red-600 absolute"></span></label>
                             <div class="flex">
                             <span class="inline-flex items-center px-3 text-sm text-[#4D5D7D]  rounded-l-md border border-r-0 border-gray-300 bg-white">
                                 +992
                             </span>
-                            <input type="number" v-model="phone"  id="website-admin" class="rounded-none rounded-r-lg border text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5" placeholder="Введите номер телефона">
+                            <input type="tel" v-model="phone"  id="website-admin" class="rounded-none rounded-r-lg border text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5" placeholder="Введите номер телефона">
                             </div>
-                            <p class="text-red-600">{{errors[0]}}</p>
+                            <p class="text-red-600 absolute">{{errors[0]}}</p>
                         </ValidationProvider>
                     </div>
                     <div class="col-span-2">
                         <ValidationProvider rules="required" v-slot="{ errors }">
-                            <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Номер автомобиля <span class="text-red-600"></span></label>
+                            <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Номер автомобиля <span class="text-red-600 absolute"></span></label>
                             <input type="text" v-model="name_ru" id="helper-text" v-on:keypress="isLetter($event)" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500" placeholder="Введите номер автомобиля">
-                            <p class="text-red-600">{{errors[0]}}</p>
+                            <p class="text-red-600 absolute">{{errors[0]}}</p>
                         </ValidationProvider>
                     </div>
                     <div class="col-span-2">
                         <ValidationProvider rules="required" v-slot="{ errors }">
-                            <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Номер карты <span class="text-red-600"></span></label>
+                            <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Номер карты <span class="text-red-600 absolute"></span></label>
                             <input type="number" v-model="name_ru" id="helper-text" v-on:keypress="isLetter($event)" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500" placeholder="Введите номер карты">
-                            <p class="text-red-600">{{errors[0]}}</p>
+                            <p class="text-red-600 absolute">{{errors[0]}}</p>
                         </ValidationProvider>
                     </div>
                     <div class="col-span-2">
                         <ValidationProvider rules="required" v-slot="{ errors }">
-                            <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Лимит <span class="text-red-600"></span></label>
+                            <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Лимит <span class="text-red-600 absolute"></span></label>
                             <input type="number" v-model="name_ru" id="helper-text" v-on:keypress="isLetter($event)" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500" placeholder="Установите лимит">
-                            <p class="text-red-600">{{errors[0]}}</p>
+                            <p class="text-red-600 absolute">{{errors[0]}}</p>
                         </ValidationProvider>
                     </div>
                     <div class="col-span-4">

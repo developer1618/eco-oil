@@ -56,8 +56,8 @@ export default {
       }),
       async getPartner(){
         let payload = {
-          // request:`/PartnerRegistration=${this.page}`,
-          request:`/PartnerRegistration?type=1&page=${this.page}`,
+          // request:`/Partner=${this.page}`,
+          request:`/Partner?type=1&page=${this.page}`,
           form: {
             liter: this.liter,
            },
