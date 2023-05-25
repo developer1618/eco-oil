@@ -15,8 +15,8 @@
               <label
                 for="helper-text1"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Имя<span class="text-red-600 absolute"></span></label
-              >
+                >Имя<span class="text-red-600"></span
+              ></label>
               <input
                 type="text"
                 v-model="form.name"
@@ -34,8 +34,8 @@
               <label
                 for="helper-text2"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Фамилия<span class="text-red-600 absolute"></span></label
-              >
+                >Фамилия<span class="text-red-600"></span
+              ></label>
               <input
                 type="text"
                 v-model="form.surname"
@@ -53,11 +53,11 @@
               <label
                 for="helper-text3"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Дата рождения<span class="text-red-600 absolute"></span></label
-              >
+                >Дата рождения<span class="text-red-600"></span
+              ></label>
               <input
                 type="date"
-                :max="minDate"
+                v-model="form.date_of_birth"
                 id="helper-text3"
                 aria-describedby="helper-text-explanation"
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
@@ -71,8 +71,8 @@
               <label
                 for="helper-text4"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Пол <span class="text-red-600 absolute"></span></label
-              >
+                >Пол <span class="text-red-600"></span
+              ></label>
               <select
                 id="helper-text4"
                 v-model="form.gender"
@@ -90,8 +90,8 @@
               <label
                 for="helper-text5"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Адрес проживания<span class="text-red-600 absolute"></span></label
-              >
+                >Адрес проживания<span class="text-red-600"></span
+              ></label>
               <input
                 type="text"
                 v-model="form.address"
@@ -108,8 +108,8 @@
               <label
                 for="website-admin"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Номер телефона <span class="text-red-600 absolute"></span></label
-              >
+                >Номер телефона <span class="text-red-600"></span
+              ></label>
               <div class="flex">
                 <span
                   class="inline-flex items-center px-3 text-sm text-[#4D5D7D] rounded-l-md border border-r-0 border-gray-300 bg-white"
@@ -132,8 +132,8 @@
               <label
                 for="helper-text6"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Должность <span class="text-red-600 absolute"></span></label
-              >
+                >Должность <span class="text-red-600"></span
+              ></label>
               <select
                 id="helper-text6"
                 v-model="form.job"
@@ -151,28 +151,18 @@
               <label
                 for="helper-text7"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Станция регистрации <span class="text-red-600 absolute"></span></label
-              >
+                >Станция регистрации <span class="text-red-600"></span
+              ></label>
               <select
                 id="helper-text7"
                 v-model="form.station"
                 class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 text-white focus:ring-blue-500 focus:border-blue-500"
               >
-                <option value="1">
-                  Шохмансур, Дустии Халкҳо 31
-                </option>
-                <option value="2">
-                  Шохмансур, Дустии Халкҳо 32
-                </option>
-                <option value="3">
-                  Шохмансур, Дустии Халкҳо 33
-                </option>
-                <option value="4">
-                  Шохмансур, Дустии Халкҳо 34
-                </option>
-                <option value="5">
-                  Шохмансур, Дустии Халкҳо 35
-                </option>
+                <option value="1">Шохмансур, Дустии Халкҳо 31</option>
+                <option value="2">Шохмансур, Дустии Халкҳо 32</option>
+                <option value="3">Шохмансур, Дустии Халкҳо 33</option>
+                <option value="4">Шохмансур, Дустии Халкҳо 34</option>
+                <option value="5">Шохмансур, Дустии Халкҳо 35</option>
                 <!-- <option   :value="cityList.id" v-for="cityList in cities">
                       {{ cityList.name_ru }}
                   </option> -->
@@ -186,8 +176,8 @@
                 <label
                   for="password"
                   class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                  >Пароль <span class="text-red-600 absolute"></span></label
-                >
+                  >Пароль <span class="text-red-600"></span
+                ></label>
                 <input
                   :type="typePassword ? 'password' : 'text'"
                   id="password"
@@ -218,39 +208,39 @@
             </ValidationProvider>
           </div>
           <div class="col-span-2">
-              <div class="relative">
-                <label
-                  for="password"
-                  class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                  >Повторите пароль <span class="text-red-600 absolute"></span></label
-                >
-                <input
-                  :type="typePassword2 ? 'password' : 'text'"
-                  id="password"
-                  v-model="form.password2"
-                  name="password"
-                  placeholder="••••••••"
-                  class="bg-white border border-gray-300 text-[#4D5D7D] sm:text-sm rounded-lg block w-full p-2.5"
+            <div class="relative">
+              <label
+                for="password"
+                class="block mb-2 text-sm font-medium text-[#4D5D7D]"
+                >Повторите пароль <span class="text-red-600"></span
+              ></label>
+              <input
+                :type="typePassword2 ? 'password' : 'text'"
+                id="password"
+                v-model="form.password2"
+                name="password"
+                placeholder="••••••••"
+                class="bg-white border border-gray-300 text-[#4D5D7D] sm:text-sm rounded-lg block w-full p-2.5"
+              />
+              <div
+                class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 mb-[-25px]"
+              >
+                <img
+                  src="/img/eye-pass-on.svg"
+                  v-if="typePassword2"
+                  @click="typePassword2 = !typePassword2"
+                  alt="on"
+                  class="cursor-pointer"
                 />
-                <div
-                  class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 mb-[-25px]"
-                >
-                  <img
-                    src="/img/eye-pass-on.svg"
-                    v-if="typePassword2"
-                    @click="typePassword2 = !typePassword2"
-                    alt="on"
-                    class="cursor-pointer"
-                  />
-                  <img
-                    src="/img/eye-pass-off.svg"
-                    v-else
-                    alt="off"
-                    @click="typePassword2 = !typePassword2"
-                    class="cursor-pointer"
-                  />
-                </div>
+                <img
+                  src="/img/eye-pass-off.svg"
+                  v-else
+                  alt="off"
+                  @click="typePassword2 = !typePassword2"
+                  class="cursor-pointer"
+                />
               </div>
+            </div>
           </div>
           <div class="flex flex-wrap">
             <div class="flex items-center pb-4">
@@ -311,7 +301,11 @@
                 Удалить
               </button>
             </div>
-            <p id="send-validate" class="text-red-600 pt-4 block" v-if="toast.open">
+            <p
+              id="send-validate"
+              class="text-red-600 pt-4 block"
+              v-if="toast.open"
+            >
               {{ toast.text }}
             </p>
           </div>
@@ -356,26 +350,24 @@ export default {
         now.getDate()
       );
       return maxDob.toISOString().slice(0, 10);
-    }
+    },
   },
   methods: {
     ...mapMutations({
       change_modal: "api/SET_MODAL",
     }),
     isLetter(e) {
-        let char = String.fromCharCode(e.keyCode);
-        if(/^[A-Za-z,А-Яа-я]+$/.test(char)) return true;
-        else e.preventDefault();
-        },
+      let char = String.fromCharCode(e.keyCode);
+      if (/^[A-Za-z,А-Яа-я]+$/.test(char)) return true;
+      else e.preventDefault();
+    },
     ...mapActions({
       edit: "api/edit",
       get_page: "api/get_page",
       edit: "api/edit",
     }),
     async getStuff() {
-      let request = await this.$axios.get(
-        `/Staff/${this.$route.params.slug}`
-      );
+      let request = await this.$axios.get(`/Staff/${this.$route.params.slug}`);
       return Object.keys(this.form).map((item) => {
         this.form[item] = request.data[item];
       });
@@ -395,7 +387,6 @@ export default {
 
   mounted() {
     this.getStuff();
-    console.log(this.minDate);
   },
 };
 </script>
