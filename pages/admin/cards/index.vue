@@ -143,7 +143,7 @@
       }),
       async getCard() {
         let payload = {
-          request: `/StaffRegistration?type=3&page=${this.page}`,
+          request: `/GetStationList?type=1&page=${this.page}`,
           key: "card",
         };
         await this.get_page(payload);
@@ -158,7 +158,7 @@
       },
       pageChangeHandler(selected) {
         this.page = selected;
-        this.getStuff();
+        this.getCard();
       },
     },
     mounted() {
