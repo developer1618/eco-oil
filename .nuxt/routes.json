@@ -2,225 +2,225 @@
   {
     "name": "admin",
     "path": "/admin",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\index.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\index.vue",
     "chunkName": "pages/admin/index",
-    "_name": "_7a97de6c"
+    "_name": "_30dac43a"
   },
   {
     "name": "login",
     "path": "/login",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\login\\\\index.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\login\\\\index.vue",
     "chunkName": "pages/login/index",
-    "_name": "_85d183dc"
+    "_name": "_2a11fd89"
   },
   {
     "name": "partner",
     "path": "/partner",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\partner\\\\index.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\partner\\\\index.vue",
     "chunkName": "pages/partner/index",
-    "_name": "_2222c713"
+    "_name": "_3b6b84ca"
   },
   {
     "name": "admin-bonus",
     "path": "/admin/bonus",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\bonus\\\\index.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\bonus\\\\index.vue",
     "chunkName": "pages/admin/bonus/index",
-    "_name": "_c9f7e9ae"
+    "_name": "_6a1f705c"
   },
   {
     "name": "admin-cards",
     "path": "/admin/cards",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\cards\\\\index.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\cards\\\\index.vue",
     "chunkName": "pages/admin/cards/index",
-    "_name": "_4359d165"
+    "_name": "_73460e0e"
   },
   {
     "name": "admin-clients",
     "path": "/admin/clients",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\clients\\\\index.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\clients\\\\index.vue",
     "chunkName": "pages/admin/clients/index",
-    "_name": "_666f9220"
+    "_name": "_4c3f4889"
   },
   {
     "name": "admin-device",
     "path": "/admin/device",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\device\\\\index.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\device\\\\index.vue",
     "chunkName": "pages/admin/device/index",
-    "_name": "_c6055e54"
+    "_name": "_6a98a94d"
   },
   {
     "name": "admin-monitoring",
     "path": "/admin/monitoring",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\monitoring\\\\index.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\monitoring\\\\index.vue",
     "chunkName": "pages/admin/monitoring/index",
-    "_name": "_60fc2ea4"
+    "_name": "_708f18ca"
   },
   {
     "name": "admin-partners",
     "path": "/admin/partners",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\partners\\\\index.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\partners\\\\index.vue",
     "chunkName": "pages/admin/partners/index",
-    "_name": "_6b3862e1"
+    "_name": "_3f5f7998"
   },
   {
     "name": "admin-profile",
     "path": "/admin/profile",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\profile\\\\index.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\profile\\\\index.vue",
     "chunkName": "pages/admin/profile/index",
-    "_name": "_c014a042"
+    "_name": "_f4753370"
   },
   {
     "name": "admin-report",
     "path": "/admin/report",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\report\\\\index.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\report\\\\index.vue",
     "chunkName": "pages/admin/report/index",
-    "_name": "_b9287990"
+    "_name": "_71071baf"
   },
   {
     "name": "admin-scoreboard",
     "path": "/admin/scoreboard",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\scoreboard\\\\index.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\scoreboard\\\\index.vue",
     "chunkName": "pages/admin/scoreboard/index",
-    "_name": "_403ce050"
+    "_name": "_469dd4cf"
   },
   {
     "name": "admin-scoreboard2",
     "path": "/admin/scoreboard2",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\scoreboard2\\\\index.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\scoreboard2\\\\index.vue",
     "chunkName": "pages/admin/scoreboard2/index",
-    "_name": "_4985e84a"
+    "_name": "_8b5b7b9a"
   },
   {
     "name": "admin-settings",
     "path": "/admin/settings",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\settings\\\\index.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\settings\\\\index.vue",
     "chunkName": "pages/admin/settings/index",
-    "_name": "_77b48869"
+    "_name": "_4bdb9f20"
   },
   {
     "name": "admin-staff",
     "path": "/admin/staff",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\staff\\\\index.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\staff\\\\index.vue",
     "chunkName": "pages/admin/staff/index",
-    "_name": "_fdf25470"
+    "_name": "_9e19db1e"
   },
   {
     "name": "admin-stations",
     "path": "/admin/stations",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\stations\\\\index.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\stations\\\\index.vue",
     "chunkName": "pages/admin/stations/index",
-    "_name": "_6718454d"
+    "_name": "_3b3f5c04"
   },
   {
     "name": "partner-employees",
     "path": "/partner/employees",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\partner\\\\employees\\\\index.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\partner\\\\employees\\\\index.vue",
     "chunkName": "pages/partner/employees/index",
-    "_name": "_42f9a9fc"
+    "_name": "_9873f836"
   },
   {
     "name": "partner-settings",
     "path": "/partner/settings",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\partner\\\\settings\\\\index.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\partner\\\\settings\\\\index.vue",
     "chunkName": "pages/partner/settings/index",
-    "_name": "_1dee0c50"
+    "_name": "_f6ab5d72"
   },
   {
     "name": "admin-device-adddevice",
     "path": "/admin/device/adddevice",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\device\\\\adddevice\\\\index.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\device\\\\adddevice\\\\index.vue",
     "chunkName": "pages/admin/device/adddevice/index",
-    "_name": "_157b4a67"
+    "_name": "_25265ce0"
   },
   {
     "name": "admin-partners-addpartners",
     "path": "/admin/partners/addpartners",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\partners\\\\addpartners\\\\index.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\partners\\\\addpartners\\\\index.vue",
     "chunkName": "pages/admin/partners/addpartners/index",
-    "_name": "_72781407"
+    "_name": "_5a8fdeb0"
   },
   {
     "name": "admin-staff-addstaff",
     "path": "/admin/staff/addstaff",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\staff\\\\addstaff\\\\index.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\staff\\\\addstaff\\\\index.vue",
     "chunkName": "pages/admin/staff/addstaff/index",
-    "_name": "_3b9f36ee"
+    "_name": "_0008bc1c"
   },
   {
     "name": "admin-stations-addstations",
     "path": "/admin/stations/addstations",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\stations\\\\addstations\\\\index.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\stations\\\\addstations\\\\index.vue",
     "chunkName": "pages/admin/stations/addstations/index",
-    "_name": "_0a686387"
+    "_name": "_1affa3a0"
   },
   {
     "name": "partner-employees-addemployees",
     "path": "/partner/employees/addemployees",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\partner\\\\employees\\\\addemployees\\\\index.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\partner\\\\employees\\\\addemployees\\\\index.vue",
     "chunkName": "pages/partner/employees/addemployees/index",
-    "_name": "_09566078"
+    "_name": "_35c6aea1"
   },
   {
     "name": "admin-path-to-flowbite-dist-flowbite.min",
     "path": "/admin/path/to/flowbite/dist/flowbite.min",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\path\\\\to\\\\flowbite\\\\dist\\\\flowbite.min.js",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\path\\\\to\\\\flowbite\\\\dist\\\\flowbite.min.js",
     "chunkName": "pages/admin/path/to/flowbite/dist/flowbite.min",
-    "_name": "_53492543"
+    "_name": "_665f6e8c"
   },
   {
     "name": "admin-clients-editclients-slug",
     "path": "/admin/clients/editclients/:slug?",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\clients\\\\editclients\\\\_slug.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\clients\\\\editclients\\\\_slug.vue",
     "chunkName": "pages/admin/clients/editclients/_slug",
-    "_name": "_646c522e"
+    "_name": "_0f67e336"
   },
   {
     "name": "admin-device-editpartners-slug",
     "path": "/admin/device/editpartners/:slug?",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\device\\\\editpartners\\\\_slug.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\device\\\\editpartners\\\\_slug.vue",
     "chunkName": "pages/admin/device/editpartners/_slug",
-    "_name": "_56e15339"
+    "_name": "_2a7de120"
   },
   {
     "name": "admin-partners-editpartners-slug",
     "path": "/admin/partners/editpartners/:slug?",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\partners\\\\editpartners\\\\_slug.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\partners\\\\editpartners\\\\_slug.vue",
     "chunkName": "pages/admin/partners/editpartners/_slug",
-    "_name": "_6bc27604"
+    "_name": "_f2b7ff0a"
   },
   {
     "name": "admin-profile-forgotPassword-slug",
     "path": "/admin/profile/forgotPassword/:slug?",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\profile\\\\forgotPassword\\\\_slug.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\profile\\\\forgotPassword\\\\_slug.vue",
     "chunkName": "pages/admin/profile/forgotPassword/_slug",
-    "_name": "_6b16390e"
+    "_name": "_0bc4a7e2"
   },
   {
     "name": "admin-staff-editstaff-slug",
     "path": "/admin/staff/editstaff/:slug?",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\staff\\\\editstaff\\\\_slug.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\staff\\\\editstaff\\\\_slug.vue",
     "chunkName": "pages/admin/staff/editstaff/_slug",
-    "_name": "_45dd56ae"
+    "_name": "_3d0c7336"
   },
   {
     "name": "admin-stations-editstations-slug",
     "path": "/admin/stations/editstations/:slug?",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\admin\\\\stations\\\\editstations\\\\_slug.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\admin\\\\stations\\\\editstations\\\\_slug.vue",
     "chunkName": "pages/admin/stations/editstations/_slug",
-    "_name": "_4d9f8ddc"
+    "_name": "_68811853"
   },
   {
     "name": "partner-employees-editemployees-slug",
     "path": "/partner/employees/editemployees/:slug?",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\partner\\\\employees\\\\editemployees\\\\_slug.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\partner\\\\employees\\\\editemployees\\\\_slug.vue",
     "chunkName": "pages/partner/employees/editemployees/_slug",
-    "_name": "_332c2835"
+    "_name": "_d674c1a8"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\LIVO\\\\eco-oil\\\\pages\\\\index.vue",
+    "component": "C:\\\\Users\\\\komyob.raufzoda\\\\Desktop\\\\eco-oil\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_55781559"
+    "_name": "_1c28847c"
   }
 ]
