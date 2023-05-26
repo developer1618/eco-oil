@@ -76,7 +76,7 @@
               <select
                 id="helper-text4"
                 v-model="form.gender"
-                class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 text-white focus:ring-blue-500 focus:border-blue-500"
+                class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500"
               >
                 <option value="Выберите пол" disabled>Выберите пол</option>
                 <option value="M">Мужской</option>
@@ -137,7 +137,7 @@
               <select
                 id="helper-text6"
                 v-model="form.job"
-                class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 text-white focus:ring-blue-500 focus:border-blue-500"
+                class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500"
               >
                 <option value="" disabled selected>Выберите должность</option>
                 <option value="1">Кассир</option>
@@ -156,7 +156,7 @@
               <select
                 id="helper-text7"
                 v-model="form.station"
-                class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 text-white focus:ring-blue-500 focus:border-blue-500"
+                class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500"
               >
                 <option value="1">Шохмансур, Дустии Халкҳо 31</option>
                 <option value="2">Шохмансур, Дустии Халкҳо 32</option>

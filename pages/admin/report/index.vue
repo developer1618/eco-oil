@@ -6,7 +6,7 @@
           <h3 class="text-sm font-medium text-dark pb-5">ОТЧЁТЫ / ЕЖЕМЕСЯЧНЫЙ</h3>
         </div>
         <div class="flex items-baseline">
-          <div class="w-64">
+          <div class="w-64 pr-4">
             <select id="countries" class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 w-56">
               <option value="year">Год</option>
               <option value="2020">2020</option>
@@ -48,7 +48,7 @@
         </div>
       </div>
         <div class="pb-4">
-          <Table :titles="thead" :bodies="report.results" :isIcon="false" :keys="['station','ai95','ai92','dt','gas','created_at',]" />
+          <Table :titles="thead" :bodies="report.results" :isIcon="false" :keys="['station_address','ai95','ai92','dt','gas','created_at',]" />
         </div>
         <div>
           <Pagination :currentPage="page" :totalPage="Number(report.count)" @pageChangeHandler="pageChangeHandler"  />
@@ -58,7 +58,6 @@
   </template>
   <script>
   import { mapState, mapActions } from "vuex";
-  import CalendarInput from "../../../components/CalendarInput.vue";
   import Footer from "../../../components/Footer.vue";
   export default {
     name: "IndexPage",

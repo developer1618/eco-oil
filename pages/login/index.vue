@@ -127,7 +127,6 @@ export default {
           this.$router.push("admin/scoreboard");
         })
         .catch((err) => {
-          console.log(err);
           this.error = true;
         });
     },

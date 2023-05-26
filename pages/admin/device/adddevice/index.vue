@@ -111,16 +111,15 @@ export default {
         }),
         async getPartner()
         {
-            let payload = {
-                text:"ПАРТНЁРЫ добавлено!",
-                request:"/PartnerRegistration",
-                form:this.form,
-            }
-           await this.store(payload);
-      setTimeout(() => {
-        this.$router.back();
-      }, 2000);
-            
+        let payload = {
+            text:"ПАРТНЁРЫ добавлено!",
+            request:"/PartnerRegistration",
+            form:this.form,
+        }
+        await this.store(payload);
+        setTimeout(() => {
+          this.$router.back();
+        }, 2000); 
         },
     },
 }

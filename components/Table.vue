@@ -40,6 +40,10 @@
                           ? "Бонус"
                           : key === "payment_type" && title[key] === "Cash"
                           ? "Наличные"
+                          : key === "gender" && title[key] === "M"
+                          ? "Муж"
+                          : key === "gender" && title[key] === "F"
+                          ? "Жен"
                           : title[key]
                       }}
                     </p>

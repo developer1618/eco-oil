@@ -33,7 +33,7 @@
           path="/editdevice"
           :isIcon="true"
           :bodies="stuff.results"
-          :keys="['station_address','last_login', 'last_logout',]"
+          :keys="['device_id','station_id', 'last_logout', 'status',]"
         />
       </div>
       <div>
@@ -59,7 +59,8 @@
         page: 1,
         search: "",
         thead: [
-          "ID",
+          "ID УСТРОЙСТВО",
+          "СТАНЦИЯ",
           "ДАТА ИЗМЕНЕНИЯ",
           "СТАТУС",
           "",
@@ -78,7 +79,7 @@
       }),
       async getStuff() {
         let payload = {
-          request: `/StaffRegistration?type=1&page=${this.page}`,
+          request: `/Device?type=1&page=${this.page}`,
           form: {
             liter: this.liter,
           },

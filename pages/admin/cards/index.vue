@@ -6,7 +6,7 @@
           <h3 class="text-sm font-medium text-dark pb-5">МОНИТОРИНГ / КАРТЫ</h3>
         </div>
         <div class="flex items-baseline">
-          <div class="w-64">
+          <div class="w-64 pr-4">
             <select id="countries" class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 w-56">
               <option value="year">Год</option>
               <option value="2020">2020</option>
@@ -15,7 +15,7 @@
               <option value="2023">2023</option>
             </select>
           </div>
-          <div class="w-64">
+          <div class="w-64 pr-4">
             <select id="countries" class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 w-56">
               <option value="month">Месяц</option>
               <option value="jan">Январь</option>
@@ -32,7 +32,7 @@
               <option value="dec">Декабр</option>
             </select>
           </div>
-          <div class="w-64">
+          <div class="w-64 pr-4">
             <select id="countries" class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 w-56">
               <option value="US">Выберите станцию</option>
               <option value="CA">Станция №1</option>
@@ -132,6 +132,9 @@
       };
     },
     computed: {
+      ...mapState({
+        meta: (state) => state.api.meta,
+      }),
       ...mapGetters({
         card:"api/cardFilter",
       })
@@ -143,7 +146,7 @@
       }),
       async getCard() {
         let payload = {
-          request: `/GetStationList?type=1&page=${this.page}`,
+          request: `/Staff?type=1&page=${this.page}`,
           key: "card",
         };
         await this.get_page(payload);

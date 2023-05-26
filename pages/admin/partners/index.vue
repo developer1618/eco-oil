@@ -64,7 +64,6 @@ export default {
           key: 'partners',
         }
         await this.get_page(payload);
-        console.log(this.partners); // add this line to check the retrieved data
       },
 
       async onSearch(val){
@@ -74,13 +73,10 @@ export default {
           key: 'partners',
 
         }
-        console.log(payload); // add this line to check the payload being sent
         await this.get_page(payload);
-        console.log(this.partners); // add this line to check the retrieved data
       },
 
       pageChangeHandler(selected){
-        console.log(selected); // add this line to check the selected page number
         this.page = selected;
         this.getPartner();
       },
