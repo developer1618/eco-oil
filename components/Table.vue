@@ -41,9 +41,9 @@
                           : key === "payment_type" && title[key] === "Cash"
                           ? "Наличные"
                           : key === "gender" && title[key] === "M"
-                          ? "Муж"
+                          ? "М"
                           : key === "gender" && title[key] === "F"
-                          ? "Жен"
+                          ? "Ж"
                           : title[key]
                       }}
                     </p>
@@ -58,7 +58,8 @@
                   </div>
                 </div>
               </td>
-              <td class="flex justify-center text-center py-2">
+              <td class="flex justify-center text-center py-2"
+              :class="icon ? 'table-icon' : ''">
                 <nuxt-link
                   v-if="isIcon"
                   :to="`${$route.path}${path}/${title.id}`"
@@ -97,7 +98,7 @@
 <script>
 import { mapMutations, mapState } from "vuex";
 export default {
-  props: ["bodies", "titles", "isIcon", "keys", "path", "deleted"],
+  props: ["bodies", "titles", "isIcon", "keys", "path", "deleted", "icon"],
 
   computed: {
     ...mapState({
@@ -122,3 +123,8 @@ export default {
   mounted() {},
 };
 </script>
+<style scoped>
+.table-icon {
+  display: none;
+}
+</style>

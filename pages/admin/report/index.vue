@@ -48,7 +48,7 @@
         </div>
       </div>
         <div class="pb-4">
-          <Table :titles="thead" :bodies="report.results" :isIcon="false" :keys="['station_address','ai95','ai92','dt','gas','created_at',]" />
+          <Table :titles="thead" :bodies="report.results" :isIcon="false" :keys="['station_address','ai95','ai92','dt','gas','total_sum']" :icon="true"/>
         </div>
         <div>
           <Pagination :currentPage="page" :totalPage="Number(report.count)" @pageChangeHandler="pageChangeHandler"  />

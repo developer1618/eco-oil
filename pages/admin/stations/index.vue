@@ -51,7 +51,6 @@ export default {
     return {
       page: 1,
       search: "",
-
       thead: ["СТАНЦИЯ", "АИ-95", "АИ-92", "ДТ", "ГАЗ", ""],
     };
   },

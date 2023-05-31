@@ -7,10 +7,8 @@
         </div>
         <div class="flex items-baseline">
           <div class="pl-4 w-64">
-            <select
-              id="countries"
-              class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 h-10 focus:border-blue-500 block w-full p-2.5 w-56 ml-4"
-            >
+            <select id="countries"
+              class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 h-10 focus:border-blue-500 block w-full p-2.5 w-56 ml-4">
               <option value="US">Выберите станцию</option>
               <option value="CA">Станция №1</option>
               <option value="CA">Станция №2</option>
@@ -20,10 +18,8 @@
             </select>
           </div>
           <div class="pl-4 w-64">
-            <select
-              id="countries"
-              class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 h-10 focus:border-blue-500 block w-full p-2.5 w-56 ml-4"
-            >
+            <select id="countries"
+              class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 h-10 focus:border-blue-500 block w-full p-2.5 w-56 ml-4">
               <option value="US">Выберите статус</option>
               <option value="CA">Активный</option>
               <option value="CA">Неактивный</option>
@@ -38,27 +34,17 @@
         </div>
       </div>
       <div class="pb-4">
-        <Table
-          :titles="thead"
-          path="/editstaff"
-          :bodies="stuff.results"
-          :isIcon="true"
-          :keys="[
-            ['name', 'surname'],
-            'date_of_birth',
-            'gender',
-            'phone',
-            'station_address',
-            'status',
-          ]"
-        />
+        <Table :titles="thead" path="/editstaff" :bodies="stuff.results" :isIcon="true" :keys="[
+          ['name', 'surname'],
+          'date_of_birth',
+          'gender',
+          'phone',
+          'station_address',
+          'status',
+        ]" />
       </div>
       <div>
-        <Pagination
-          :currentPage="page"
-          :totalPage="Number(meta)"
-          @pageChangeHandler="pageChangeHandler"
-        />
+        <Pagination :currentPage="page" :totalPage="Number(meta)" @pageChangeHandler="pageChangeHandler" />
       </div>
     </div>
   </div>
@@ -125,3 +111,4 @@ export default {
   },
 };
 </script>
+

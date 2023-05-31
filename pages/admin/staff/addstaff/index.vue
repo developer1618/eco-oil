@@ -82,11 +82,11 @@
             <ValidationProvider v-slot="{ errors }">
               <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Должность <span
                   class="text-red-600"></span></label>
-              <select id="job" v-model="form.job"
+              <select id="job" v-model="form.role"
                 class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500">
                 <option value="Выберите пол">Выберите должность</option>
-                <option value="Кассир">Кассир</option>
-                <option value="Администратор">Администратор</option>
+                <option value="2">Кассир</option>
+                <option value="1">Администратор</option>
               </select>
               <p class="text-red-600">{{ errors[0] }}</p>
             </ValidationProvider>
@@ -206,7 +206,7 @@ export default {
         status: null,
         address: "",
         station: null,
-        role: 2,
+        role: '',
         min: 9,
         max: 9,
       },
