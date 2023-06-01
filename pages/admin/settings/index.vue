@@ -3,7 +3,7 @@
         <div class="grid px-8 py-10 grid-cols-2 bg-white h-[85vh]   ">
             <ValidationObserver v-slot="{handleSubmit}">
             <h3 class="text-sm font-medium text-dark pb-10">НАСТРОЙКИ</h3>
-                <form class="grid grid-cols-4 gap-8" @submit.prevent="handleSubmit(getStations)">
+                <form class="grid grid-cols-4 gap-8" @submit.prevent="handleSubmit(editSettings)">
                     <div class="col-span-2">
                         <ValidationProvider rules="required" v-slot="{ errors }">
                             <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Имя<span class="text-red-600 absolute"></span></label>
@@ -38,30 +38,40 @@
                         </ValidationProvider>
                     </div>
                     <div class="col-span-2">
-                        <ValidationProvider rules="required" v-slot="{ errors }">
-                            <div class="relative">
-                                <label for="password" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Новый пароль <span class="text-red-600 absolute"></span></label>
-                                <input :type="typePassword ? 'password' : 'text'" id="password" name="password" v-model="form.password" placeholder="••••••••" class="bg-white border border-gray-300 text-[#4D5D7D] sm:text-sm rounded-lg  block w-full p-2.5">
-                                <div class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 mb-[-25px]">
-                                <img src="/img/eye-pass-on.svg" v-if="typePassword" @click="typePassword = !typePassword" alt="on" class="cursor-pointer">
-                                <img src="/img/eye-pass-off.svg" v-else alt="off" @click="typePassword = !typePassword" class="cursor-pointer">
-                                </div>                            
-                                <p class="text-red-600 pb-4 absolute">{{errors[0]}}</p>
-                            </div>
-                        </ValidationProvider>
+                      <ValidationProvider rules="required" v-slot="{ errors }">
+                        <div class="relative">
+                          <label for="password" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Пароль <span
+                              class="text-red-600"></span></label>
+                          <input :type="typePassword ? 'password' : 'text'" id="password" name="password" v-model="form.password"
+                            placeholder="••••••••"
+                            class="bg-white border border-gray-300 text-[#4D5D7D] sm:text-sm rounded-lg block w-full p-2.5" />
+                          <div class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 mb-[-25px]">
+                            <img src="/img/eye-pass-on.svg" v-if="typePassword" @click="typePassword = !typePassword" alt="on"
+                              class="cursor-pointer" />
+                            <img src="/img/eye-pass-off.svg" v-else alt="off" @click="typePassword = !typePassword"
+                              class="cursor-pointer" />
+                          </div>
+                          <p class="text-red-600 pb-4 absolute">{{ errors[0] }}</p>
+                        </div>
+                      </ValidationProvider>
                     </div>
                     <div class="col-span-2">
-                        <ValidationProvider rules="required" v-slot="{ errors }">
-                            <div class="relative">
-                                <label for="password2" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Повторите пароль <span class="text-red-600 absolute"></span></label>
-                                <input :type="typePassword ? 'password' : 'text'" id="password2" name="password" v-model="form.password" placeholder="••••••••" class="bg-white border border-gray-300 text-[#4D5D7D] sm:text-sm rounded-lg  block w-full p-2.5">
-                                <div class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 mb-[-25px]">
-                                <img src="/img/eye-pass-on.svg" v-if="typePassword" @click="typePassword = !typePassword" alt="on" class="cursor-pointer">
-                                <img src="/img/eye-pass-off.svg" v-else alt="off" @click="typePassword = !typePassword" class="cursor-pointer">
-                                </div>
-                                <p class="text-red-600 pb-4 absolute">{{errors[0]}}</p>
-                            </div>
-                        </ValidationProvider>
+                      <ValidationProvider rules="required" v-slot="{ errors }">
+                        <div class="relative">
+                          <label for="password" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Повторите пароль <span
+                              class="text-red-600"></span></label>
+                          <input :type="typePassword2 ? 'password' : 'text'" id="password" name="password" v-model="form.password2"
+                            placeholder="••••••••"
+                            class="bg-white border border-gray-300 text-[#4D5D7D] sm:text-sm rounded-lg block w-full p-2.5" />
+                          <div class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 mb-[-25px]">
+                            <img src="/img/eye-pass-on.svg" v-if="typePassword2" @click="typePassword2 = !typePassword2" alt="on"
+                              class="cursor-pointer" />
+                            <img src="/img/eye-pass-off.svg" v-else alt="off" @click="typePassword2 = !typePassword2"
+                              class="cursor-pointer" />
+                          </div>
+                          <p class="text-red-600 pb-4 absolute">{{ errors[0] }}</p>
+                        </div>
+                      </ValidationProvider>
                     </div>
                     <div class="col-span-4 navbtn">
                         <button type="submit"  class="text-white bg-[#009688] hover:bg-[#157766] font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2  focus:outline-none">Сохранить</button>
@@ -79,18 +89,22 @@ export default {
   layout: "admin",
   data() {
     return {
+      typePassword: true,
+      typePassword2: true,
       form: {
         name: '',
         surname: '',
         email: '',
         phone: '',
         password: '',
+        password2: '',
       },
     };
   },
   computed: {
     ...mapState({
       toast: (state) => state.api.toast,
+      settings: (state) => state.api.settings,
     }),
   },
   methods: {
@@ -107,7 +121,7 @@ export default {
     ...mapMutations({
       change_modal: "api/SET_MODAL",
     }),
-    async getSettings() {
+    async editSettings() {
       let request = await this.$axios.get(
         `/Registration/${this.$route.params.slug}`
       );
@@ -115,7 +129,7 @@ export default {
         this.form[item] = request.data[item];
       });
     },
-    async changeSettings() {
+    async editSettings() {
       let payload = {
         text: "Станция изменено!",
         request: `/Registration/${this.$route.params.slug}`,
@@ -129,7 +143,7 @@ export default {
   },
 
   mounted() {
-    this.getSettings();
+    this.editSettings();
   },
 };
 </script>
