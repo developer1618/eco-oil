@@ -166,10 +166,12 @@
                 Удалить
               </button>
             </div>
-            <p id="send-validate" class="text-red-600 pt-4 block" v-if="toast.open">
-              {{ toast.text }}
-            </p>
           </div>
+          <div class="-mt-8">
+              <p id="send-validate" class="text-red-600 pt-4 block" v-if="toast.open">
+                {{ toast.text }}
+              </p>
+            </div>
         </form>
       </ValidationObserver>
     </div>

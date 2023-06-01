@@ -85,7 +85,7 @@ export const actions = {
   async edit({ dispatch, commit }, payload) {
     try {
       await this.$axios
-        .put(payload.request, payload.form, {
+        .patch(payload.request, payload.form, {
           headers: {
             "Content-Type": "application/json",
           },
