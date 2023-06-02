@@ -155,7 +155,7 @@
         let payload = {
           request: `/SearchInStaff?query=${val}`,
           body: [],
-          key: "stuff",
+          key: "staff",
         };
         await this.get_page(payload);
       },

@@ -7,10 +7,8 @@
         </div>
         <div class="flex items-baseline">
           <div class="pl-4 w-64">
-            <select
-              id="countries"
-              class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 h-10 focus:border-blue-500 block w-full p-2.5 w-56 ml-4"
-            >
+            <select id="countries"
+              class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 h-10 focus:border-blue-500 block w-full p-2.5 w-56 ml-4">
               <option value="US">Выберите станцию</option>
               <option value="CA">Станция №1</option>
               <option value="CA">Станция №2</option>
@@ -25,24 +23,18 @@
         </div>
       </div>
       <div class="pb-4">
-        <Table
-          :titles="thead"
-          :bodies="clients.results"
-          path="/editclients"
-          :isIcon="true"
-          :keys="[
-            'full_name',
-            'date_of_birth',
-            'gender',
-            'plate_number',
-            'card_number',
-            'phone',
-            'registration_date',
-            'bonus',
-            'full_name',
-            'status',
-          ]"
-        />
+        <Table :titles="thead" :bodies="clients.results" path="/editclients" :isIcon="true" :keys="[
+          'full_name',
+          'date_of_birth',
+          'gender',
+          'plate_number',
+          'card_number',
+          'phone',
+          'registration_date',
+          'bonus',
+          'full_name',
+          'status',
+        ]" />
       </div>
       <div class="btn flex justify-end py-4">
         <button class="bg-[#009688] text-white px-3 py-2 rounded-md ml-4">
@@ -50,11 +42,7 @@
         </button>
       </div>
       <div>
-        <Pagination
-          :currentPage="page"
-          :totalPage="Number(clients.count)"
-          @pageChangeHandler="pageChangeHandler"
-        />
+        <Pagination :currentPage="page" :totalPage="Number(clients.count)" @pageChangeHandler="pageChangeHandler" />
       </div>
       <!-- <div class="flex">
         <AddButton addButton="Редактировать" link="clients/editclients"/>

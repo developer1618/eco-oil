@@ -144,18 +144,22 @@ export default {
             typePassword2: true,
             form: {
                 username: '',
-                password: '',
+                password: "",
+                password2: "",
                 phone: '',
                 name: '',
                 address: '',
                 role: 3,
                 balance: '',
                 status: '',
+                min: 9,
+                max: 9,
             },
         };
     },
     computed: {
         ...mapState({
+            station: (state) => state.api.station,
             toast: (state) => state.api.toast,
         })
     },

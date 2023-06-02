@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="pb-4">
-        <Table :titles="thead" path="/editstaff" :bodies="stuff.results" :isIcon="true" :keys="[
+        <Table :titles="thead" :bodies="staff.results" path="/editstaff" :isIcon="true" :keys="[
           ['name', 'surname'],
           'date_of_birth',
           'gender',
@@ -44,7 +44,7 @@
         ]" />
       </div>
       <div>
-        <Pagination :currentPage="page" :totalPage="Number(meta)" @pageChangeHandler="pageChangeHandler" />
+        <Pagination :currentPage="page" :totalPage="Number(staff.count)" @pageChangeHandler="pageChangeHandler" />
       </div>
     </div>
   </div>
@@ -53,8 +53,8 @@
 <script>
 import { mapState, mapActions } from "vuex";
 export default {
-  layout: "admin",
   name: "IndexPage",
+  layout: "admin",
   head: {
     title: "СОТРУДНИКИ",
   },
@@ -75,7 +75,7 @@ export default {
   },
   computed: {
     ...mapState({
-      stuff: (state) => state.api.stuff,
+      staff: (state) => state.api.staff,
       meta: (state) => state.api.meta,
     }),
   },
@@ -89,7 +89,7 @@ export default {
         form: {
           liter: this.liter,
         },
-        key: "stuff",
+        key: "staff",
       };
       await this.get_page(payload);
     },
@@ -97,7 +97,7 @@ export default {
       let payload = {
         request: `/SearchInStaff?query=${val}`,
         body: [],
-        key: "stuff",
+        key: "staff",
       };
       await this.get_page(payload);
     },

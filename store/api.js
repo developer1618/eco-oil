@@ -1,6 +1,6 @@
 export const state = () => ({
   client: [],
-  stuff: [],
+  staff: [],
   scoreboard: [],
   report: [],
   card: [],

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[43],{426:function(t,n,e){"use strict";e.r(n);var r={layout:"chat",middleware:"partner",created:function(){this.$router.push("/partner")}},c=e(11),component=Object(c.a)(r,(function(){return(0,this._self._c)("div")}),[],!1,null,null,null);n.default=component.exports}}]);

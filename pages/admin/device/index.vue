@@ -32,7 +32,7 @@
           :titles="thead"
           path="/editdevice"
           :isIcon="true"
-          :bodies="stuff.results"
+          :bodies="staff.results"
           :keys="['device_id','station_id', 'last_logout', 'status',]"
         />
       </div>
@@ -69,7 +69,7 @@
     },
     computed: {
       ...mapState({
-        stuff: (state) => state.api.stuff,
+        staff: (state) => state.api.staff,
         meta: (state) => state.api.meta,
       }),
     },
@@ -83,7 +83,7 @@
           form: {
             liter: this.liter,
           },
-          key: "stuff",
+          key: "staff",
         };
         await this.get_page(payload);
       },
@@ -91,7 +91,7 @@
         let payload = {
           request: `/SearchInStaff?query=${val}`,
           body: [],
-          key: "stuff",
+          key: "staff",
         };
         await this.get_page(payload);
       },
