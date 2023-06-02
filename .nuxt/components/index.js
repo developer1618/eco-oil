@@ -1,17 +1,17 @@
-export const AddButton = () => import('../..\\components\\AddButton.vue' /* webpackChunkName: "components/add-button" */).then(c => wrapFunctional(c.default || c))
-export const AddModal = () => import('../..\\components\\AddModal.vue' /* webpackChunkName: "components/add-modal" */).then(c => wrapFunctional(c.default || c))
-export const AdminMenu = () => import('../..\\components\\AdminMenu.vue' /* webpackChunkName: "components/admin-menu" */).then(c => wrapFunctional(c.default || c))
-export const CalendarInput = () => import('../..\\components\\CalendarInput.vue' /* webpackChunkName: "components/calendar-input" */).then(c => wrapFunctional(c.default || c))
-export const DeleteModal = () => import('../..\\components\\DeleteModal.vue' /* webpackChunkName: "components/delete-modal" */).then(c => wrapFunctional(c.default || c))
-export const ExitModal = () => import('../..\\components\\ExitModal.vue' /* webpackChunkName: "components/exit-modal" */).then(c => wrapFunctional(c.default || c))
-export const Footer = () => import('../..\\components\\Footer.vue' /* webpackChunkName: "components/footer" */).then(c => wrapFunctional(c.default || c))
-export const Loader = () => import('../..\\components\\Loader.vue' /* webpackChunkName: "components/loader" */).then(c => wrapFunctional(c.default || c))
-export const NuxtLogo = () => import('../..\\components\\NuxtLogo.vue' /* webpackChunkName: "components/nuxt-logo" */).then(c => wrapFunctional(c.default || c))
-export const Pagination = () => import('../..\\components\\Pagination.vue' /* webpackChunkName: "components/pagination" */).then(c => wrapFunctional(c.default || c))
-export const PartnerMenu = () => import('../..\\components\\PartnerMenu.vue' /* webpackChunkName: "components/partner-menu" */).then(c => wrapFunctional(c.default || c))
-export const Search = () => import('../..\\components\\Search.vue' /* webpackChunkName: "components/search" */).then(c => wrapFunctional(c.default || c))
-export const Table = () => import('../..\\components\\Table.vue' /* webpackChunkName: "components/table" */).then(c => wrapFunctional(c.default || c))
-export const UploadFile = () => import('../..\\components\\UploadFile.vue' /* webpackChunkName: "components/upload-file" */).then(c => wrapFunctional(c.default || c))
+export { default as AddButton } from '../..\\components\\AddButton.vue'
+export { default as AddModal } from '../..\\components\\AddModal.vue'
+export { default as AdminMenu } from '../..\\components\\AdminMenu.vue'
+export { default as CalendarInput } from '../..\\components\\CalendarInput.vue'
+export { default as DeleteModal } from '../..\\components\\DeleteModal.vue'
+export { default as ExitModal } from '../..\\components\\ExitModal.vue'
+export { default as Footer } from '../..\\components\\Footer.vue'
+export { default as Loader } from '../..\\components\\Loader.vue'
+export { default as NuxtLogo } from '../..\\components\\NuxtLogo.vue'
+export { default as Pagination } from '../..\\components\\Pagination.vue'
+export { default as PartnerMenu } from '../..\\components\\PartnerMenu.vue'
+export { default as Search } from '../..\\components\\Search.vue'
+export { default as Table } from '../..\\components\\Table.vue'
+export { default as UploadFile } from '../..\\components\\UploadFile.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

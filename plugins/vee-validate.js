@@ -10,12 +10,11 @@ import {
   between,
   min_value,
   image,
-  mimes
+  mimes,
 } from "vee-validate/dist/rules";
 
 Vue.component("ValidationObserver", ValidationObserver);
 Vue.component("ValidationProvider", ValidationProvider);
-
 
 extend("required", {
   ...required,
@@ -49,4 +48,8 @@ extend("image", {
 extend("mimes", {
   ...mimes,
   message: "Добавьте только ПАРТНЁРЫ!",
+});
+extend("confirmed", {
+  ...confirmed,
+  message: "Пароль не совпадает!",
 });
