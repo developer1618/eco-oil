@@ -5,7 +5,7 @@
         <div class="flex">
           <h3 class="text-sm font-medium text-dark pb-5">КЛИЕНТЫ (АВТО)</h3>
         </div>
-        <div class="flex items-baseline">
+        <div class="flex">
           <div class="pl-4 w-64">
             <select id="countries"
               class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 h-10 focus:border-blue-500 block w-full p-2.5 w-56 ml-4">
@@ -32,7 +32,7 @@
           'phone',
           'registration_date',
           'bonus',
-          'full_name',
+          '',
           'status',
         ]" />
       </div>

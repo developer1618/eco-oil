@@ -7,7 +7,7 @@
             СТАНЦИИ (ЦЕНЫ НА ТОПЛИВО)
           </h3>
         </div>
-        <div class="flex items-baseline">
+        <div class="flex">
           <div class="flex pl-4 w-72">
             <Search @onChange="onSearch" searchPlaceholder="Найти ..." />
           </div>

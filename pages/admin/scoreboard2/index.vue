@@ -5,7 +5,7 @@
           <div class="flex">
             <h3 class="text-sm font-medium text-dark pb-5">ТАБЛО</h3>
           </div>
-          <div class="flex items-baseline">
+          <div class="flex">
             <CalendarInput />
             <div class="pl-4 w-64">
               <select id="bonus" class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 h-10 focus:border-blue-500 block w-full p-2.5 w-56 ml-4">

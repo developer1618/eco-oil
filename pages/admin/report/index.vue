@@ -5,7 +5,7 @@
         <div class="flex">
           <h3 class="text-sm font-medium text-dark pb-5">ОТЧЁТЫ / ЕЖЕМЕСЯЧНЫЙ</h3>
         </div>
-        <div class="flex items-baseline">
+        <div class="flex">
           <div class="w-64 pr-4">
             <select id="countries" class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 w-56">
               <option value="year">Год</option>

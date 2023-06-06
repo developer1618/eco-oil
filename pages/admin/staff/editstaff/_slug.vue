@@ -71,7 +71,7 @@
                   class="inline-flex items-center px-3 text-sm text-[#4D5D7D] rounded-l-md border border-r-0 border-gray-300 bg-white">
                   +992
                 </span>
-                <input type="tel" v-model="form.phone" id="website-admin"
+                <input type="number" v-model="form.phone" id="website-admin"
                   class="rounded-none rounded-r-lg border text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5"
                   placeholder="Введите Номер телефона" />
               </div>
@@ -144,6 +144,7 @@
             <div class="flex items-center pb-4">
               <label class="text-sm font-medium text-[#6B7280]">Статус</label>
             </div>
+            <ValidationProvider rules="required" v-slot="{ errors }">
             <div class="flex">
               <div class="flex items-center mr-4">
                 <input id="red-radio" type="radio" v-model="form.status" :value="1" name="colored-radio"
@@ -156,6 +157,8 @@
                 <label for="green-radio" class="ml-2 text-sm font-medium text-gray-500">Неактивный</label>
               </div>
             </div>
+            <p class="text-red-600 pb-4 absolute">{{ errors[0] }}</p>
+          </ValidationProvider>
           </div>
           <div class="flex col-span-4 navbtn">
             <button type="submit"

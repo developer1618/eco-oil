@@ -77,7 +77,7 @@
                   +992
                 </span>
                 <input
-                  type="tel"
+                  type="number"
                   v-model="form.phone"
                   id="website-admin"
                   class="rounded-none rounded-r-lg border text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5"

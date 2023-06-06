@@ -35,7 +35,7 @@
                                     class="inline-flex items-center px-3 text-sm text-[#4D5D7D] rounded-l-md border border-r-0 border-gray-300 bg-white">
                                     +992
                                 </span>
-                                <input type="tel" v-model="form.phone" id="website-admin"
+                                <input type="number" v-model="form.phone" id="website-admin"
                                     class="rounded-none rounded-r-lg border text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5"
                                     placeholder="Введите Номер телефона" />
                             </div>

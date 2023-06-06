@@ -3,7 +3,7 @@
         <div class="grid px-8 py-10 grid-cols-2 bg-white  h-[85vh]">
             <ValidationObserver v-slot="{ handleSubmit }">
                 <h3 class="text-sm font-medium text-dark pb-10">ПАРТНЁРЫ / РЕДАКТИРОВАНИЕ ПАРТНЁРА</h3>
-                <form class="grid grid-cols-4 gap-8" @submit.prevent="handleSubmit(getPartner)">
+                <form class="grid grid-cols-4 gap-8" @submit.prevent="handleSubmit(editPartner)">
                     <div class="col-span-2">
                         <ValidationProvider rules="required" v-slot="{ errors }">
                             <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Партнёр<span
@@ -35,7 +35,7 @@
                                     class="inline-flex items-center px-3 text-sm text-[#4D5D7D] rounded-l-md border border-r-0 border-gray-300 bg-white">
                                     +992
                                 </span>
-                                <input type="tel" v-model="form.phone" id="website-admin"
+                                <input type="number" v-model="form.phone" id="website-admin"
                                     class="rounded-none rounded-r-lg border text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5"
                                     placeholder="Введите Номер телефона" />
                             </div>
@@ -43,21 +43,21 @@
                         </ValidationProvider>
                     </div>
                     <div class="col-span-2">
-                        <ValidationProvider rules="required" v-slot="{ errors }">
+                        <ValidationProvider rules="min:8" v-slot="{ errors }" vid="password">
                             <div class="relative">
                                 <label for="password" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Пароль <span
-                                        class="text-red-600 absolute"></span></label>
-                                <input :type="typePassword ? 'password' : 'text'" id="password" name="password"
-                                    v-model="form.password" placeholder="••••••••"
-                                    class="bg-white border border-gray-300 text-[#4D5D7D] sm:text-sm rounded-lg  block w-full p-2.5">
+                                    class="text-red-600"></span></label>
+                                <input :type="typePassword ? 'password' : 'text'" id="password" v-model="form.password" name="password"
+                                placeholder="••••••••"
+                                class="bg-white border border-gray-300 text-[#4D5D7D] sm:text-sm rounded-lg block w-full p-2.5" />
                                 <div class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 mb-[-25px]">
-                                    <img src="/img/eye-pass-on.svg" v-if="typePassword"
-                                        @click="typePassword = !typePassword" alt="on" class="cursor-pointer">
-                                    <img src="/img/eye-pass-off.svg" v-else alt="off" @click="typePassword = !typePassword"
-                                        class="cursor-pointer">
+                                <img src="/img/eye-pass-on.svg" v-if="typePassword" @click="typePassword = !typePassword" alt="on"
+                                    class="cursor-pointer" />
+                                <img src="/img/eye-pass-off.svg" v-else alt="off" @click="typePassword = !typePassword"
+                                    class="cursor-pointer" />
                                 </div>
-                                <p class="text-red-600 pb-4 absolute">{{ errors[0] }}</p>
                             </div>
+                            <p class="text-red-600 pb-4 absolute">{{ errors[0] }}</p>
                         </ValidationProvider>
                     </div>
                     <div class="col-span-2">
@@ -73,18 +73,18 @@
                     </div>
 
                     <div class="col-span-2">
-                        <ValidationProvider rules="required" v-slot="{ errors }">
+                        <ValidationProvider rules="confirmed:password" v-slot="{ errors }">
                             <div class="relative">
-                                <label for="password2" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Повторите
-                                    пароль <span class="text-red-600 absolute"></span></label>
-                                <input :type="typePassword2 ? 'password' : 'text'" id="password2" name="password"
-                                    v-model="form.password2" placeholder="••••••••"
-                                    class="bg-white border border-gray-300 text-[#4D5D7D] sm:text-sm rounded-lg  block w-full p-2.5">
+                                <label for="password" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Повторите пароль <span
+                                    class="text-red-600"></span></label>
+                                <input :type="typePassword2 ? 'password' : 'text'" id="password" v-model="form.password2" name="password"
+                                placeholder="••••••••"
+                                class="bg-white border border-gray-300 text-[#4D5D7D] sm:text-sm rounded-lg block w-full p-2.5" />
                                 <div class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 mb-[-25px]">
-                                    <img src="/img/eye-pass-on.svg" v-if="typePassword2"
-                                        @click="typePassword2 = !typePassword2" alt="on" class="cursor-pointer">
-                                    <img src="/img/eye-pass-off.svg" v-else alt="off"
-                                        @click="typePassword2 = !typePassword2" class="cursor-pointer">
+                                <img src="/img/eye-pass-on.svg" v-if="typePassword2" @click="typePassword2 = !typePassword2" alt="on"
+                                    class="cursor-pointer" />
+                                <img src="/img/eye-pass-off.svg" v-else alt="off" @click="typePassword2 = !typePassword2"
+                                    class="cursor-pointer" />
                                 </div>
                                 <p class="text-red-600 pb-4 absolute">{{ errors[0] }}</p>
                             </div>
@@ -136,7 +136,7 @@
 </template>
 
 <script>
-import { mapActions, mapState, } from "vuex";
+import { mapActions, mapState, mapMutations} from "vuex";
 export default {
     layout: "admin",
     data() {
@@ -145,13 +145,16 @@ export default {
             typePassword2: true,
             form: {
                 username: '',
-                password: '',
+                password: "",
+                password2: "",
                 phone: '',
                 name: '',
                 address: '',
                 role: 3,
                 balance: '',
                 status: '',
+                min: 9,
+                max: 9,
             },
         };
     },
@@ -161,8 +164,16 @@ export default {
         }),
     },
     methods: {
+        ...mapMutations({
+                change_modal: "api/SET_MODAL",
+            }),
+            isLetter(e) {
+                let char = String.fromCharCode(e.keyCode);
+                if (/^[A-Za-z,А-Яа-я]+$/.test(char)) return true;
+                else e.preventDefault();
+            },
         ...mapActions({
-            edit: "api/edit",
+            store: "api/store",
             get_page: "api/get_page",
             edit: "api/edit",
         }),
