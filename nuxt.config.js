@@ -1,4 +1,4 @@
-let baseUrl = "http://1319152-cd48417.tw1.ru/api";
+let baseUrl = "http://92.255.76.192/api";
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -48,7 +48,7 @@ export default {
   auth: {
     strategies: {
       local: {
-        url: "http://1319152-cd48417.tw1.ru/api",
+        url: "http://92.255.76.192/api",
         token: {
           property: "access_token",
           maxAge: 86400,
@@ -61,14 +61,14 @@ export default {
         },
         endpoints: {
           login: {
-            url: "http://1319152-cd48417.tw1.ru/api/Login",
+            url: "http://92.255.76.192/api/Login",
           },
           refresh: { url: 'http://1319152-cd48417.tw1.ru/token/refresh/' },
           logout: {
-            url: "http://1319152-cd48417.tw1.ru/api/Logout",
+            url: "http://92.255.76.192/api/Logout",
           },
           user: {
-            url: "http://1319152-cd48417.tw1.ru/api/UserDetailView",
+            url: "http://92.255.76.192/api/UserDetailView",
           },
         },
       },

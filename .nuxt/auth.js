@@ -42,7 +42,7 @@ export default function (ctx, inject) {
   // Register strategies
   // local
   $auth.registerStrategy('local', new LocalScheme($auth, {
-  "url": "http://1319152-cd48417.tw1.ru/api",
+  "url": "http://92.255.76.192/api",
   "token": {
     "property": "access_token",
     "maxAge": 86400
@@ -55,16 +55,16 @@ export default function (ctx, inject) {
   },
   "endpoints": {
     "login": {
-      "url": "http://1319152-cd48417.tw1.ru/api/Login"
+      "url": "http://92.255.76.192/api/Login"
     },
     "refresh": {
       "url": "http://1319152-cd48417.tw1.ru/token/refresh/"
     },
     "logout": {
-      "url": "http://1319152-cd48417.tw1.ru/api/Logout"
+      "url": "http://92.255.76.192/api/Logout"
     },
     "user": {
-      "url": "http://1319152-cd48417.tw1.ru/api/UserDetailView"
+      "url": "http://92.255.76.192/api/UserDetailView"
     }
   },
   "name": "local"
