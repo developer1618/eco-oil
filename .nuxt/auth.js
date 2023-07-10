@@ -42,7 +42,7 @@ export default function (ctx, inject) {
   // Register strategies
   // local
   $auth.registerStrategy('local', new LocalScheme($auth, {
-  "url": "http://92.255.76.192/api",
+  "url": "http://api.ecooil.colibri.tj/api",
   "token": {
     "property": "access_token",
     "maxAge": 86400
@@ -55,16 +55,16 @@ export default function (ctx, inject) {
   },
   "endpoints": {
     "login": {
-      "url": "http://92.255.76.192/api/Login"
+      "url": "http://api.ecooil.colibri.tj/api/Login"
     },
     "refresh": {
       "url": "http://1319152-cd48417.tw1.ru/token/refresh/"
     },
     "logout": {
-      "url": "http://92.255.76.192/api/Logout"
+      "url": "http://api.ecooil.colibri.tj/api/Logout"
     },
     "user": {
-      "url": "http://92.255.76.192/api/UserDetailView"
+      "url": "http://api.ecooil.colibri.tj/api/UserDetailView"
     }
   },
   "name": "local"
