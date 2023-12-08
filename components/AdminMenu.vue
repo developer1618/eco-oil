@@ -5,7 +5,7 @@
     <ExitModal :modal="modal" @onClose="modal = $event" />
     <div class="flex items-center 2xl:gap-4 xl:gap-0">
       <div class="sidebar_user-info flex items-center">
-        <a href="/admin/scoreboard" class="image-bg">
+        <a href="/main" class="image-bg">
           <img src="../static/logo.png" alt="Logo" class="w-36" />
         </a>
       </div>
@@ -69,7 +69,7 @@ export default {
       navigation: [
         {
           title: "ТАБЛО",
-          url: "/admin/scoreboard",
+          url: "/main",
         },
         {
           title: "КЛИЕНТЫ (АВТО)",

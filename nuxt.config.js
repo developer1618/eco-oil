@@ -1,4 +1,4 @@
-let baseUrl = "http://api.ecooil.colibri.tj/api";
+let baseUrl = "http://94.241.170.46:7485/";
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -8,17 +8,32 @@ export default {
   layout: "default",
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "ECO OIL",
+    title: "ICAP",
     htmlAttrs: {
       lang: "en",
     },
-    meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
-      { name: "format-detection", content: "telephone=no" },
+    meta: [{
+        charset: "utf-8"
+      },
+      {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1"
+      },
+      {
+        hid: "description",
+        name: "description",
+        content: ""
+      },
+      {
+        name: "format-detection",
+        content: "telephone=no"
+      },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [{
+      rel: "icon",
+      type: "image/x-icon",
+      href: "/favicon.ico"
+    }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -48,35 +63,41 @@ export default {
   auth: {
     strategies: {
       local: {
-        url: "http://api.ecooil.colibri.tj/api",
+        url: baseUrl,
         token: {
           property: "access_token",
-          maxAge: 86400,
+          maxAge: false,
+          global: true,
         },
         refreshToken: {
           property: "refresh_token",
         },
         user: {
-          property: "user",
+          property: false,
+          getData: ({ data }) => data.user,
         },
         endpoints: {
           login: {
-            url: "http://api.ecooil.colibri.tj/api/Login",
+            url: `${baseUrl}/accounts/login/`,
           },
-          refresh: { url: 'http://1319152-cd48417.tw1.ru/token/refresh/' },
+          refresh: { 
+            url: `${baseUrl}/accounts/token/refresh/`,
+          },
           logout: {
-            url: "http://api.ecooil.colibri.tj/api/Logout",
+            url: `${baseUrl}/accounts/logout/`,
           },
           user: {
-            url: "http://api.ecooil.colibri.tj/api/UserDetailView",
+            url: `${baseUrl}/accounts/UserDetailView`,
           },
         },
+        autoFetchUser: true,
       },
     },
     redirect: {
       login: "/login",
       logout: "/login",
-      home: "/admin/",
+      callback: '/login',
+      home: "/main",
     },
   },
   router: {
