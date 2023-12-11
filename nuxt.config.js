@@ -65,12 +65,12 @@ export default {
       local: {
         url: baseUrl,
         token: {
-          property: "access_token",
+          property: "access",
           maxAge: false,
           global: true,
         },
         refreshToken: {
-          property: "refresh_token",
+          property: "refresh",
         },
         user: {
           property: false,
@@ -87,7 +87,7 @@ export default {
             url: `${baseUrl}/accounts/logout/`,
           },
           user: {
-            url: `${baseUrl}/accounts/UserDetailView`,
+            url: `${baseUrl}/accounts/who-am-i/`,
           },
         },
         autoFetchUser: true,

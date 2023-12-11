@@ -8,6 +8,9 @@
   "AdminMenu": {
     "description": "Auto imported from components/AdminMenu.vue"
   },
+  "Authorization": {
+    "description": "Auto imported from components/Authorization.vue"
+  },
   "CalendarInput": {
     "description": "Auto imported from components/CalendarInput.vue"
   },
@@ -32,8 +35,14 @@
   "PartnerMenu": {
     "description": "Auto imported from components/PartnerMenu.vue"
   },
+  "ResetPassword": {
+    "description": "Auto imported from components/ResetPassword.vue"
+  },
   "Search": {
     "description": "Auto imported from components/Search.vue"
+  },
+  "SendEmail": {
+    "description": "Auto imported from components/SendEmail.vue"
   },
   "Table": {
     "description": "Auto imported from components/Table.vue"

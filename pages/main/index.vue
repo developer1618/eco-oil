@@ -1,5 +1,9 @@
 <template>
-  <h1 class="text-7xl text-blue-600">Hello ICAP</h1>
+  <div class="main bg-[#F5F5F5] flex h-screen">
+    <div class="sidebar">
+      <AdminMenu />
+    </div>
+  </div>
 </template>
 <script>
   

@@ -44,12 +44,12 @@ export default function (ctx, inject) {
   $auth.registerStrategy('local', new LocalScheme($auth, {
   "url": "http://94.241.170.46:7485/",
   "token": {
-    "property": "access_token",
+    "property": "access",
     "maxAge": false,
     "global": true
   },
   "refreshToken": {
-    "property": "refresh_token"
+    "property": "refresh"
   },
   "user": {
     "property": false
@@ -65,7 +65,7 @@ export default function (ctx, inject) {
       "url": "http://94.241.170.46:7485//accounts/logout/"
     },
     "user": {
-      "url": "http://94.241.170.46:7485//accounts/UserDetailView"
+      "url": "http://94.241.170.46:7485//accounts/who-am-i/"
     }
   },
   "autoFetchUser": true,
