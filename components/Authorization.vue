@@ -112,7 +112,8 @@
             </div>
           </div>
           <a
-            href="#"
+            href="/sendemail"
+            @click="showSecondStep = true"
             class="text-sm font-medium hover:underline text-gray-700"
             >Забыли пароль?</a
           >

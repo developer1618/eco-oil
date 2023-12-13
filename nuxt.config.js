@@ -89,6 +89,9 @@ export default {
           user: {
             url: `${baseUrl}/accounts/who-am-i/`,
           },
+          reset: {
+            url: `${baseUrl}/accounts/reset-password/`,
+          },
         },
         autoFetchUser: true,
       },

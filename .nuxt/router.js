@@ -12,7 +12,9 @@ const _517c9fba = () => interopDefault(import('..\\pages\\logs\\index.vue' /* we
 const _e4ec344e = () => interopDefault(import('..\\pages\\main\\index.vue' /* webpackChunkName: "pages/main/index" */))
 const _4350b3c2 = () => interopDefault(import('..\\pages\\organization\\index.vue' /* webpackChunkName: "pages/organization/index" */))
 const _33091efa = () => interopDefault(import('..\\pages\\reports\\index.vue' /* webpackChunkName: "pages/reports/index" */))
+const _d764b310 = () => interopDefault(import('..\\pages\\resetpassword\\index.vue' /* webpackChunkName: "pages/resetpassword/index" */))
 const _b1b56828 = () => interopDefault(import('..\\pages\\screening\\index.vue' /* webpackChunkName: "pages/screening/index" */))
+const _16afe7e4 = () => interopDefault(import('..\\pages\\sendemail\\index.vue' /* webpackChunkName: "pages/sendemail/index" */))
 const _3f3ef5a2 = () => interopDefault(import('..\\pages\\settings\\index.vue' /* webpackChunkName: "pages/settings/index" */))
 const _4cadfab2 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -60,9 +62,17 @@ export const routerOptions = {
     component: _33091efa,
     name: "reports"
   }, {
+    path: "/resetpassword",
+    component: _d764b310,
+    name: "resetpassword"
+  }, {
     path: "/screening",
     component: _b1b56828,
     name: "screening"
+  }, {
+    path: "/sendemail",
+    component: _16afe7e4,
+    name: "sendemail"
   }, {
     path: "/settings",
     component: _3f3ef5a2,

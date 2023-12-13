@@ -16,7 +16,7 @@
     <ValidationObserver v-slot="{ handleSubmit }">
       <form
         class="space-y-4 md:space-y-6"
-        @submit.prevent="handleSubmit(login)"
+        @submit.prevent="handleSubmit(reset)"
       >
         
         <ValidationProvider rules="required" v-slot="{ errors }">
@@ -116,7 +116,7 @@
 </template>
 <script>
 export default {
-    layout: "login",
+    layout: "reset",
     middleware: 'auth',
     auth:false,
     data() {
@@ -131,12 +131,11 @@ export default {
         };
     },
     methods: {
-        async login() {
+        async reset() {
             try {
                 await this.$auth.loginWith("local", {
                     data: {
                         email: this.email,
-                        password: this.password,
                     },
                 });
                 this.error = false;
@@ -149,9 +148,6 @@ export default {
     },
     watch: {
         email() {
-            this.error = false;
-        },
-        password() {
             this.error = false;
         },
     },

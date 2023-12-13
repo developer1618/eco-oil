@@ -66,6 +66,9 @@ export default function (ctx, inject) {
     },
     "user": {
       "url": "http://94.241.170.46:7485//accounts/who-am-i/"
+    },
+    "reset": {
+      "url": "http://94.241.170.46:7485//accounts/reset-password/"
     }
   },
   "autoFetchUser": true,

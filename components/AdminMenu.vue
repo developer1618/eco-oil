@@ -1,7 +1,7 @@
 <!-- Please remove this file from your project -->
 <template>
-  <div class="sidebar bg-[#0A7194] text-white flex h-full pr-12 pl-6 py-14 flex-col items-between justify-between">
-    <div class="pb-8 flex justify-center">
+  <div class="sidebar bg-[#0A7194] text-white flex h-full pr-12 pl-6 py-8 flex-col items-between justify-between">
+    <div class="pb-12 flex justify-center">
       <img src="../static/img/logo.png" alt="Logo">
     </div>
     <svg style="display: none" width="10" height="10">
@@ -177,15 +177,10 @@ export default {
 
   .active a svg {
     fill: #727ABE !important;
-    padding: 8px;
-    border-radius: 8px;
   }
 
   a.nuxt-link-active {
     color: #727ABE;
-    padding: 8px;
-    border-radius: 8px;
-    width: 100%;
   }
 
   a.nuxt-link-active svg {
@@ -193,10 +188,7 @@ export default {
   }
 
   a:hover {
-    background: #125B78;
-    padding: 8px;
-    border-radius: 8px;
-    width: 100%;
+    /* background: #125B78; */
   }
 
   a:hover svg {
