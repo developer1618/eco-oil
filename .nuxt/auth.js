@@ -42,7 +42,7 @@ export default function (ctx, inject) {
   // Register strategies
   // local
   $auth.registerStrategy('local', new LocalScheme($auth, {
-  "url": "http://94.241.170.46:7485/",
+  "url": "http://94.241.170.46:7485",
   "token": {
     "property": "access",
     "maxAge": false,
@@ -56,16 +56,19 @@ export default function (ctx, inject) {
   },
   "endpoints": {
     "login": {
-      "url": "http://94.241.170.46:7485//accounts/login/"
+      "url": "http://94.241.170.46:7485/accounts/login/"
     },
     "refresh": {
-      "url": "http://94.241.170.46:7485//accounts/token/refresh/"
+      "url": "http://94.241.170.46:7485/accounts/token/refresh/"
     },
     "logout": {
-      "url": "http://94.241.170.46:7485//accounts/logout/"
+      "url": "http://94.241.170.46:7485/accounts/logout/"
     },
     "user": {
-      "url": "http://94.241.170.46:7485//accounts/who-am-i/"
+      "url": "http://94.241.170.46:7485/accounts/who-am-i/"
+    },
+    "reset": {
+      "url": "http://94.241.170.46:7485/accounts/reset-password/"
     }
   },
   "autoFetchUser": true,

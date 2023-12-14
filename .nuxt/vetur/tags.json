@@ -23,6 +23,9 @@
   "Footer": {
     "description": "Auto imported from components/Footer.vue"
   },
+  "Header": {
+    "description": "Auto imported from components/Header.vue"
+  },
   "Loader": {
     "description": "Auto imported from components/Loader.vue"
   },
@@ -46,6 +49,9 @@
   },
   "Table": {
     "description": "Auto imported from components/Table.vue"
+  },
+  "Table2": {
+    "description": "Auto imported from components/Table2.vue"
   },
   "UploadFile": {
     "description": "Auto imported from components/UploadFile.vue"

@@ -14,6 +14,7 @@ You can directly use them in pages and other components without the need to impo
 - `<DeleteModal>` | `<delete-modal>` (components/DeleteModal.vue)
 - `<ExitModal>` | `<exit-modal>` (components/ExitModal.vue)
 - `<Footer>` | `<footer>` (components/Footer.vue)
+- `<Header>` | `<header>` (components/Header.vue)
 - `<Loader>` | `<loader>` (components/Loader.vue)
 - `<NuxtLogo>` | `<nuxt-logo>` (components/NuxtLogo.vue)
 - `<Pagination>` | `<pagination>` (components/Pagination.vue)
@@ -22,4 +23,5 @@ You can directly use them in pages and other components without the need to impo
 - `<Search>` | `<search>` (components/Search.vue)
 - `<SendEmail>` | `<send-email>` (components/SendEmail.vue)
 - `<Table>` | `<table>` (components/Table.vue)
+- `<Table2>` | `<table2>` (components/Table2.vue)
 - `<UploadFile>` | `<upload-file>` (components/UploadFile.vue)

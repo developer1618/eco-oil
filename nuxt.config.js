@@ -1,4 +1,4 @@
-let baseUrl = "http://94.241.170.46:7485/";
+let baseUrl = "http://94.241.170.46:7485";
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -88,6 +88,9 @@ export default {
           },
           user: {
             url: `${baseUrl}/accounts/who-am-i/`,
+          },
+          reset: {
+            url: `${baseUrl}/accounts/reset-password/`,
           },
         },
         autoFetchUser: true,
