@@ -1,5 +1,5 @@
 <template>
-  <h1>Clients</h1>
+  <h1>City</h1>
 </template>
 <script>
 export default {

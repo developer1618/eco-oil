@@ -2,92 +2,176 @@
   {
     "name": "clients",
     "path": "/clients",
-    "component": "C:\\\\LIVO\\\\ICAP-External\\\\pages\\\\clients\\\\index.vue",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\clients\\\\index.vue",
     "chunkName": "pages/clients/index",
-    "_name": "_29ff771a"
+    "_name": "_618de49a"
   },
   {
     "name": "coupons",
     "path": "/coupons",
-    "component": "C:\\\\LIVO\\\\ICAP-External\\\\pages\\\\coupons\\\\index.vue",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\coupons\\\\index.vue",
     "chunkName": "pages/coupons/index",
-    "_name": "_53e6aa16"
+    "_name": "_0d9b1875"
   },
   {
     "name": "directories",
     "path": "/directories",
-    "component": "C:\\\\LIVO\\\\ICAP-External\\\\pages\\\\directories\\\\index.vue",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\directories\\\\index.vue",
     "chunkName": "pages/directories/index",
-    "_name": "_0376f177"
+    "_name": "_69dac212"
   },
   {
     "name": "login",
     "path": "/login",
-    "component": "C:\\\\LIVO\\\\ICAP-External\\\\pages\\\\login\\\\index.vue",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\login\\\\index.vue",
     "chunkName": "pages/login/index",
-    "_name": "_413af5ce"
+    "_name": "_8aa35ace"
   },
   {
     "name": "logs",
     "path": "/logs",
-    "component": "C:\\\\LIVO\\\\ICAP-External\\\\pages\\\\logs\\\\index.vue",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\logs\\\\index.vue",
     "chunkName": "pages/logs/index",
-    "_name": "_09fd2da3"
+    "_name": "_517c9fba"
   },
   {
     "name": "main",
     "path": "/main",
-    "component": "C:\\\\LIVO\\\\ICAP-External\\\\pages\\\\main\\\\index.vue",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\main\\\\index.vue",
     "chunkName": "pages/main/index",
-    "_name": "_7f75394e"
+    "_name": "_e4ec344e"
   },
   {
     "name": "organization",
     "path": "/organization",
-    "component": "C:\\\\LIVO\\\\ICAP-External\\\\pages\\\\organization\\\\index.vue",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\organization\\\\index.vue",
     "chunkName": "pages/organization/index",
-    "_name": "_9b04b8c2"
+    "_name": "_4350b3c2"
   },
   {
     "name": "reports",
     "path": "/reports",
-    "component": "C:\\\\LIVO\\\\ICAP-External\\\\pages\\\\reports\\\\index.vue",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\reports\\\\index.vue",
     "chunkName": "pages/reports/index",
-    "_name": "_a225f9fa"
+    "_name": "_33091efa"
   },
   {
     "name": "reset-password",
     "path": "/reset-password",
-    "component": "C:\\\\LIVO\\\\ICAP-External\\\\pages\\\\reset-password\\\\index.vue",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\reset-password\\\\index.vue",
     "chunkName": "pages/reset-password/index",
-    "_name": "_4f6f21b9"
+    "_name": "_265af78e"
   },
   {
     "name": "screening",
     "path": "/screening",
-    "component": "C:\\\\LIVO\\\\ICAP-External\\\\pages\\\\screening\\\\index.vue",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\screening\\\\index.vue",
     "chunkName": "pages/screening/index",
-    "_name": "_197c3e6c"
+    "_name": "_b1b56828"
   },
   {
     "name": "send-email",
     "path": "/send-email",
-    "component": "C:\\\\LIVO\\\\ICAP-External\\\\pages\\\\send-email\\\\index.vue",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\send-email\\\\index.vue",
     "chunkName": "pages/send-email/index",
-    "_name": "_0e6fe33b"
+    "_name": "_35e885bb"
   },
   {
     "name": "settings",
     "path": "/settings",
-    "component": "C:\\\\LIVO\\\\ICAP-External\\\\pages\\\\settings\\\\index.vue",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\settings\\\\index.vue",
     "chunkName": "pages/settings/index",
-    "_name": "_262142af"
+    "_name": "_3f3ef5a2"
+  },
+  {
+    "name": "sub-access",
+    "path": "/sub-access",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\sub-access\\\\index.vue",
+    "chunkName": "pages/sub-access/index",
+    "_name": "_082435fe"
+  },
+  {
+    "name": "sub-city",
+    "path": "/sub-city",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\sub-city\\\\index.vue",
+    "chunkName": "pages/sub-city/index",
+    "_name": "_971f6d4c"
+  },
+  {
+    "name": "sub-clients",
+    "path": "/sub-clients",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\sub-clients\\\\index.vue",
+    "chunkName": "pages/sub-clients/index",
+    "_name": "_5e55dd72"
+  },
+  {
+    "name": "sub-form",
+    "path": "/sub-form",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\sub-form\\\\index.vue",
+    "chunkName": "pages/sub-form/index",
+    "_name": "_5849173e"
+  },
+  {
+    "name": "sub-invitations",
+    "path": "/sub-invitations",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\sub-invitations\\\\index.vue",
+    "chunkName": "pages/sub-invitations/index",
+    "_name": "_67391595"
+  },
+  {
+    "name": "sub-lang",
+    "path": "/sub-lang",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\sub-lang\\\\index.vue",
+    "chunkName": "pages/sub-lang/index",
+    "_name": "_a6ae1e12"
+  },
+  {
+    "name": "sub-organization",
+    "path": "/sub-organization",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\sub-organization\\\\index.vue",
+    "chunkName": "pages/sub-organization/index",
+    "_name": "_1fe25d92"
+  },
+  {
+    "name": "sub-region",
+    "path": "/sub-region",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\sub-region\\\\index.vue",
+    "chunkName": "pages/sub-region/index",
+    "_name": "_28b9d971"
+  },
+  {
+    "name": "sub-rewards",
+    "path": "/sub-rewards",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\sub-rewards\\\\index.vue",
+    "chunkName": "pages/sub-rewards/index",
+    "_name": "_a2e112aa"
+  },
+  {
+    "name": "sub-roles",
+    "path": "/sub-roles",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\sub-roles\\\\index.vue",
+    "chunkName": "pages/sub-roles/index",
+    "_name": "_c721ea9c"
+  },
+  {
+    "name": "sub-visualization",
+    "path": "/sub-visualization",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\sub-visualization\\\\index.vue",
+    "chunkName": "pages/sub-visualization/index",
+    "_name": "_b7434e2a"
+  },
+  {
+    "name": "users",
+    "path": "/users",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\users\\\\index.vue",
+    "chunkName": "pages/users/index",
+    "_name": "_54d6aacc"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\LIVO\\\\ICAP-External\\\\pages\\\\index.vue",
+    "component": "C:\\\\LIVO\\\\ICAP\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_1b359832"
+    "_name": "_4cadfab2"
   }
 ]

@@ -4,19 +4,31 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _29ff771a = () => interopDefault(import('..\\pages\\clients\\index.vue' /* webpackChunkName: "pages/clients/index" */))
-const _53e6aa16 = () => interopDefault(import('..\\pages\\coupons\\index.vue' /* webpackChunkName: "pages/coupons/index" */))
-const _0376f177 = () => interopDefault(import('..\\pages\\directories\\index.vue' /* webpackChunkName: "pages/directories/index" */))
-const _413af5ce = () => interopDefault(import('..\\pages\\login\\index.vue' /* webpackChunkName: "pages/login/index" */))
-const _09fd2da3 = () => interopDefault(import('..\\pages\\logs\\index.vue' /* webpackChunkName: "pages/logs/index" */))
-const _7f75394e = () => interopDefault(import('..\\pages\\main\\index.vue' /* webpackChunkName: "pages/main/index" */))
-const _9b04b8c2 = () => interopDefault(import('..\\pages\\organization\\index.vue' /* webpackChunkName: "pages/organization/index" */))
-const _a225f9fa = () => interopDefault(import('..\\pages\\reports\\index.vue' /* webpackChunkName: "pages/reports/index" */))
-const _4f6f21b9 = () => interopDefault(import('..\\pages\\reset-password\\index.vue' /* webpackChunkName: "pages/reset-password/index" */))
-const _197c3e6c = () => interopDefault(import('..\\pages\\screening\\index.vue' /* webpackChunkName: "pages/screening/index" */))
-const _0e6fe33b = () => interopDefault(import('..\\pages\\send-email\\index.vue' /* webpackChunkName: "pages/send-email/index" */))
-const _262142af = () => interopDefault(import('..\\pages\\settings\\index.vue' /* webpackChunkName: "pages/settings/index" */))
-const _1b359832 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _618de49a = () => interopDefault(import('..\\pages\\clients\\index.vue' /* webpackChunkName: "pages/clients/index" */))
+const _0d9b1875 = () => interopDefault(import('..\\pages\\coupons\\index.vue' /* webpackChunkName: "pages/coupons/index" */))
+const _69dac212 = () => interopDefault(import('..\\pages\\directories\\index.vue' /* webpackChunkName: "pages/directories/index" */))
+const _8aa35ace = () => interopDefault(import('..\\pages\\login\\index.vue' /* webpackChunkName: "pages/login/index" */))
+const _517c9fba = () => interopDefault(import('..\\pages\\logs\\index.vue' /* webpackChunkName: "pages/logs/index" */))
+const _e4ec344e = () => interopDefault(import('..\\pages\\main\\index.vue' /* webpackChunkName: "pages/main/index" */))
+const _4350b3c2 = () => interopDefault(import('..\\pages\\organization\\index.vue' /* webpackChunkName: "pages/organization/index" */))
+const _33091efa = () => interopDefault(import('..\\pages\\reports\\index.vue' /* webpackChunkName: "pages/reports/index" */))
+const _265af78e = () => interopDefault(import('..\\pages\\reset-password\\index.vue' /* webpackChunkName: "pages/reset-password/index" */))
+const _b1b56828 = () => interopDefault(import('..\\pages\\screening\\index.vue' /* webpackChunkName: "pages/screening/index" */))
+const _35e885bb = () => interopDefault(import('..\\pages\\send-email\\index.vue' /* webpackChunkName: "pages/send-email/index" */))
+const _3f3ef5a2 = () => interopDefault(import('..\\pages\\settings\\index.vue' /* webpackChunkName: "pages/settings/index" */))
+const _082435fe = () => interopDefault(import('..\\pages\\sub-access\\index.vue' /* webpackChunkName: "pages/sub-access/index" */))
+const _971f6d4c = () => interopDefault(import('..\\pages\\sub-city\\index.vue' /* webpackChunkName: "pages/sub-city/index" */))
+const _5e55dd72 = () => interopDefault(import('..\\pages\\sub-clients\\index.vue' /* webpackChunkName: "pages/sub-clients/index" */))
+const _5849173e = () => interopDefault(import('..\\pages\\sub-form\\index.vue' /* webpackChunkName: "pages/sub-form/index" */))
+const _67391595 = () => interopDefault(import('..\\pages\\sub-invitations\\index.vue' /* webpackChunkName: "pages/sub-invitations/index" */))
+const _a6ae1e12 = () => interopDefault(import('..\\pages\\sub-lang\\index.vue' /* webpackChunkName: "pages/sub-lang/index" */))
+const _1fe25d92 = () => interopDefault(import('..\\pages\\sub-organization\\index.vue' /* webpackChunkName: "pages/sub-organization/index" */))
+const _28b9d971 = () => interopDefault(import('..\\pages\\sub-region\\index.vue' /* webpackChunkName: "pages/sub-region/index" */))
+const _a2e112aa = () => interopDefault(import('..\\pages\\sub-rewards\\index.vue' /* webpackChunkName: "pages/sub-rewards/index" */))
+const _c721ea9c = () => interopDefault(import('..\\pages\\sub-roles\\index.vue' /* webpackChunkName: "pages/sub-roles/index" */))
+const _b7434e2a = () => interopDefault(import('..\\pages\\sub-visualization\\index.vue' /* webpackChunkName: "pages/sub-visualization/index" */))
+const _54d6aacc = () => interopDefault(import('..\\pages\\users\\index.vue' /* webpackChunkName: "pages/users/index" */))
+const _4cadfab2 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -31,55 +43,103 @@ export const routerOptions = {
 
   routes: [{
     path: "/clients",
-    component: _29ff771a,
+    component: _618de49a,
     name: "clients"
   }, {
     path: "/coupons",
-    component: _53e6aa16,
+    component: _0d9b1875,
     name: "coupons"
   }, {
     path: "/directories",
-    component: _0376f177,
+    component: _69dac212,
     name: "directories"
   }, {
     path: "/login",
-    component: _413af5ce,
+    component: _8aa35ace,
     name: "login"
   }, {
     path: "/logs",
-    component: _09fd2da3,
+    component: _517c9fba,
     name: "logs"
   }, {
     path: "/main",
-    component: _7f75394e,
+    component: _e4ec344e,
     name: "main"
   }, {
     path: "/organization",
-    component: _9b04b8c2,
+    component: _4350b3c2,
     name: "organization"
   }, {
     path: "/reports",
-    component: _a225f9fa,
+    component: _33091efa,
     name: "reports"
   }, {
     path: "/reset-password",
-    component: _4f6f21b9,
+    component: _265af78e,
     name: "reset-password"
   }, {
     path: "/screening",
-    component: _197c3e6c,
+    component: _b1b56828,
     name: "screening"
   }, {
     path: "/send-email",
-    component: _0e6fe33b,
+    component: _35e885bb,
     name: "send-email"
   }, {
     path: "/settings",
-    component: _262142af,
+    component: _3f3ef5a2,
     name: "settings"
   }, {
+    path: "/sub-access",
+    component: _082435fe,
+    name: "sub-access"
+  }, {
+    path: "/sub-city",
+    component: _971f6d4c,
+    name: "sub-city"
+  }, {
+    path: "/sub-clients",
+    component: _5e55dd72,
+    name: "sub-clients"
+  }, {
+    path: "/sub-form",
+    component: _5849173e,
+    name: "sub-form"
+  }, {
+    path: "/sub-invitations",
+    component: _67391595,
+    name: "sub-invitations"
+  }, {
+    path: "/sub-lang",
+    component: _a6ae1e12,
+    name: "sub-lang"
+  }, {
+    path: "/sub-organization",
+    component: _1fe25d92,
+    name: "sub-organization"
+  }, {
+    path: "/sub-region",
+    component: _28b9d971,
+    name: "sub-region"
+  }, {
+    path: "/sub-rewards",
+    component: _a2e112aa,
+    name: "sub-rewards"
+  }, {
+    path: "/sub-roles",
+    component: _c721ea9c,
+    name: "sub-roles"
+  }, {
+    path: "/sub-visualization",
+    component: _b7434e2a,
+    name: "sub-visualization"
+  }, {
+    path: "/users",
+    component: _54d6aacc,
+    name: "users"
+  }, {
     path: "/",
-    component: _1b359832,
+    component: _4cadfab2,
     name: "index"
   }],
 

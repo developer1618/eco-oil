@@ -1,5 +1,5 @@
 <template>
-  <h1>Clients</h1>
+  <h1>Invitions</h1>
 </template>
 <script>
 export default {
