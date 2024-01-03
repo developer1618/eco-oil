@@ -1,9 +1,9 @@
 {
-  "name": "ECO OIL",
+  "name": "ICAP",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt --port=8000",
+    "dev": "nuxt --port=1618",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"

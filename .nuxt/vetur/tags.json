@@ -8,6 +8,9 @@
   "AdminMenu": {
     "description": "Auto imported from components/AdminMenu.vue"
   },
+  "Authorization": {
+    "description": "Auto imported from components/Authorization.vue"
+  },
   "CalendarInput": {
     "description": "Auto imported from components/CalendarInput.vue"
   },
@@ -19,6 +22,9 @@
   },
   "Footer": {
     "description": "Auto imported from components/Footer.vue"
+  },
+  "Header": {
+    "description": "Auto imported from components/Header.vue"
   },
   "Loader": {
     "description": "Auto imported from components/Loader.vue"
@@ -32,11 +38,20 @@
   "PartnerMenu": {
     "description": "Auto imported from components/PartnerMenu.vue"
   },
+  "ResetPassword": {
+    "description": "Auto imported from components/ResetPassword.vue"
+  },
   "Search": {
     "description": "Auto imported from components/Search.vue"
   },
+  "SendEmail": {
+    "description": "Auto imported from components/SendEmail.vue"
+  },
   "Table": {
     "description": "Auto imported from components/Table.vue"
+  },
+  "Table2": {
+    "description": "Auto imported from components/Table2.vue"
   },
   "UploadFile": {
     "description": "Auto imported from components/UploadFile.vue"

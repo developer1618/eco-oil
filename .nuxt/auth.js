@@ -18,7 +18,7 @@ export default function (ctx, inject) {
   "redirect": {
     "login": "/login",
     "logout": "/login",
-    "home": "/admin/",
+    "home": "/main",
     "callback": "/login"
   },
   "vuex": {
@@ -42,31 +42,40 @@ export default function (ctx, inject) {
   // Register strategies
   // local
   $auth.registerStrategy('local', new LocalScheme($auth, {
-  "url": "http://api.ecooil.colibri.tj/api",
+  "url": "http://94.241.170.46:7485",
   "token": {
-    "property": "access_token",
-    "maxAge": 86400
+    "property": "access",
+    "maxAge": false,
+    "global": true
   },
   "refreshToken": {
-    "property": "refresh_token"
+    "property": "refresh"
   },
   "user": {
-    "property": "user"
+    "property": false
   },
   "endpoints": {
     "login": {
-      "url": "http://api.ecooil.colibri.tj/api/Login"
+      "url": "http://94.241.170.46:7485/accounts/login/"
     },
     "refresh": {
+<<<<<<< HEAD
       "url": "http://api.ecooil.colibri.tj/token/refresh/"
+=======
+      "url": "http://94.241.170.46:7485/accounts/token/refresh/"
+>>>>>>> ab8ba99d3d8e30699f32bad4c8845de57c0df2f2
     },
     "logout": {
-      "url": "http://api.ecooil.colibri.tj/api/Logout"
+      "url": "http://94.241.170.46:7485/accounts/logout/"
     },
     "user": {
-      "url": "http://api.ecooil.colibri.tj/api/UserDetailView"
+      "url": "http://94.241.170.46:7485/accounts/who-am-i/"
+    },
+    "reset": {
+      "url": "http://94.241.170.46:7485/accounts/reset-password/"
     }
   },
+  "autoFetchUser": true,
   "name": "local"
 }))
 

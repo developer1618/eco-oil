@@ -8,7 +8,7 @@
     </div>
     <div class="flex">
       <a
-        href="/admin/scoreboard"
+        href="/main"
         class="inline-flex items-center rounded-full hover:rounded-full border border-transparent bg-[#31363b] px-6 py-3 hover:px-6 hover:py-3 text-base font-medium text-white shadow-sm hover:bg-[#0e0f12]"
         >на Главную</a
       >
