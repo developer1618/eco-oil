@@ -84,10 +84,6 @@ export default {
           url: "/admin/staff",
         },
         {
-          title: "ПАРТНЁРЫ",
-          url: "/admin/partners",
-        },
-        {
           title: "МОНИТОРИНГ ˅",
           url: "/admin/monitoring",
           children: [

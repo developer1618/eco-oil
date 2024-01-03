@@ -58,7 +58,7 @@ export default function (ctx, inject) {
       "url": "http://api.ecooil.colibri.tj/api/Login"
     },
     "refresh": {
-      "url": "http://1319152-cd48417.tw1.ru/token/refresh/"
+      "url": "http://api.ecooil.colibri.tj/token/refresh/"
     },
     "logout": {
       "url": "http://api.ecooil.colibri.tj/api/Logout"
