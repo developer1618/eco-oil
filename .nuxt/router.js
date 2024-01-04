@@ -4,31 +4,38 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _618de49a = () => interopDefault(import('..\\pages\\clients\\index.vue' /* webpackChunkName: "pages/clients/index" */))
-const _0d9b1875 = () => interopDefault(import('..\\pages\\coupons\\index.vue' /* webpackChunkName: "pages/coupons/index" */))
-const _69dac212 = () => interopDefault(import('..\\pages\\directories\\index.vue' /* webpackChunkName: "pages/directories/index" */))
-const _8aa35ace = () => interopDefault(import('..\\pages\\login\\index.vue' /* webpackChunkName: "pages/login/index" */))
-const _517c9fba = () => interopDefault(import('..\\pages\\logs\\index.vue' /* webpackChunkName: "pages/logs/index" */))
-const _e4ec344e = () => interopDefault(import('..\\pages\\main\\index.vue' /* webpackChunkName: "pages/main/index" */))
-const _4350b3c2 = () => interopDefault(import('..\\pages\\organization\\index.vue' /* webpackChunkName: "pages/organization/index" */))
-const _33091efa = () => interopDefault(import('..\\pages\\reports\\index.vue' /* webpackChunkName: "pages/reports/index" */))
-const _265af78e = () => interopDefault(import('..\\pages\\reset-password\\index.vue' /* webpackChunkName: "pages/reset-password/index" */))
-const _b1b56828 = () => interopDefault(import('..\\pages\\screening\\index.vue' /* webpackChunkName: "pages/screening/index" */))
-const _35e885bb = () => interopDefault(import('..\\pages\\send-email\\index.vue' /* webpackChunkName: "pages/send-email/index" */))
-const _3f3ef5a2 = () => interopDefault(import('..\\pages\\settings\\index.vue' /* webpackChunkName: "pages/settings/index" */))
-const _082435fe = () => interopDefault(import('..\\pages\\sub-access\\index.vue' /* webpackChunkName: "pages/sub-access/index" */))
-const _971f6d4c = () => interopDefault(import('..\\pages\\sub-city\\index.vue' /* webpackChunkName: "pages/sub-city/index" */))
-const _5e55dd72 = () => interopDefault(import('..\\pages\\sub-clients\\index.vue' /* webpackChunkName: "pages/sub-clients/index" */))
-const _5849173e = () => interopDefault(import('..\\pages\\sub-form\\index.vue' /* webpackChunkName: "pages/sub-form/index" */))
-const _67391595 = () => interopDefault(import('..\\pages\\sub-invitations\\index.vue' /* webpackChunkName: "pages/sub-invitations/index" */))
-const _a6ae1e12 = () => interopDefault(import('..\\pages\\sub-lang\\index.vue' /* webpackChunkName: "pages/sub-lang/index" */))
-const _1fe25d92 = () => interopDefault(import('..\\pages\\sub-organization\\index.vue' /* webpackChunkName: "pages/sub-organization/index" */))
-const _28b9d971 = () => interopDefault(import('..\\pages\\sub-region\\index.vue' /* webpackChunkName: "pages/sub-region/index" */))
-const _a2e112aa = () => interopDefault(import('..\\pages\\sub-rewards\\index.vue' /* webpackChunkName: "pages/sub-rewards/index" */))
-const _c721ea9c = () => interopDefault(import('..\\pages\\sub-roles\\index.vue' /* webpackChunkName: "pages/sub-roles/index" */))
-const _b7434e2a = () => interopDefault(import('..\\pages\\sub-visualization\\index.vue' /* webpackChunkName: "pages/sub-visualization/index" */))
-const _54d6aacc = () => interopDefault(import('..\\pages\\users\\index.vue' /* webpackChunkName: "pages/users/index" */))
-const _4cadfab2 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _7a97de6c = () => interopDefault(import('..\\pages\\admin\\index.vue' /* webpackChunkName: "pages/admin/index" */))
+const _85d183dc = () => interopDefault(import('..\\pages\\login\\index.vue' /* webpackChunkName: "pages/login/index" */))
+const _2222c713 = () => interopDefault(import('..\\pages\\partner\\index.vue' /* webpackChunkName: "pages/partner/index" */))
+const _c9f7e9ae = () => interopDefault(import('..\\pages\\admin\\bonus\\index.vue' /* webpackChunkName: "pages/admin/bonus/index" */))
+const _4359d165 = () => interopDefault(import('..\\pages\\admin\\cards\\index.vue' /* webpackChunkName: "pages/admin/cards/index" */))
+const _666f9220 = () => interopDefault(import('..\\pages\\admin\\clients\\index.vue' /* webpackChunkName: "pages/admin/clients/index" */))
+const _c6055e54 = () => interopDefault(import('..\\pages\\admin\\device\\index.vue' /* webpackChunkName: "pages/admin/device/index" */))
+const _60fc2ea4 = () => interopDefault(import('..\\pages\\admin\\monitoring\\index.vue' /* webpackChunkName: "pages/admin/monitoring/index" */))
+const _6b3862e1 = () => interopDefault(import('..\\pages\\admin\\partners\\index.vue' /* webpackChunkName: "pages/admin/partners/index" */))
+const _c014a042 = () => interopDefault(import('..\\pages\\admin\\profile\\index.vue' /* webpackChunkName: "pages/admin/profile/index" */))
+const _b9287990 = () => interopDefault(import('..\\pages\\admin\\report\\index.vue' /* webpackChunkName: "pages/admin/report/index" */))
+const _403ce050 = () => interopDefault(import('..\\pages\\admin\\scoreboard\\index.vue' /* webpackChunkName: "pages/admin/scoreboard/index" */))
+const _4985e84a = () => interopDefault(import('..\\pages\\admin\\scoreboard2\\index.vue' /* webpackChunkName: "pages/admin/scoreboard2/index" */))
+const _77b48869 = () => interopDefault(import('..\\pages\\admin\\settings\\index.vue' /* webpackChunkName: "pages/admin/settings/index" */))
+const _fdf25470 = () => interopDefault(import('..\\pages\\admin\\staff\\index.vue' /* webpackChunkName: "pages/admin/staff/index" */))
+const _6718454d = () => interopDefault(import('..\\pages\\admin\\stations\\index.vue' /* webpackChunkName: "pages/admin/stations/index" */))
+const _42f9a9fc = () => interopDefault(import('..\\pages\\partner\\employees\\index.vue' /* webpackChunkName: "pages/partner/employees/index" */))
+const _1dee0c50 = () => interopDefault(import('..\\pages\\partner\\settings\\index.vue' /* webpackChunkName: "pages/partner/settings/index" */))
+const _157b4a67 = () => interopDefault(import('..\\pages\\admin\\device\\adddevice\\index.vue' /* webpackChunkName: "pages/admin/device/adddevice/index" */))
+const _72781407 = () => interopDefault(import('..\\pages\\admin\\partners\\addpartners\\index.vue' /* webpackChunkName: "pages/admin/partners/addpartners/index" */))
+const _3b9f36ee = () => interopDefault(import('..\\pages\\admin\\staff\\addstaff\\index.vue' /* webpackChunkName: "pages/admin/staff/addstaff/index" */))
+const _0a686387 = () => interopDefault(import('..\\pages\\admin\\stations\\addstations\\index.vue' /* webpackChunkName: "pages/admin/stations/addstations/index" */))
+const _09566078 = () => interopDefault(import('..\\pages\\partner\\employees\\addemployees\\index.vue' /* webpackChunkName: "pages/partner/employees/addemployees/index" */))
+const _53492543 = () => interopDefault(import('..\\pages\\admin\\path\\to\\flowbite\\dist\\flowbite.min.js' /* webpackChunkName: "pages/admin/path/to/flowbite/dist/flowbite.min" */))
+const _646c522e = () => interopDefault(import('..\\pages\\admin\\clients\\editclients\\_slug.vue' /* webpackChunkName: "pages/admin/clients/editclients/_slug" */))
+const _56e15339 = () => interopDefault(import('..\\pages\\admin\\device\\editpartners\\_slug.vue' /* webpackChunkName: "pages/admin/device/editpartners/_slug" */))
+const _6bc27604 = () => interopDefault(import('..\\pages\\admin\\partners\\editpartners\\_slug.vue' /* webpackChunkName: "pages/admin/partners/editpartners/_slug" */))
+const _6b16390e = () => interopDefault(import('..\\pages\\admin\\profile\\forgotPassword\\_slug.vue' /* webpackChunkName: "pages/admin/profile/forgotPassword/_slug" */))
+const _45dd56ae = () => interopDefault(import('..\\pages\\admin\\staff\\editstaff\\_slug.vue' /* webpackChunkName: "pages/admin/staff/editstaff/_slug" */))
+const _4d9f8ddc = () => interopDefault(import('..\\pages\\admin\\stations\\editstations\\_slug.vue' /* webpackChunkName: "pages/admin/stations/editstations/_slug" */))
+const _332c2835 = () => interopDefault(import('..\\pages\\partner\\employees\\editemployees\\_slug.vue' /* webpackChunkName: "pages/partner/employees/editemployees/_slug" */))
+const _55781559 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -42,104 +49,132 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
-    path: "/clients",
-    component: _618de49a,
-    name: "clients"
-  }, {
-    path: "/coupons",
-    component: _0d9b1875,
-    name: "coupons"
-  }, {
-    path: "/directories",
-    component: _69dac212,
-    name: "directories"
+    path: "/admin",
+    component: _7a97de6c,
+    name: "admin"
   }, {
     path: "/login",
-    component: _8aa35ace,
+    component: _85d183dc,
     name: "login"
   }, {
-    path: "/logs",
-    component: _517c9fba,
-    name: "logs"
+    path: "/partner",
+    component: _2222c713,
+    name: "partner"
   }, {
-    path: "/main",
-    component: _e4ec344e,
-    name: "main"
+    path: "/admin/bonus",
+    component: _c9f7e9ae,
+    name: "admin-bonus"
   }, {
-    path: "/organization",
-    component: _4350b3c2,
-    name: "organization"
+    path: "/admin/cards",
+    component: _4359d165,
+    name: "admin-cards"
   }, {
-    path: "/reports",
-    component: _33091efa,
-    name: "reports"
+    path: "/admin/clients",
+    component: _666f9220,
+    name: "admin-clients"
   }, {
-    path: "/reset-password",
-    component: _265af78e,
-    name: "reset-password"
+    path: "/admin/device",
+    component: _c6055e54,
+    name: "admin-device"
   }, {
-    path: "/screening",
-    component: _b1b56828,
-    name: "screening"
+    path: "/admin/monitoring",
+    component: _60fc2ea4,
+    name: "admin-monitoring"
   }, {
-    path: "/send-email",
-    component: _35e885bb,
-    name: "send-email"
+    path: "/admin/partners",
+    component: _6b3862e1,
+    name: "admin-partners"
   }, {
-    path: "/settings",
-    component: _3f3ef5a2,
-    name: "settings"
+    path: "/admin/profile",
+    component: _c014a042,
+    name: "admin-profile"
   }, {
-    path: "/sub-access",
-    component: _082435fe,
-    name: "sub-access"
+    path: "/admin/report",
+    component: _b9287990,
+    name: "admin-report"
   }, {
-    path: "/sub-city",
-    component: _971f6d4c,
-    name: "sub-city"
+    path: "/admin/scoreboard",
+    component: _403ce050,
+    name: "admin-scoreboard"
   }, {
-    path: "/sub-clients",
-    component: _5e55dd72,
-    name: "sub-clients"
+    path: "/admin/scoreboard2",
+    component: _4985e84a,
+    name: "admin-scoreboard2"
   }, {
-    path: "/sub-form",
-    component: _5849173e,
-    name: "sub-form"
+    path: "/admin/settings",
+    component: _77b48869,
+    name: "admin-settings"
   }, {
-    path: "/sub-invitations",
-    component: _67391595,
-    name: "sub-invitations"
+    path: "/admin/staff",
+    component: _fdf25470,
+    name: "admin-staff"
   }, {
-    path: "/sub-lang",
-    component: _a6ae1e12,
-    name: "sub-lang"
+    path: "/admin/stations",
+    component: _6718454d,
+    name: "admin-stations"
   }, {
-    path: "/sub-organization",
-    component: _1fe25d92,
-    name: "sub-organization"
+    path: "/partner/employees",
+    component: _42f9a9fc,
+    name: "partner-employees"
   }, {
-    path: "/sub-region",
-    component: _28b9d971,
-    name: "sub-region"
+    path: "/partner/settings",
+    component: _1dee0c50,
+    name: "partner-settings"
   }, {
-    path: "/sub-rewards",
-    component: _a2e112aa,
-    name: "sub-rewards"
+    path: "/admin/device/adddevice",
+    component: _157b4a67,
+    name: "admin-device-adddevice"
   }, {
-    path: "/sub-roles",
-    component: _c721ea9c,
-    name: "sub-roles"
+    path: "/admin/partners/addpartners",
+    component: _72781407,
+    name: "admin-partners-addpartners"
   }, {
-    path: "/sub-visualization",
-    component: _b7434e2a,
-    name: "sub-visualization"
+    path: "/admin/staff/addstaff",
+    component: _3b9f36ee,
+    name: "admin-staff-addstaff"
   }, {
-    path: "/users",
-    component: _54d6aacc,
-    name: "users"
+    path: "/admin/stations/addstations",
+    component: _0a686387,
+    name: "admin-stations-addstations"
+  }, {
+    path: "/partner/employees/addemployees",
+    component: _09566078,
+    name: "partner-employees-addemployees"
+  }, {
+    path: "/admin/path/to/flowbite/dist/flowbite.min",
+    component: _53492543,
+    name: "admin-path-to-flowbite-dist-flowbite.min"
+  }, {
+    path: "/admin/clients/editclients/:slug?",
+    component: _646c522e,
+    name: "admin-clients-editclients-slug"
+  }, {
+    path: "/admin/device/editpartners/:slug?",
+    component: _56e15339,
+    name: "admin-device-editpartners-slug"
+  }, {
+    path: "/admin/partners/editpartners/:slug?",
+    component: _6bc27604,
+    name: "admin-partners-editpartners-slug"
+  }, {
+    path: "/admin/profile/forgotPassword/:slug?",
+    component: _6b16390e,
+    name: "admin-profile-forgotPassword-slug"
+  }, {
+    path: "/admin/staff/editstaff/:slug?",
+    component: _45dd56ae,
+    name: "admin-staff-editstaff-slug"
+  }, {
+    path: "/admin/stations/editstations/:slug?",
+    component: _4d9f8ddc,
+    name: "admin-stations-editstations-slug"
+  }, {
+    path: "/partner/employees/editemployees/:slug?",
+    component: _332c2835,
+    name: "partner-employees-editemployees-slug"
   }, {
     path: "/",
-    component: _4cadfab2,
+    component: _55781559,
     name: "index"
   }],
 

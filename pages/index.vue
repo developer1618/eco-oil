@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h1>ICAP</h1>
+    <h1>ECO OIL</h1>
   </div>
 </template>
 <script>
 export default {
-  middleware: "login",
+  middleware: "partner",
 };
 </script>

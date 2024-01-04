@@ -13,13 +13,13 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_76fd3525 from 'nuxt_plugin_plugin_76fd3525' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_axios_36b10e70 from 'nuxt_plugin_axios_36b10e70' // Source: .\\axios.js (mode: 'all')
-import nuxt_plugin_moment_82199c60 from 'nuxt_plugin_moment_82199c60' // Source: .\\moment.js (mode: 'all')
+import nuxt_plugin_plugin_d3b027f4 from 'nuxt_plugin_plugin_d3b027f4' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_axios_5be68dae from 'nuxt_plugin_axios_5be68dae' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_moment_7e35fd8f from 'nuxt_plugin_moment_7e35fd8f' // Source: .\\moment.js (mode: 'all')
 import nuxt_plugin_axios_3566aa80 from 'nuxt_plugin_axios_3566aa80' // Source: ..\\plugins\\axios (mode: 'all')
 import nuxt_plugin_veevalidate_6e5ad03a from 'nuxt_plugin_veevalidate_6e5ad03a' // Source: ..\\plugins\\vee-validate (mode: 'all')
 import nuxt_plugin_datepicker_4a26849c from 'nuxt_plugin_datepicker_4a26849c' // Source: ..\\plugins\\datepicker (mode: 'all')
-import nuxt_plugin_auth_8ef41130 from 'nuxt_plugin_auth_8ef41130' // Source: .\\auth.js (mode: 'all')
+import nuxt_plugin_auth_3d92b232 from 'nuxt_plugin_auth_3d92b232' // Source: .\\auth.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -84,7 +84,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"ICAP","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"format-detection","content":"telephone=no"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
+    head: {"title":"ECO OIL","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"name":"format-detection","content":"telephone=no"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
 
     store,
     router,
@@ -214,16 +214,16 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_76fd3525 === 'function') {
-    await nuxt_plugin_plugin_76fd3525(app.context, inject)
+  if (typeof nuxt_plugin_plugin_d3b027f4 === 'function') {
+    await nuxt_plugin_plugin_d3b027f4(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_36b10e70 === 'function') {
-    await nuxt_plugin_axios_36b10e70(app.context, inject)
+  if (typeof nuxt_plugin_axios_5be68dae === 'function') {
+    await nuxt_plugin_axios_5be68dae(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_moment_82199c60 === 'function') {
-    await nuxt_plugin_moment_82199c60(app.context, inject)
+  if (typeof nuxt_plugin_moment_7e35fd8f === 'function') {
+    await nuxt_plugin_moment_7e35fd8f(app.context, inject)
   }
 
   if (typeof nuxt_plugin_axios_3566aa80 === 'function') {
@@ -238,8 +238,8 @@ async function createApp(ssrContext, config = {}) {
     await nuxt_plugin_datepicker_4a26849c(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_auth_8ef41130 === 'function') {
-    await nuxt_plugin_auth_8ef41130(app.context, inject)
+  if (typeof nuxt_plugin_auth_3d92b232 === 'function') {
+    await nuxt_plugin_auth_3d92b232(app.context, inject)
   }
 
   // Lock enablePreview in context

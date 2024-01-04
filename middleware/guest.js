@@ -1,10 +1,10 @@
 export default async function ({ $auth, redirect }) {
     switch ($auth?.user?.type) {
       case 0:
-        redirect("/main/");
+        redirect("/admin/");
         break;
       case 1:
-        redirect("/main/");
+        redirect("/partner/");
         break;
     }
    
