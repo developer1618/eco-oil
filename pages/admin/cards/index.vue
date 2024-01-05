@@ -1,6 +1,6 @@
 <template>
     <div class="px-24 w-12/12">
-      <div class="bg-white w-full h-[85vh] p-4 overflow-y-auto">
+      <div class="bg-white w-full h-[85vh] p-4 overflow-y-auto overflow-x-auto">
         <div class="flex py-8 items-baseline justify-between px-4">
         <div class="flex">
           <h3 class="text-sm font-medium text-dark pb-5">МОНИТОРИНГ / КАРТЫ</h3>
@@ -33,13 +33,11 @@
             </select>
           </div>
           <div class="w-64 pr-4">
-            <select id="countries" class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 w-56">
-              <option value="US">Выберите станцию</option>
-              <option value="CA">Станция №1</option>
-              <option value="CA">Станция №2</option>
-              <option value="CA">Станция №3</option>
-              <option value="CA">Станция №4</option>
-              <option value="CA">Станция №5</option>
+            <select  placeholder="Выберите станцию"  id="address" v-model="station" class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500">
+              <option :value="null" disabled selected>Выберите станцию</option>
+              <option :value="item?.id" v-for="item in stations?.results">
+                {{ item.station_address }}
+              </option>
             </select>
           </div>
           <div class="flex w-72">
@@ -122,6 +120,7 @@
         page: 1,
         search: "",
         id: null,
+        station: null,
         thead: [
           "СТАНЦИЯ",
           "КАССИР",
@@ -134,6 +133,7 @@
     computed: {
       ...mapState({
         meta: (state) => state.api.meta,
+        stations:(state) => state.api.station
       }),
       ...mapGetters({
         card:"api/cardFilter",
@@ -151,6 +151,13 @@
         };
         await this.get_page(payload);
       },
+      async getStations() {
+      let payload = {
+        request: `/Station`,
+        key: "station",
+      };
+      await this.get_page(payload);
+    },
       async onSearch(val) {
         let payload = {
           request: `/SearchInStaff?query=${val}`,
@@ -166,6 +173,7 @@
     },
     mounted() {
       this.getCard();
+      this.getStations();
     },
   };
   </script>

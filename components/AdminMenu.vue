@@ -112,8 +112,6 @@ export default {
     }),
     async onLogout() {
       this.modal = true;
-      // this.change_modal(true);
-      // await this.$auth.logout();
     },
   },
   components: { ExitModal },

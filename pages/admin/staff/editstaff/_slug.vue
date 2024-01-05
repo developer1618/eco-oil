@@ -6,7 +6,8 @@
         <h3 class="text-sm font-medium text-dark pb-10">
           СОТРУДНИКИ / РЕДАКТИРОВАНИЕ СОТРУДНИКА
         </h3>
-        <form class="grid grid-cols-6 gap-8" @submit.prevent="handleSubmit(editStuff)">
+        <form class="grid grid-cols-6 gap-8" 
+        @submit.prevent="handleSubmit(editStuff)">
           <div class="col-span-3">
             <ValidationProvider rules="required" v-slot="{ errors }">
               <label for="helper-text1" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Имя<span
@@ -45,7 +46,7 @@
                   class="text-red-600"></span></label>
               <select id="helper-text4" v-model="form.gender"
                 class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500">
-                <option value="Выберите пол" disabled>Выберите пол</option>
+                <option :value="null" disabled selected>Выберите пол</option>
                 <option value="M">Мужской</option>
                 <option value="F">Женский</option>
               </select>
@@ -84,7 +85,7 @@
                   class="text-red-600"></span></label>
               <select id="helper-text6" v-model="form.role"
                 class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500">
-                <option value="" disabled selected>Выберите должность</option>
+                <option :value="null" disabled selected>Выберите должность</option>
                 <option value="2">Кассир</option>
                 <option value="1">Администратор</option>
               </select>
@@ -97,6 +98,7 @@
                   class="text-red-600"></span></label>
               <select id="address" v-model="form.station"
                 class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500">
+                <option :value="null" disabled selected>Выберите станцию</option>
                 <option :value="item?.id" v-for="item in station?.results">
                   {{ item?.station_address }}
                 </option>

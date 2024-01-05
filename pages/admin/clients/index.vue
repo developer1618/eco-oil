@@ -1,14 +1,13 @@
 <template>
   <div class="px-24 w-12/12">
-    <div class="bg-white w-full h-[85vh] p-4">
+    <div class="bg-white w-full h-[85vh] p-4 overflow-y-auto overflow-x-auto">
       <div class="flex py-8 items-baseline justify-between px-4">
         <div class="flex">
           <h3 class="text-sm font-medium text-dark pb-5">КЛИЕНТЫ (АВТО)</h3>
         </div>
         <div class="flex">
           <div class="col-span-3">
-
-            <select  placeholder="Test"  id="address" v-model="station" class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500">
+            <select  placeholder="Выберите станцию"  id="address" v-model="station" class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500">
               <option :value="null" disabled selected>Выберите станцию</option>
               <option :value="item?.id" v-for="item in stations?.results">
                 {{ item.station_address }}

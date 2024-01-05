@@ -5,8 +5,7 @@
         <h3 class="text-sm font-medium text-dark pb-10">НАСТРОЙКИ</h3>
         <form
           class="grid grid-cols-4 gap-8"
-          @submit.prevent="handleSubmit(editSettings)"
-        >
+          @submit.prevent="handleSubmit(editSettings)">
           <div class="col-span-2">
             <ValidationProvider rules="required" v-slot="{ errors }">
               <label
@@ -217,6 +216,9 @@ export default {
     }),
   },
   methods: {
+    ...mapMutations({
+      change_modal: "api/SET_MODAL",
+    }),
     isLetter(e) {
       let char = String.fromCharCode(e.keyCode);
       if (/^[A-Za-z,А-Яа-я]+$/.test(char)) return true;
@@ -226,9 +228,6 @@ export default {
       edit: "api/edit",
       get_page: "api/get_page",
       edit: "api/edit",
-    }),
-    ...mapMutations({
-      change_modal: "api/SET_MODAL",
     }),
     async getSettings() {
       let request = await this.$axios.get(

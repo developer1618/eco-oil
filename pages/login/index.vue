@@ -124,7 +124,7 @@ export default {
         })
         .then(() => {
           this.error = false;
-          this.$router.push("admin/scoreboard");
+          this.$router.push("/admin/scoreboard");
         })
         .catch((err) => {
           this.error = true;
