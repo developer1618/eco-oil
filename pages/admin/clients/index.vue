@@ -7,9 +7,9 @@
         </div>
         <div class="flex">
           <div class="col-span-3">
-            <select id="address" v-model="station" class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500">
-              <option :value="item?.id" v-for="item in station?.results">
-                {{ item?.station_address }}
+            <select placeholder="Test"  id="address" v-model="station" class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500">
+              <option :value="item?.id" v-for="item in stations?.results">
+                {{ item.station_address }}
               </option>
             </select>
           </div>
@@ -82,12 +82,14 @@ export default {
         "СТАТУС",
         "",
       ],
+      station:null
     };
   },
   computed: {
     ...mapState({
       clients: (state) => state.api.client,
       meta: (state) => state.api.meta,
+      stations:(state) => state.api.station
     }),
   },
   methods: {
