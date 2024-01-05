@@ -131,7 +131,7 @@
               </button>
             </div>
           </div>
-          <p id="send-validate" class="text-red-600 -mt-4 block" v-if="toast.open">
+          <p id="send-validate" class="text-red-600 -mt-4 block whitespace-nowrap" v-if="toast.open">
             {{ toast.text }}
           </p>
         </form>

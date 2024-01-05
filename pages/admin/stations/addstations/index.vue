@@ -121,7 +121,7 @@
             >
             <p
               id="send-validate"
-              class="text-red-600 pt-4 block"
+              class="text-red-600 pt-4 block whitespace-nowrap"
               v-if="toast.open"
             >
               {{ toast.text }}
@@ -165,7 +165,7 @@ export default {
       };
       await this.store(payload);
       setTimeout(() => {
-        this.$router.back();
+        this.$router.back('');
       }, 2000);
     },
   },

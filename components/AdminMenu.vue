@@ -85,11 +85,10 @@ export default {
         },
         {
           title: "МОНИТОРИНГ ˅",
-          url: "/admin/monitoring",
+          url: "#",
           children: [
             { title: "Cотрудники", url: "/admin/monitoring" },
             { title: "Карты", url: "/admin/cards" },
-            { title: "Устройство", url: "/admin/device" },
           ],
         },
         {

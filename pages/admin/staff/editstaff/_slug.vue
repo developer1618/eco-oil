@@ -6,8 +6,8 @@
         <h3 class="text-sm font-medium text-dark pb-10">
           СОТРУДНИКИ / РЕДАКТИРОВАНИЕ СОТРУДНИКА
         </h3>
-        <form class="grid grid-cols-4 gap-8" @submit.prevent="handleSubmit(editStuff)">
-          <div class="col-span-2">
+        <form class="grid grid-cols-6 gap-8" @submit.prevent="handleSubmit(editStuff)">
+          <div class="col-span-3">
             <ValidationProvider rules="required" v-slot="{ errors }">
               <label for="helper-text1" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Имя<span
                   class="text-red-600"></span></label>
@@ -18,7 +18,7 @@
               <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
-          <div class="col-span-2">
+          <div class="col-span-3">
             <ValidationProvider rules="required" v-slot="{ errors }">
               <label for="helper-text2" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Фамилия<span
                   class="text-red-600"></span></label>
@@ -29,7 +29,7 @@
               <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
-          <div class="col-span-2">
+          <div class="col-span-3">
             <ValidationProvider rules="required" v-slot="{ errors }">
               <label for="helper-text3" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Дата рождения<span
                   class="text-red-600"></span></label>
@@ -39,7 +39,7 @@
               <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
-          <div class="col-span-2">
+          <div class="col-span-3">
             <ValidationProvider rules="required" v-slot="{ errors }">
               <label for="helper-text4" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Пол <span
                   class="text-red-600"></span></label>
@@ -52,7 +52,7 @@
               <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
-          <div class="col-span-2">
+          <div class="col-span-3">
             <ValidationProvider rules="required" v-slot="{ errors }">
               <label for="helper-text5" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Адрес проживания<span
                   class="text-red-600"></span></label>
@@ -62,7 +62,7 @@
               <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
-          <div class="col-span-2">
+          <div class="col-span-3">
             <ValidationProvider rules="required" v-slot="{ errors }">
               <label for="website-admin" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Номер телефона <span
                   class="text-red-600"></span></label>
@@ -78,7 +78,7 @@
               <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
-          <div class="col-span-2">
+          <div class="col-span-3">
             <ValidationProvider rules="required" v-slot="{ errors }">
               <label for="helper-text6" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Должность <span
                   class="text-red-600"></span></label>
@@ -91,7 +91,7 @@
               <p class="text-red-600 absolute">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
-          <div class="col-span-2">
+          <div class="col-span-3">
             <ValidationProvider rules="required" v-slot="{ errors }">
               <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Станция регистрации <span
                   class="text-red-600"></span></label>
@@ -101,6 +101,16 @@
                   {{ item?.station_address }}
                 </option>
               </select>
+              <p class="text-red-600">{{ errors[0] }}</p>
+            </ValidationProvider>
+          </div>
+          <div class="col-span-2">
+            <ValidationProvider rules="required" v-slot="{ errors }">
+              <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Логин<span
+                  class="text-red-600"></span></label>
+              <input type="text" v-model="form.username" disabled id="helper-text" aria-describedby="helper-text-explanation"
+                class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#999] focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Введите Логин" />
               <p class="text-red-600">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
@@ -160,7 +170,7 @@
             <p class="text-red-600 pb-4 absolute">{{ errors[0] }}</p>
           </ValidationProvider>
           </div>
-          <div class="flex col-span-4 navbtn">
+          <div class="flex col-span-6 navbtn">
             <button type="submit"
               class="text-white bg-[#009688] hover:bg-[#157766] font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none">
               Сохранить
@@ -175,7 +185,7 @@
             </div>
           </div>
           <div class="-mt-8">
-            <p id="send-validate" class="text-red-600 pt-4 block" v-if="toast.open">
+            <p id="send-validate" class="text-red-600 pt-4 block whitespace-nowrap" v-if="toast.open">
               {{ toast.text }}
             </p>
           </div>
@@ -194,18 +204,18 @@ export default {
       typePassword: true,
       typePassword2: true,
       form: {
-        username: "",
-        password: "",
-        password2: "",
-        name: "",
-        surname: "",
+        address: "",
         date_of_birth: "",
         gender: "",
+        name: "",
         phone: "",
-        status: null,
-        address: "",
-        station: null,
         role: "",
+        station: null,
+        status: null,
+        username: "",
+        surname: "",
+        password: "",
+        password2: "",
         min: 9,
         max: 9,
       },
@@ -248,7 +258,7 @@ export default {
     },
     async editStuff() {
       let payload = {
-        text: "Сотрудник изменено!",
+        text: "Сотрудник изменён!",
         request: `/Staff/${this.$route.params.slug}`,
         form: this.form,
       };
