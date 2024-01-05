@@ -232,7 +232,7 @@ export default {
     }),
     async getSettings() {
       let request = await this.$axios.get(
-        `/AdminEdit/`
+        `/AdminEdit/${this.$route.params.slug}`
       );
       return Object.keys(this.form).map((item) => {
         this.form[item] = request.data[item];
