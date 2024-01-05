@@ -232,7 +232,7 @@ export default {
     }),
     async getSettings() {
       let request = await this.$axios.get(
-        `/Staff/${this.$route.params.slug}`
+        `/AdminEdit/`
       );
       return Object.keys(this.form).map((item) => {
         this.form[item] = request.data[item];
@@ -240,8 +240,8 @@ export default {
     },
     async editSettings() {
       let payload = {
-        text: "Клиент изменено!",
-        request: `/Staff/${this.$route.params.slug}`,
+        text: "Настройки изменены!",
+        request: `/AdminEdit/${this.$route.params.slug}`,
         form: this.form,
       };
       await this.edit(payload);

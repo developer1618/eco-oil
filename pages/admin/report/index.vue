@@ -1,126 +1,120 @@
 <template>
-    <div class="px-24 w-12/12">
-      <div class="bg-white w-full h-[85vh] p-4 overflow-y-auto">
-        <div class="flex py-8 items-baseline justify-between px-4">
+  <div class="px-24 w-12/12">
+    <div class="bg-white w-full h-[85vh] p-4">
+      <div class="flex py-8 items-baseline justify-between px-4">
         <div class="flex">
-          <h3 class="text-sm font-medium text-dark pb-5">ОТЧЁТЫ / ЕЖЕМЕСЯЧНЫЙ</h3>
+          <h3 class="text-sm font-medium text-dark pb-5">ТАБЛО</h3>
         </div>
         <div class="flex">
-          <div class="w-64 pr-4">
-            <select id="countries" class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 w-56">
-              <option value="year">Год</option>
-              <option value="2020">2020</option>
-              <option value="2021">2021</option>
-              <option value="2022">2022</option>
-              <option value="2023">2023</option>
+          <!-- <div class="pl-4 w-64">
+            <select id="bonus"
+              class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 h-10 focus:border-blue-500 block w-full p-2.5 w-56 ml-4">
+              <option value="add">Начислено бонусов</option>
+              <option value="del">Снято из бонусов</option>
             </select>
-          </div>
-          <div class="w-56">
-            <select id="countries" class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 w-56">
-              <option value="month">Месяц</option>
-              <option value="jan">Январь</option>
-              <option value="feb">Февраль</option>
-              <option value="apr">Март</option>
-              <option value="mar">Апрель</option>
-              <option value="may">Май</option>
-              <option value="jun">Июнь</option>
-              <option value="jul">Июль</option>
-              <option value="aug">Август</option>
-              <option value="sep">Сентябрь</option>
-              <option value="oct">Октябрь</option>
-              <option value="nov">Ноябрь</option>
-              <option value="dec">Декабр</option>
-            </select>
-          </div>
-          <div class="pl-4 w-64">
-            <select id="countries" class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 w-56 ml-4">
-              <option value="US">Сумма (TJS)</option>
-              <option value="CA">Сумма (ЛИТРЫ)</option>
-              <option value="CA">Сумма (БОНУСЫ)</option>
-            </select>
-          </div>
+          </div> -->
           <div class="flex pl-4 w-72">
             <Search @onChange="onSearch" searchPlaceholder="Найти ..." />
           </div>
-          <div class="btn">
-            <button class="bg-[#009688] text-white px-3 py-2 rounded-md ml-4">Экспорт</button>
-          </div>
         </div>
       </div>
-        <div class="pb-4">
-          <Table :titles="thead" :bodies="report.results" :isIcon="false" :keys="['station_address','ai95','ai92','dt','gas','total_sum']" :icon="true"/>
-        </div>
-        <div>
-          <Pagination :currentPage="page" :totalPage="Number(report.count)" @pageChangeHandler="pageChangeHandler"  />
-        </div>
+      <div class="pb-4">
+        <Table :titles="thead" :bodies="scoreboard.results" :isIcon="false" :keys="[
+          ['station', 'station_address'],
+          'staff_name',
+          ['client_data', 'full_name'],
+          ['client_data', 'plate_number'],
+          ['client_data', 'card_number'],
+          'payment_type',
+          'fuel_type',
+          'amount_per_liter',
+          'total_bonus',
+          'client_bonus',
+          ['client_data', 'registration_date']
+        ]" :icon="true" />
+      </div>
+      <div>
+        <Pagination :currentPage="page" :totalPage="Number(scoreboard.count)" @pageChangeHandler="pageChangeHandler" />
       </div>
     </div>
-  </template>
-  <script>
-  import { mapState, mapActions } from "vuex";
-  import Footer from "../../../components/Footer.vue";
-  export default {
-    name: "IndexPage",
-    layout: "admin",
-    head: {
-      title: "ТАБЛО",
+  </div>
+</template>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/datepicker.min.js"></script>
+<script>
+import { mapState, mapActions } from "vuex";
+import CalendarInput from "../../../components/CalendarInput.vue";
+import Footer from "../../../components/Footer.vue";
+export default {
+  name: "IndexPage",
+  layout: "admin",
+  head: {
+    title: "ТАБЛО",
+  },
+  data() {
+    return {
+      page: 1,
+      fromDate: "",
+      date_of_birth: "",
+      icon: false,
+      search: "",
+      liter: "",
+      thead: [
+        "СТАНЦИЯ",
+        "КАССИР",
+        "ВОДИТЕЛЬ",
+        "НОМЕР АВТОМОБИЛЯ",
+        "НОМЕР КАРТЫ",
+        "ТИП ОПЛАТЫ",
+        "ТИП ТОВАРА",
+        "ЛИТР",
+        "СУММА",
+        "НАЧИСЛЕНО БОНУСОВ",
+        "ДАТА",
+      ],
+    };
+  },
+  computed: {
+    ...mapState({
+      scoreboard: (state) => state.api.scoreboard,
+      meta: (state) => state.api.meta,
+    }),
+    minSelectableDate() {
+      const minDate = new Date();
+      minDate.setDate(minDate.getDate() + 7); // set minimum date to one week from today
+      return minDate;
     },
-    data() {
-      return {
-        page: 1,
-        search: "",
-        thead: [
-          "СТАНЦИЯ",
-          "АИ — 95",
-          "АИ — 92",
-          "ДТ",
-          "ГАЗ",
-          "ВСЕГО",
-        ],
+  },
+  methods: {
+    ...mapActions({
+      get_page: "api/get_page",
+    }),
+
+    async getScoreboard() {
+      let payload = {
+        request: `/Board?type=1&page=${this.page}`,
+        form: {
+          liter: this.liter,
+        },
+        key:"scoreboard"
       };
+      await this.get_page(payload);
     },
-    computed: {
-      ...mapState({
-        report: (state) => state.api.report,
-        meta: (state) => state.api.meta,
-      }),
-      minSelectableDate() {
-        const minDate = new Date();
-        minDate.setDate(minDate.getDate() + 7); // set minimum date to one week from today
-        return minDate;
-      },
+    async onSearch(val) {
+      let payload = {
+        request: `/SearchInBoard?query=${val}`,
+        body: [],
+        key:"scoreboard"
+      };
+      await this.get_page(payload);
     },
-    methods: {
-      ...mapActions({
-        get_page: "api/get_page",
-      }),
-  
-      async getReport() {
-        let payload = {
-          request: `/MonthReportSomoni?type=1&page=${this.page}`,
-          form: {
-            liter: this.liter,
-          },
-          key:"report"
-        };
-        await this.get_page(payload);
-      },
-      async onSearch(val) {
-        let payload = {
-          request: `/SearchInBoard?query=${val}`,
-          body: [],
-          key:"report"
-        };
-        await this.get_page(payload);
-      },
-      pageChangeHandler(selected) {
-        this.page = selected;
-        this.getReport();
-      },
+    pageChangeHandler(selected) {
+      this.page = selected;
+      this.getScoreboard();
     },
-    mounted() {
-      this.getReport();
-    },
-    components: { Footer },
-  };
-  </script>
+  },
+  mounted() {
+    this.getScoreboard();
+  },
+  components: { CalendarInput, Footer },
+};
+</script>

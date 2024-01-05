@@ -20,8 +20,6 @@
       </div>
       <div class="pb-4">
         <Table :titles="thead" :bodies="scoreboard.results" :isIcon="false" :keys="[
-          ['client_data', 'plate_number'],
-          ['client_data', 'card_number'],
           ['client_data', 'full_name'],
           'staff_name',
           ['station', 'station_address'],
@@ -59,8 +57,6 @@ export default {
       search: "",
       liter: "",
       thead: [
-        "НОМЕР АВТОМОБИЛЯ",
-        "НОМЕР КАРТЫ",
         "ВОДИТЕЛЬ",
         "КАССИР",
         "СТАНЦИЯ",

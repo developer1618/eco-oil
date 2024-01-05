@@ -126,6 +126,7 @@ export default {
   },
   mounted() {
     this.getClient();
+    this.getStations();
   },
 };
 </script>

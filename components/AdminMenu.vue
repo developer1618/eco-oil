@@ -85,19 +85,15 @@ export default {
         },
         {
           title: "МОНИТОРИНГ ˅",
-          url: "#",
+          url: "/admin/monitoring",
           children: [
             { title: "Cотрудники", url: "/admin/monitoring" },
             { title: "Карты", url: "/admin/cards" },
           ],
         },
         {
-          title: "ОТЧЁТЫ ˅",
-          url: "report",
-          children: [
-            { title: "За месяц", url: "/admin/report" },
-            { title: "Бонусы", url: "/admin/bonus" },
-          ],
+          title: "ОТЧЁТЫ",
+          url: "/admin/report",
         },
         {
           title: "НАСТРОЙКИ",
