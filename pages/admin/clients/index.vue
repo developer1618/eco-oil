@@ -35,7 +35,7 @@
             'phone',
             'registration_date',
             'bonus',
-            'station_registration',
+            'station',
             'status',
           ]"
         />
