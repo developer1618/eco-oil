@@ -16,6 +16,7 @@
           </div>
           <div class="pl-4 w-64">
             <select id="countries"
+            v-model="status"
               class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 h-10 focus:border-blue-500 block w-full p-2.5 w-56 ml-4">
               <option :value="null" selected disabled>Выберите статус</option>
               <option value="1">Активный</option>
@@ -60,6 +61,7 @@ export default {
       page: 1,
       search: "",
       station: null,
+      status:null,
       thead: [
         "ФИО",
         "ДАТА РОЖДЕНИЯ",
@@ -82,14 +84,12 @@ export default {
     ...mapActions({
       get_page: "api/get_page",
     }),
-    async getStuff(stationID) {
+    async getStuff() {
       const params = {
         type:1,
         page:this.page,
-      }
-
-      if(stationID) {
-        params.station_id = stationID;
+        station_id:this.station,
+        status:this.status
       }
 
       let payload = {
@@ -123,8 +123,8 @@ export default {
     },
   },
   watch:{
-    station(stationId) {
-      this.getStuff(stationId);
+    station() {
+      this.getStuff();
     }
   },
   mounted() {
