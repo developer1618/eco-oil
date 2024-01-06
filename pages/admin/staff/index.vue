@@ -17,7 +17,7 @@
           <div class="pl-4 w-64">
             <select id="countries"
               class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 h-10 focus:border-blue-500 block w-full p-2.5 w-56 ml-4">
-              <option disabled>Выберите статус</option>
+              <option :value="null" selected disabled>Выберите статус</option>
               <option value="1">Активный</option>
               <option value="0">Неактивный</option>
             </select>
@@ -89,22 +89,12 @@ export default {
       }
 
       if(stationID) {
-        params.station_registration = stationID;
+        params.station_id = stationID;
       }
 
       let payload = {
         request: `/Staff`,
         params,
-        form: {
-          liter: this.liter,
-        },
-        key: "staff",
-      };
-      await this.get_page(payload);
-    },
-    async getStuff() {
-      let payload = {
-        request: `/Staff?page=${this.page}`,
         form: {
           liter: this.liter,
         },
