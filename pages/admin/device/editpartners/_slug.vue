@@ -128,7 +128,7 @@ export default {
       await this.edit(payload);
       setTimeout(() => {
         this.$router.back();
-      }, 2000);
+      }, 3000);
     },
   },
     mounted() {

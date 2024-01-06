@@ -15,8 +15,8 @@
               <label
                 for="helper-text"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Название станции<span class="text-red-600 absolute"></span></label
-              >
+                >Название станции<span class="text-red-600 absolute"></span
+              ></label>
               <input
                 type="text"
                 v-model="form.station_address"
@@ -33,8 +33,8 @@
               <label
                 for="helper-text"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >АИ — 95<span class="text-red-600 absolute"></span></label
-              >
+                >АИ — 95<span class="text-red-600 absolute"></span
+              ></label>
               <input
                 type="number"
                 step="any"
@@ -53,8 +53,8 @@
               <label
                 for="helper-text"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >АИ — 92<span class="text-red-600 absolute"></span></label
-              >
+                >АИ — 92<span class="text-red-600 absolute"></span
+              ></label>
               <input
                 type="number"
                 step="any"
@@ -73,8 +73,8 @@
               <label
                 for="helper-text"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >ДТ<span class="text-red-600 absolute"></span></label
-              >
+                >ДТ<span class="text-red-600 absolute"></span
+              ></label>
               <input
                 type="number"
                 step="any"
@@ -93,8 +93,8 @@
               <label
                 for="helper-text"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >ГАЗ<span class="text-red-600 absolute"></span></label
-              >
+                >ГАЗ<span class="text-red-600 absolute"></span
+              ></label>
               <input
                 type="number"
                 step="any"
@@ -131,7 +131,11 @@
               </button>
             </div>
           </div>
-          <p id="send-validate" class="text-red-600 -mt-4 block whitespace-nowrap" v-if="toast.open">
+          <p
+            id="send-validate"
+            class="text-red-600 -mt-4 block whitespace-nowrap"
+            v-if="toast.open"
+          >
             {{ toast.text }}
           </p>
         </form>
@@ -140,7 +144,7 @@
   </div>
 </template>
 <script>
-import { mapActions,mapMutations, mapState } from "vuex";
+import { mapActions, mapMutations, mapState } from "vuex";
 export default {
   layout: "admin",
   data() {
@@ -185,7 +189,7 @@ export default {
       await this.edit(payload);
       setTimeout(() => {
         this.$router.back();
-      }, 2000);
+      }, 3000);
     },
   },
   mounted() {

@@ -1,8 +1,10 @@
 <template>
   <div class="px-24 w-12/12">
-    <div class="grid px-8 py-10 grid-cols-2 bg-white h-[85vh] ">
+    <div class="grid px-8 py-10 grid-cols-2 bg-white h-[85vh]">
       <ValidationObserver v-slot="{ handleSubmit }">
-        <h3 class="text-sm font-medium text-dark pb-10">КЛИЕНТЫ (АВТО) / РЕДАКТИРОВАНИЕ КЛИЕНТА</h3>
+        <h3 class="text-sm font-medium text-dark pb-10">
+          КЛИЕНТЫ (АВТО) / РЕДАКТИРОВАНИЕ КЛИЕНТА
+        </h3>
         <form
           class="grid grid-cols-4 gap-8"
           @submit.prevent="handleSubmit(editClient)"
@@ -12,8 +14,8 @@
               <label
                 for="helper-text"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Ф.И.О<span class="text-red-600 absolute"></span></label
-              >
+                >Ф.И.О<span class="text-red-600 absolute"></span
+              ></label>
               <input
                 type="text"
                 v-model="form.full_name"
@@ -31,8 +33,8 @@
               <label
                 for="helper-text"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Дата рождения<span class="text-red-600 absolute"></span></label
-              >
+                >Дата рождения<span class="text-red-600 absolute"></span
+              ></label>
               <input
                 type="date"
                 v-model="form.date_of_birth"
@@ -49,8 +51,8 @@
               <label
                 for="website-admin"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Номер телефона <span class="text-red-600 absolute"></span></label
-              >
+                >Номер телефона <span class="text-red-600 absolute"></span
+              ></label>
               <div class="flex">
                 <span
                   class="inline-flex items-center px-3 text-sm text-[#4D5D7D] rounded-l-md border border-r-0 border-gray-300 bg-white"
@@ -59,7 +61,7 @@
                 </span>
                 <input
                   type="number"
-                  v-model="form.phone" 
+                  v-model="form.phone"
                   id="website-admin"
                   class="rounded-none rounded-r-lg border text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5"
                   placeholder="Введите Номер телефона"
@@ -70,10 +72,16 @@
           </div>
           <div class="col-span-2">
             <ValidationProvider rules="required" v-slot="{ errors }">
-              <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Пол <span
-                  class="text-red-600"></span></label>
-              <select id="gender" v-model="form.gender"
-                class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500">
+              <label
+                for="helper-text"
+                class="block mb-2 text-sm font-medium text-[#4D5D7D]"
+                >Пол <span class="text-red-600"></span
+              ></label>
+              <select
+                id="gender"
+                v-model="form.gender"
+                class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500"
+              >
                 <option value="Выберите пол" disabled>Выберите пол</option>
                 <option value="M">Мужской</option>
                 <option value="F">Женский</option>
@@ -86,8 +94,8 @@
               <label
                 for="helper-text"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Номер автомобиля<span class="text-red-600 absolute"></span></label
-              >
+                >Номер автомобиля<span class="text-red-600 absolute"></span
+              ></label>
               <input
                 type="text"
                 v-model="form.plate_number"
@@ -104,8 +112,8 @@
               <label
                 for="helper-text"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
-                >Номер карты<span class="text-red-600 absolute"></span></label
-              >
+                >Номер карты<span class="text-red-600 absolute"></span
+              ></label>
               <input
                 type="text"
                 v-model="form.card_number"
@@ -122,9 +130,7 @@
               <label class="text-sm font-medium text-[#6B7280]">Статус</label>
             </div>
             <div class="flex">
-              <div
-                class="flex items-center mr-4"
-              >
+              <div class="flex items-center mr-4">
                 <input
                   :id="`red-radio-act`"
                   type="radio"
@@ -139,9 +145,7 @@
                   >Активный</label
                 >
               </div>
-              <div
-                class="flex items-center mr-4"
-              >
+              <div class="flex items-center mr-4">
                 <input
                   :id="`red-radio-dis-act`"
                   type="radio"
@@ -171,7 +175,11 @@
               class="text-[#4D5D7D] border border-[#009688] text-[#009688] hover:bg-[#009688] hover:text-[#fff] focus:outline-none focus:ring-gray-200 font-medium rounded-lg hover:rounded-lg text-sm px-8 py-2.5 hover:px-8 hover:py-2.5 mr-2 mb-2"
               >Назад</nuxt-link
             >
-            <p id="send-validate" class="text-red-600 pt-4 block whitespace-nowrap" v-if="toast.open">
+            <p
+              id="send-validate"
+              class="text-red-600 pt-4 block whitespace-nowrap"
+              v-if="toast.open"
+            >
               {{ toast.text }}
             </p>
           </div>
@@ -207,19 +215,17 @@ export default {
   },
   methods: {
     isLetter(e) {
-        let char = String.fromCharCode(e.keyCode);
-        if(/^[A-Za-z,А-Яа-я]+$/.test(char)) return true;
-        else e.preventDefault();
-        },
+      let char = String.fromCharCode(e.keyCode);
+      if (/^[A-Za-z,А-Яа-я]+$/.test(char)) return true;
+      else e.preventDefault();
+    },
     ...mapActions({
       edit: "api/edit",
       get_page: "api/get_page",
       edit: "api/edit",
     }),
     async getClient() {
-      let request = await this.$axios.get(
-        `/Client/${this.$route.params.slug}`
-      );
+      let request = await this.$axios.get(`/Client/${this.$route.params.slug}`);
       return Object.keys(this.form).map((item) => {
         this.form[item] = request.data[item];
       });
@@ -233,7 +239,7 @@ export default {
       await this.edit(payload);
       setTimeout(() => {
         this.$router.back();
-      }, 2000);
+      }, 3000);
     },
   },
   mounted() {

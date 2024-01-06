@@ -5,7 +5,8 @@
         <h3 class="text-sm font-medium text-dark pb-10">НАСТРОЙКИ</h3>
         <form
           class="grid grid-cols-4 gap-8"
-          @submit.prevent="handleSubmit(editSettings)">
+          @submit.prevent="handleSubmit(editSettings)"
+        >
           <div class="col-span-2">
             <ValidationProvider rules="required" v-slot="{ errors }">
               <label
@@ -182,7 +183,11 @@
               class="text-[#4D5D7D] border border-[#009688] text-[#009688] hover:bg-[#009688] hover:text-[#fff] focus:outline-none focus:ring-gray-200 font-medium rounded-lg hover:rounded-lg text-sm px-8 py-2.5 hover:px-8 hover:py-2.5 mr-2 mb-2"
               >Назад</nuxt-link
             >
-            <p id="send-validate" class="text-red-600 pt-4 whitespace-nowrap" v-if="toast.open">
+            <p
+              id="send-validate"
+              class="text-red-600 pt-4 whitespace-nowrap"
+              v-if="toast.open"
+            >
               {{ toast.text }}
             </p>
           </div>
@@ -246,7 +251,7 @@ export default {
       await this.edit(payload);
       setTimeout(() => {
         this.$router.back();
-      }, 2000);
+      }, 3000);
     },
   },
 

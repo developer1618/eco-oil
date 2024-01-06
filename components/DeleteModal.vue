@@ -74,21 +74,21 @@
 <script>
 import { mapState, mapMutations } from "vuex";
 export default {
-  props: ["isDelete","request"],
+  props: ["isDelete", "request"],
   methods: {
     ...mapMutations({
       set_modal: "api/SET_MODAL",
       set_delete: "api/SET_DELETE",
     }),
 
-   async onDelete(){
-      return await this.$axios.delete(this.request).then(() =>{
-          this.set_modal(false);
-          setTimeout(() => {
-        this.$router.back();
-      }, 2000);
+    async onDelete() {
+      return await this.$axios.delete(this.request).then(() => {
+        this.set_modal(false);
+        setTimeout(() => {
+          this.$router.back();
+        }, 3000);
       });
-    }
+    },
   },
   computed: {
     ...mapState({

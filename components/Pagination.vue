@@ -1,10 +1,10 @@
 <template>
     <div class="flex justify-end">
         <sliding-pagination
-              v-if="total > 1"
-              :current="currentPage"
-              :total="total"
-              @page-change="pageChangeHandler"
+            v-if="total > 1"
+            :current="currentPage"
+            :total="total"
+            @page-change="pageChangeHandler"
         ></sliding-pagination>
     </div>
 </template>
