@@ -125,6 +125,9 @@ export default {
   watch:{
     station() {
       this.getStuff();
+    },
+    status() {
+      this.getStuff();
     }
   },
   mounted() {
