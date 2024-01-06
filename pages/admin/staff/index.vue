@@ -14,16 +14,16 @@
               </option>
             </select>
           </div>
-          <div class="pl-4 w-64">
+          <div class="px-4 w-64">
             <select id="countries"
             v-model="status"
-              class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 h-10 focus:border-blue-500 block w-full p-2.5 w-56 ml-4">
+              class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 h-10 focus:border-blue-500 block w-full p-2.5 w-56">
               <option :value="null" selected disabled>Выберите статус</option>
               <option value="1">Активный</option>
               <option value="0">Неактивный</option>
             </select>
           </div>
-          <div class="flex pl-4 w-72">
+          <div class="flex w-64">
             <Search @onChange="onSearch" searchPlaceholder="Найти ..." />
           </div>
           <div class="btn">
@@ -93,7 +93,7 @@ export default {
       }
 
       let payload = {
-        request: `/Staff`,
+        request: `/Staff?type=1&page=${this.page}`,
         params,
         form: {
           liter: this.liter,

@@ -32,7 +32,7 @@
               <option value="dec">Декабр</option>
             </select>
           </div>
-          <div class="w-64 pr-4">
+          <div class="pr-4 w-64">
             <select  placeholder="Выберите станцию"  id="address" v-model="station" class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500">
               <option :value="null" disabled selected>Выберите станцию</option>
               <option :value="item?.id" v-for="item in stations?.results">
@@ -40,7 +40,7 @@
               </option>
             </select>
           </div>
-          <div class="flex w-72">
+          <div class="flex w-64">
             <Search @onChange="onSearch" searchPlaceholder="Найти ..." />
           </div>
         </div>
@@ -132,6 +132,7 @@
     },
     computed: {
       ...mapState({
+        staff: (state) => state.api.staff,
         meta: (state) => state.api.meta,
         stations:(state) => state.api.station
       }),
@@ -144,9 +145,20 @@
         get_page: "api/get_page",
         set_modal: "api/SET_MODAL",
       }),
-      async getCard() {
+      async getStuff() {
+        const params = {
+        type:1,
+        page:this.page,
+        station_id:this.station,
+        status:this.status
+      }
+
         let payload = {
           request: `/Staff?type=1&page=${this.page}`,
+          params,
+          form: {
+            liter: this.liter,
+          },
           key: "card",
         };
         await this.get_page(payload);
@@ -168,11 +180,19 @@
       },
       pageChangeHandler(selected) {
         this.page = selected;
-        this.getCard();
+        this.getStuff();
       },
     },
+    watch:{
+      station() {
+        this.getStuff();
+      },
+      status() {
+        this.getStuff();
+      }
+    },
     mounted() {
-      this.getCard();
+      this.getStuff();
       this.getStations();
     },
   };

@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="pb-4">
-        <Table :titles="thead" path="/editstaff" :bodies="stuff.results"
+        <Table :titles="thead" path="/editstaff" :bodies="staff.results"
           :keys="['station_address', ['name', 'surname'], 'phone', 'last_login', 'last_logout',]" :icon="true" />
       </div>
       <div>
@@ -29,31 +29,32 @@
     </div>
   </div>
 </template>
+
 <script>
 import { mapState, mapActions } from "vuex";
 export default {
   layout: "admin",
-  name: "IndexPage",
-  head: {
-    title: "СОТРУДНИКИ",
-  },
-  data() {
-    return {
-      page: 1,
-      search: "",
-      station: null,
-      thead: [
-        "СТАНЦИЯ",
-        "КАССИР",
-        "ТЕЛЕФОН",
-        "ДАТА ВХОДА",
-        "ДАТА ВЫХОДА",
-      ],
-    };
-  },
+    name: "IndexPage",
+    head: {
+      title: "СОТРУДНИКИ",
+    },
+    data() {
+      return {
+        page: 1,
+        search: "",
+        station: null,
+        thead: [
+          "СТАНЦИЯ",
+          "КАССИР",
+          "ТЕЛЕФОН",
+          "ДАТА ВХОДА",
+          "ДАТА ВЫХОДА",
+        ],
+      };
+    },
   computed: {
     ...mapState({
-      stuff: (state) => state.api.stuff,
+      staff: (state) => state.api.staff,
       meta: (state) => state.api.meta,
       stations:(state) => state.api.station
     }),
@@ -63,12 +64,20 @@ export default {
       get_page: "api/get_page",
     }),
     async getStuff() {
+      const params = {
+        type:1,
+        page:this.page,
+        station_id:this.station,
+        status:this.status
+      }
+
       let payload = {
         request: `/Staff?type=1&page=${this.page}`,
+        params,
         form: {
           liter: this.liter,
         },
-        key: "stuff",
+        key: "staff",
       };
       await this.get_page(payload);
     },
@@ -83,7 +92,7 @@ export default {
       let payload = {
         request: `/SearchInStaff?query=${val}`,
         body: [],
-        key: "stuff",
+        key: "staff",
       };
       await this.get_page(payload);
     },
@@ -92,10 +101,17 @@ export default {
       this.getStuff();
     },
   },
+  watch:{
+    station() {
+      this.getStuff();
+    },
+    status() {
+      this.getStuff();
+    }
+  },
   mounted() {
     this.getStuff();
     this.getStations();
-
   },
 };
 </script>

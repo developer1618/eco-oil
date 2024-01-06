@@ -6,7 +6,7 @@
           <h3 class="text-sm font-medium text-dark pb-5">КЛИЕНТЫ (АВТО)</h3>
         </div>
         <div class="flex">
-          <div class="col-span-3">
+          <div class="col-span-3 w-64">
             <select  placeholder="Выберите станцию"  id="address" v-model="station" class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500">
               <option :value="null" disabled selected>Выберите станцию</option>
               <option :value="item?.id" v-for="item in stations?.results">
@@ -14,7 +14,7 @@
               </option>
             </select>
           </div>
-          <div class="flex pl-4 w-72">
+          <div class="flex pl-4 w-64">
             <Search @onChange="onSearch" searchPlaceholder="Найти ..." />
           </div>
         </div>
