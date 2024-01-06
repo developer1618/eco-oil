@@ -82,6 +82,26 @@ export default {
     ...mapActions({
       get_page: "api/get_page",
     }),
+    async getStuff(stationID) {
+      const params = {
+        type:1,
+        page:this.page,
+      }
+
+      if(stationID) {
+        params.station_registration = stationID;
+      }
+
+      let payload = {
+        request: `/Staff`,
+        params,
+        form: {
+          liter: this.liter,
+        },
+        key: "staff",
+      };
+      await this.get_page(payload);
+    },
     async getStuff() {
       let payload = {
         request: `/Staff?page=${this.page}`,
@@ -111,6 +131,11 @@ export default {
       this.page = selected;
       this.getStuff();
     },
+  },
+  watch:{
+    station(stationId) {
+      this.getStuff(stationId);
+    }
   },
   mounted() {
     this.getStuff();
