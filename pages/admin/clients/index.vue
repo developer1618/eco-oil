@@ -97,9 +97,19 @@ export default {
     ...mapActions({
       get_page: "api/get_page",
     }),
-    async getClient() {
+    async getClient(stationID) {
+      const params = {
+        type:1,
+        page:this.page,
+      }
+
+      if(stationID) {
+        params.station_registration = stationID;
+      }
+
       let payload = {
-        request: `/Client?type=1&page=${this.page}`,
+        request: `/Client`,
+        params,
         form: {
           liter: this.liter,
         },
@@ -126,6 +136,11 @@ export default {
       this.page = selected;
       this.getClient();
     },
+  },
+  watch:{
+    station(stationId) {
+      this.getClient(stationId);
+    }
   },
   mounted() {
     this.getClient();
