@@ -5,46 +5,79 @@
         <h3 class="text-sm font-medium text-dark pb-10">
           СОТРУДНИКИ / ДОБАВЛЕНИЕ СОТРУДНИКА
         </h3>
-        <form class="grid grid-cols-6 gap-8" @submit.prevent="handleSubmit(addStuff)">
+        <form
+          class="grid grid-cols-6 gap-8"
+          @submit.prevent="handleSubmit(addStuff)"
+        >
           <div class="col-span-3">
             <ValidationProvider rules="required" v-slot="{ errors }">
-              <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Имя<span
-                  class="text-red-600"></span></label>
-              <input type="text" v-model="form.name" id="helper-text" v-on:keypress="isLetter($event)"
+              <label
+                for="helper-text"
+                class="block mb-2 text-sm font-medium text-[#4D5D7D]"
+                >Имя<span class="text-red-600"></span
+              ></label>
+              <input
+                type="text"
+                v-model="form.name"
+                id="helper-text"
+                v-on:keypress="isLetter($event)"
                 aria-describedby="helper-text-explanation"
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Введите имя" />
+                placeholder="Введите имя"
+              />
               <p class="text-red-600">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span-3">
             <ValidationProvider rules="required" v-slot="{ errors }">
-              <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Фамилия<span
-                  class="text-red-600"></span></label>
-              <input type="text" v-model="form.surname" id="helper-text" v-on:keypress="isLetter($event)"
+              <label
+                for="helper-text"
+                class="block mb-2 text-sm font-medium text-[#4D5D7D]"
+                >Фамилия<span class="text-red-600"></span
+              ></label>
+              <input
+                type="text"
+                v-model="form.surname"
+                id="helper-text"
+                v-on:keypress="isLetter($event)"
                 aria-describedby="helper-text-explanation"
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Введите имя" />
+                placeholder="Введите имя"
+              />
               <p class="text-red-600">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span-3">
             <ValidationProvider rules="required" v-slot="{ errors }">
-              <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Дата рождения<span
-                  class="text-red-600"></span></label>
-              <input type="date" :max="maxDate" v-model="form.date_of_birth" id="helper-text"
+              <label
+                for="helper-text"
+                class="block mb-2 text-sm font-medium text-[#4D5D7D]"
+                >Дата рождения<span class="text-red-600"></span
+              ></label>
+              <input
+                type="date"
+                :max="maxDate"
+                v-model="form.date_of_birth"
+                id="helper-text"
                 aria-describedby="helper-text-explanation"
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
-                value="MM/DD/YYYY" />
+                value="MM/DD/YYYY"
+              />
               <!-- <CalendarInput /> -->
             </ValidationProvider>
           </div>
           <div class="col-span-3">
             <ValidationProvider rules="required" v-slot="{ errors }">
-              <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Пол <span
-                  class="text-red-600"></span></label>
-              <select id="gender" v-model="form.gender"
-                class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500">
+              <label
+                for="helper-text"
+                class="block mb-2 text-sm font-medium text-[#4D5D7D]"
+                >Пол <span class="text-red-600"></span
+              ></label>
+              <select
+                id="gender"
+                v-model="form.gender"
+                class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500"
+              >
                 <option :value="null" disabled selected>Выберите пол</option>
                 <option value="M">Мужской</option>
                 <option value="F">Женский</option>
@@ -54,37 +87,61 @@
           </div>
           <div class="col-span-3">
             <ValidationProvider rules="required" v-slot="{ errors }">
-              <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Адрес проживания<span
-                  class="text-red-600"></span></label>
-              <input type="text" v-model="form.address" id="helper-text" aria-describedby="helper-text-explanation"
+              <label
+                for="helper-text"
+                class="block mb-2 text-sm font-medium text-[#4D5D7D]"
+                >Адрес проживания<span class="text-red-600"></span
+              ></label>
+              <input
+                type="text"
+                v-model="form.address"
+                id="helper-text"
+                aria-describedby="helper-text-explanation"
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Введите адрес" />
+                placeholder="Введите адрес"
+              />
               <p class="text-red-600">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span-3">
             <ValidationProvider rules="required" v-slot="{ errors }">
-              <label for="website-admin" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Номер телефона <span
-                  class="text-red-600"></span></label>
+              <label
+                for="website-admin"
+                class="block mb-2 text-sm font-medium text-[#4D5D7D]"
+                >Номер телефона <span class="text-red-600"></span
+              ></label>
               <div class="flex">
                 <span
-                  class="inline-flex items-center px-3 text-sm text-[#4D5D7D] rounded-l-md border border-r-0 border-gray-300 bg-white">
+                  class="inline-flex items-center px-3 text-sm text-[#4D5D7D] rounded-l-md border border-r-0 border-gray-300 bg-white"
+                >
                   +992
                 </span>
-                <input type="number" v-model="form.phone" id="website-admin"
+                <input
+                  type="number"
+                  v-model="form.phone"
+                  id="website-admin"
                   class="rounded-none rounded-r-lg border text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5"
-                  placeholder="Введите Номер телефона" />
+                  placeholder="Введите Номер телефона"
+                />
               </div>
               <p class="text-red-600">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span-3">
             <ValidationProvider v-slot="{ errors }">
-              <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Должность <span
-                  class="text-red-600"></span></label>
-              <select id="job" v-model="form.role"
-                class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500">
-                <option :value="null" disabled selected>Выберите должность</option>
+              <label
+                for="helper-text"
+                class="block mb-2 text-sm font-medium text-[#4D5D7D]"
+                >Должность <span class="text-red-600"></span
+              ></label>
+              <select
+                id="job"
+                v-model="form.role"
+                class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500"
+              >
+                <option :value="null" disabled selected>
+                  Выберите должность
+                </option>
                 <option value="2">Кассир</option>
                 <option value="1">Администратор</option>
               </select>
@@ -93,58 +150,123 @@
           </div>
           <div class="col-span-3">
             <ValidationProvider rules="required" v-slot="{ errors }">
-              <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Станция регистрации <span
-                  class="text-red-600"></span></label>
-                  <select  placeholder="Выберите станцию"  id="address" v-model="form.station" class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500">
-                    <option :value="null" disabled selected>Выберите станцию</option>
-                    <option :value="item?.id" v-for="item in station?.results">
-                      {{ item.station_address }}
-                    </option>
-                  </select>
+              <label
+                for="helper-text"
+                class="block mb-2 text-sm font-medium text-[#4D5D7D]"
+                >Станция регистрации <span class="text-red-600"></span
+              ></label>
+              <select
+                placeholder="Выберите станцию"
+                id="address"
+                v-model="form.station"
+                class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500"
+              >
+                <option :value="null" disabled selected>
+                  Выберите станцию
+                </option>
+                <option :value="item?.id" v-for="item in station?.results">
+                  {{ item.station_address }}
+                </option>
+              </select>
               <p class="text-red-600">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span-2">
             <ValidationProvider rules="required" v-slot="{ errors }">
-              <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Логин<span
-                  class="text-red-600"></span></label>
-              <input type="text" v-model="form.username" id="helper-text" aria-describedby="helper-text-explanation"
+              <label
+                for="helper-text"
+                class="block mb-2 text-sm font-medium text-[#4D5D7D]"
+                >Логин<span class="text-red-600"></span
+              ></label>
+              <input
+                type="text"
+                v-model="form.username"
+                id="helper-text"
+                aria-describedby="helper-text-explanation"
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Введите Логин" />
+                placeholder="Введите Логин"
+              />
               <p class="text-red-600">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span-2">
-            <ValidationProvider rules="required" v-slot="{ errors }" vid="password">
+            <ValidationProvider
+              rules="required"
+              v-slot="{ errors }"
+              vid="password"
+            >
               <div class="relative">
-                <label for="password" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Пароль <span
-                    class="text-red-600"></span></label>
-                <input :type="typePassword ? 'password' : 'text'" id="password" name="password" v-model="form.password"
+                <label
+                  for="password"
+                  class="block mb-2 text-sm font-medium text-[#4D5D7D]"
+                  >Пароль <span class="text-red-600"></span
+                ></label>
+                <input
+                  :type="typePassword ? 'password' : 'text'"
+                  id="password"
+                  name="password"
+                  v-model="form.password"
                   placeholder="••••••••"
-                  class="bg-white border border-gray-300 text-[#4D5D7D] sm:text-sm rounded-lg block w-full p-2.5" />
-                <div class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 mb-[-25px]">
-                  <img src="/img/eye-pass-on.svg" v-if="typePassword" @click="typePassword = !typePassword" alt="on"
-                    class="cursor-pointer" />
-                  <img src="/img/eye-pass-off.svg" v-else alt="off" @click="typePassword = !typePassword"
-                    class="cursor-pointer" />
+                  class="bg-white border border-gray-300 text-[#4D5D7D] sm:text-sm rounded-lg block w-full p-2.5"
+                />
+                <div
+                  class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 mb-[-25px]"
+                >
+                  <img
+                    src="/img/eye-pass-on.svg"
+                    v-if="typePassword"
+                    @click="typePassword = !typePassword"
+                    alt="on"
+                    class="cursor-pointer"
+                  />
+                  <img
+                    src="/img/eye-pass-off.svg"
+                    v-else
+                    alt="off"
+                    @click="typePassword = !typePassword"
+                    class="cursor-pointer"
+                  />
                 </div>
                 <p class="text-red-600 pb-4 absolute">{{ errors[0] }}</p>
               </div>
             </ValidationProvider>
           </div>
           <div class="col-span-2">
-            <ValidationProvider rules="required|confirmed:password" v-slot="{ errors }">
+            <ValidationProvider
+              rules="required|confirmed:password"
+              v-slot="{ errors }"
+            >
               <div class="relative">
-                <label for="password" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Повторите пароль <span
-                    class="text-red-600"></span></label>
-                <input :type="typePassword2 ? 'password' : 'text'" id="password2" name="password2"
-                  v-model="form.password2" placeholder="••••••••"
-                  class="bg-white border border-gray-300 text-[#4D5D7D] sm:text-sm rounded-lg block w-full p-2.5" />
-                <div class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 mb-[-25px]">
-                  <img src="/img/eye-pass-on.svg" v-if="typePassword2" @click="typePassword2 = !typePassword2" alt="on"
-                    class="cursor-pointer" />
-                  <img src="/img/eye-pass-off.svg" v-else alt="off" @click="typePassword2 = !typePassword2"
-                    class="cursor-pointer" />
+                <label
+                  for="password"
+                  class="block mb-2 text-sm font-medium text-[#4D5D7D]"
+                  >Повторите пароль <span class="text-red-600"></span
+                ></label>
+                <input
+                  :type="typePassword2 ? 'password' : 'text'"
+                  id="password2"
+                  name="password2"
+                  v-model="form.password2"
+                  placeholder="••••••••"
+                  class="bg-white border border-gray-300 text-[#4D5D7D] sm:text-sm rounded-lg block w-full p-2.5"
+                />
+                <div
+                  class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 mb-[-25px]"
+                >
+                  <img
+                    src="/img/eye-pass-on.svg"
+                    v-if="typePassword2"
+                    @click="typePassword2 = !typePassword2"
+                    alt="on"
+                    class="cursor-pointer"
+                  />
+                  <img
+                    src="/img/eye-pass-off.svg"
+                    v-else
+                    alt="off"
+                    @click="typePassword2 = !typePassword2"
+                    class="cursor-pointer"
+                  />
                 </div>
                 <p class="text-red-600 pb-4 absolute">{{ errors[0] }}</p>
               </div>
@@ -156,30 +278,60 @@
                 <label class="text-sm font-medium text-[#6B7280]">Статус</label>
               </div>
               <ValidationProvider rules="required" v-slot="{ errors }">
-              <div class="flex">
-                <div class="flex items-center mr-4">
-                  <input id="red-radio" type="radio" v-model="form.status" :value="1" name="colored-radio"
-                    class="w-4 h-4 bg-gray-100 border-gray-300" />
-                  <label for="red-radio" class="ml-2 text-sm font-medium text-gray-500">Активный</label>
+                <div class="flex">
+                  <div class="flex items-center mr-4">
+                    <input
+                      id="red-radio"
+                      type="radio"
+                      v-model="form.status"
+                      :value="1"
+                      name="colored-radio"
+                      class="w-4 h-4 bg-gray-100 border-gray-300"
+                    />
+                    <label
+                      for="red-radio"
+                      class="ml-2 text-sm font-medium text-gray-500"
+                      >Активный</label
+                    >
+                  </div>
+                  <div class="flex items-center mr-4">
+                    <input
+                      id="green-radio"
+                      type="radio"
+                      v-model="form.status"
+                      :value="0"
+                      name="colored-radio"
+                      class="w-4 h-4 bg-gray-100 border-gray-300"
+                    />
+                    <label
+                      for="green-radio"
+                      class="ml-2 text-sm font-medium text-gray-500"
+                      >Неактивный</label
+                    >
+                  </div>
                 </div>
-                <div class="flex items-center mr-4">
-                  <input id="green-radio" type="radio" v-model="form.status" :value="0" name="colored-radio"
-                    class="w-4 h-4 bg-gray-100 border-gray-300" />
-                  <label for="green-radio" class="ml-2 text-sm font-medium text-gray-500">Неактивный</label>
-                </div>
-              </div>
-              <p class="text-red-600 pb-4 absolute">{{ errors[0] }}</p>
-            </ValidationProvider>
+                <p class="text-red-600 pb-4 absolute">{{ errors[0] }}</p>
+              </ValidationProvider>
             </div>
           </div>
           <div class="col-span-6 navbtn">
-            <button type="submit"
-              class="text-white bg-[#009688] hover:bg-[#157766] font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none">
+            <button
+              type="submit"
+              class="text-white bg-[#009688] hover:bg-[#157766] font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"
+            >
               Сохранить
             </button>
-            <nuxt-link to="/admin/staff" type="button"
-              class="text-[#4D5D7D] border border-[#009688] text-[#009688] hover:bg-[#009688] hover:text-[#fff] focus:outline-none focus:ring-gray-200 font-medium rounded-lg hover:rounded-lg text-sm px-8 py-2.5 hover:px-8 hover:py-2.5 mr-2 mb-2">Назад</nuxt-link>
-            <p id="send-validate" class="text-red-600 pt-4 block whitespace-nowrap" v-if="toast.open">
+            <nuxt-link
+              to="/admin/staff"
+              type="button"
+              class="text-[#4D5D7D] border border-[#009688] text-[#009688] hover:bg-[#009688] hover:text-[#fff] focus:outline-none focus:ring-gray-200 font-medium rounded-lg hover:rounded-lg text-sm px-8 py-2.5 hover:px-8 hover:py-2.5 mr-2 mb-2"
+              >Назад</nuxt-link
+            >
+            <p
+              id="send-validate"
+              class="text-red-600 pt-4 block whitespace-nowrap"
+              v-if="toast.open"
+            >
               {{ toast.text }}
             </p>
           </div>
@@ -241,16 +393,19 @@ export default {
       get_page: "api/get_page",
     }),
     async addStuff() {
-      let payload = {
-        text: "Сотрудник добавлено!",
-        request: "/Staff",
-        form: this.form,
-      };
-      await this.store(payload).then(() => {
+      try {
+        let payload = {
+          text: "Станция добавлено!",
+          request: "/Staff",
+          form: this.form,
+        };
+        await this.store(payload);
         setTimeout(() => {
           this.$router.back();
         }, 2000);
-      });
+      } catch (error) {
+        console.error("Ошибка при выполнении запроса:", error);
+      }
     },
     async getStations() {
       let payload = {

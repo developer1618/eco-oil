@@ -86,7 +86,7 @@ export default {
         this.set_modal(false);
         setTimeout(() => {
           this.$router.back();
-        }, 3000);
+        }, 2000);
       });
     },
   },

@@ -205,6 +205,7 @@ export default {
       typePassword: true,
       typePassword2: true,
       form: {
+        username: "",
         name: "",
         surname: "",
         email: "",
@@ -221,22 +222,16 @@ export default {
     }),
   },
   methods: {
-    ...mapMutations({
-      change_modal: "api/SET_MODAL",
-    }),
-    isLetter(e) {
-      let char = String.fromCharCode(e.keyCode);
-      if (/^[A-Za-z,А-Яа-я]+$/.test(char)) return true;
-      else e.preventDefault();
-    },
     ...mapActions({
       edit: "api/edit",
       get_page: "api/get_page",
-      edit: "api/edit",
+    }),
+    ...mapMutations({
+      change_modal: "api/SET_MODAL",
     }),
     async getSettings() {
       let request = await this.$axios.get(
-        `/AdminEdit/${this.$route.params.slug}`
+        `/AdminEdit/${this.$route.params.slug}`,
       );
       return Object.keys(this.form).map((item) => {
         this.form[item] = request.data[item];
@@ -251,7 +246,7 @@ export default {
       await this.edit(payload);
       setTimeout(() => {
         this.$router.back();
-      }, 3000);
+      }, 2000);
     },
   },
 

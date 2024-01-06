@@ -167,14 +167,13 @@ export default {
     ...mapActions({
       edit: "api/edit",
       get_page: "api/get_page",
-      edit: "api/edit",
     }),
     ...mapMutations({
       change_modal: "api/SET_MODAL",
     }),
     async getStation() {
       let request = await this.$axios.get(
-        `/Station/${this.$route.params.slug}`
+        `/Station/${this.$route.params.slug}`,
       );
       return Object.keys(this.form).map((item) => {
         this.form[item] = request.data[item];
@@ -189,7 +188,7 @@ export default {
       await this.edit(payload);
       setTimeout(() => {
         this.$router.back();
-      }, 3000);
+      }, 2000);
     },
   },
   mounted() {

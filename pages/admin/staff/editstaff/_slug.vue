@@ -417,7 +417,7 @@ export default {
       await this.edit(payload);
       setTimeout(() => {
         this.$router.back();
-      }, 3000);
+      }, 2000);
     },
     async getStations() {
       let payload = {

@@ -222,7 +222,6 @@ export default {
     ...mapActions({
       edit: "api/edit",
       get_page: "api/get_page",
-      edit: "api/edit",
     }),
     async getClient() {
       let request = await this.$axios.get(`/Client/${this.$route.params.slug}`);
@@ -239,7 +238,7 @@ export default {
       await this.edit(payload);
       setTimeout(() => {
         this.$router.back();
-      }, 3000);
+      }, 2000);
     },
   },
   mounted() {
