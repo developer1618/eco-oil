@@ -3,7 +3,7 @@
     <div class="bg-white w-full h-[85vh] p-4 overflow-y-auto overflow-x-auto">
       <div class="flex py-8 items-baseline justify-between px-4">
         <div class="flex">
-          <h3 class="text-sm font-medium text-dark pb-5">ТАБЛО</h3>
+          <h3 class="text-sm font-medium text-dark pb-5">ОТЧЁТЫ</h3>
         </div>
         <div class="flex">
           <div class="flex pl-4 w-72">
@@ -88,7 +88,7 @@ export default {
     }),
     async exportReport() {
       try {
-        const response = this.$axios.get('/ReportSomoni/export/', {
+        const response = await this.$axios.get('/ReportSomoni/export/', {
           responseType: 'arraybuffer', // указываем, что ожидаем массив байтов
         });
 
