@@ -27,7 +27,7 @@
         ]" :icon="true" />
       </div>
       <div class="btn flex justify-end pt-4 pb-4">
-        <button class="bg-[#009688] text-white px-3 py-2 rounded-md ml-4">
+        <button @click="exportReport" class="bg-[#009688] text-white px-3 py-2 rounded-md ml-4">
           Экспорт
         </button>
       </div>
@@ -86,7 +86,21 @@ export default {
     ...mapActions({
       get_page: "api/get_page",
     }),
+    async exportReport() {
+      try {
+        const response = await axios.get('/ReportSomoni/export/', {
+          responseType: 'arraybuffer', // указываем, что ожидаем массив байтов
+        });
 
+        const blob = new Blob([response.data], { type: 'application/octet-stream' });
+        const link = document.createElement('a');
+        link.href = window.URL.createObjectURL(blob);
+        link.download = 'Report_on_stations_in_somoni.xlsx'; // замените на имя файла, которое вы ожидаете
+        link.click();
+      } catch (error) {
+        console.error('Ошибка при экспорте файла:', error);
+      }
+    },
     async getScoreboard() {
       let payload = {
         request: `/Board?type=1&page=${this.page}`,
