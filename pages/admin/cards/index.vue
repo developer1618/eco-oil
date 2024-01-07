@@ -6,32 +6,6 @@
           <h3 class="text-sm font-medium text-dark pb-5">МОНИТОРИНГ / КАРТЫ</h3>
         </div>
         <div class="flex">
-          <div class="w-64 pr-4">
-            <select id="countries" class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 w-56">
-              <option value="year">Год</option>
-              <option value="2020">2020</option>
-              <option value="2021">2021</option>
-              <option value="2022">2022</option>
-              <option value="2023">2023</option>
-            </select>
-          </div>
-          <div class="w-64 pr-4">
-            <select id="countries" class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 w-56">
-              <option value="month">Месяц</option>
-              <option value="jan">Январь</option>
-              <option value="feb">Февраль</option>
-              <option value="apr">Март</option>
-              <option value="mar">Апрель</option>
-              <option value="may">Май</option>
-              <option value="jun">Июнь</option>
-              <option value="jul">Июль</option>
-              <option value="aug">Август</option>
-              <option value="sep">Сентябрь</option>
-              <option value="oct">Октябрь</option>
-              <option value="nov">Ноябрь</option>
-              <option value="dec">Декабр</option>
-            </select>
-          </div>
           <div class="pr-4 w-64">
             <select  placeholder="Выберите станцию"  id="address" v-model="station" class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500">
               <option :value="null" disabled selected>Выберите станцию</option>
