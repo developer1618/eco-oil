@@ -88,7 +88,7 @@ export default {
     }),
     async exportReport() {
       try {
-        const response = await axios.get('/ReportSomoni/export/', {
+        const response = this.$axios.get('/ReportSomoni/export/', {
           responseType: 'arraybuffer', // указываем, что ожидаем массив байтов
         });
 
