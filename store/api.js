@@ -57,7 +57,9 @@ export const mutations = {
 export const actions = {
   async get_page({ commit }, payload) {
     try {
-      let res = await this.$axios.get(payload.request);
+      let res = await this.$axios.get(payload.request,{
+        params:payload.params
+      });
       commit("GET_PAGEDATA", { data: res, key: payload.key });
     } catch (err) {}
   },
@@ -71,7 +73,7 @@ export const actions = {
           },
         })
         .then(() => {
-          window.location.reload();
+          // window.location.reload();
           commit("SET_TOAST", payload.text);
           setTimeout(() => {
             commit("UN_TOAST");

@@ -1,18 +1,11 @@
 <template>
   <div class="px-24 w-12/12">
-    <div class="bg-white w-full h-[85vh] p-4">
+    <div class="bg-white w-full h-[85vh] p-4 overflow-y-auto overflow-x-auto">
       <div class="flex py-8 items-baseline justify-between px-4">
         <div class="flex">
           <h3 class="text-sm font-medium text-dark pb-5">ТАБЛО</h3>
         </div>
         <div class="flex">
-          <!-- <div class="pl-4 w-64">
-            <select id="bonus"
-              class="bg-white border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 h-10 focus:border-blue-500 block w-full p-2.5 w-56 ml-4">
-              <option value="add">Начислено бонусов</option>
-              <option value="del">Снято из бонусов</option>
-            </select>
-          </div> -->
           <div class="flex pl-4 w-72">
             <Search @onChange="onSearch" searchPlaceholder="Найти ..." />
           </div>

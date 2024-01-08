@@ -1,9 +1,9 @@
 <template>
   <div class="px-24 w-12/12">
-    <div class="bg-white w-full h-[85vh] p-4">
+    <div class="bg-white w-full h-[85vh] p-4 overflow-y-auto overflow-x-auto">
       <div class="flex py-8 items-baseline justify-between px-4">
         <div class="flex">
-          <h3 class="text-sm font-medium text-dark pb-5">ТАБЛО</h3>
+          <h3 class="text-sm font-medium text-dark pb-5">ОТЧЁТЫ</h3>
         </div>
         <div class="flex">
           <div class="flex pl-4 w-72">
@@ -26,8 +26,8 @@
           ['client_data', 'registration_date']
         ]" :icon="true" />
       </div>
-      <div class="btn flex justify-end py-4">
-        <button class="bg-[#009688] text-white px-3 py-2 rounded-md ml-4">
+      <div class="btn flex justify-end pt-4 pb-4">
+        <button @click="exportReport" class="bg-[#009688] text-white px-3 py-2 rounded-md ml-4">
           Экспорт
         </button>
       </div>
@@ -86,7 +86,20 @@ export default {
     ...mapActions({
       get_page: "api/get_page",
     }),
-
+    async exportReport() {
+      try {
+        const response = await this.$axios.get('/ReportSomoni/export/', {
+          responseType: 'arraybuffer', // указываем, что ожидаем массив байтов
+        });
+        const blob = new Blob([response.data], { type: 'application/octet-stream' });
+        const link = document.createElement('a');
+        link.href = window.URL.createObjectURL(blob);
+        link.download = 'Report_on_stations_in_somoni.xlsx'; // замените на имя файла, которое вы ожидаете
+        link.click();
+      } catch (error) {
+        console.error('Ошибка при экспорте файла:', error);
+      }
+    },
     async getScoreboard() {
       let payload = {
         request: `/Board?type=1&page=${this.page}`,

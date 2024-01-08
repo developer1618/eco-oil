@@ -86,42 +86,4 @@ export default {
   },
 };
 </script>
-<!-- <style>
-a {
-  padding: 9px 12px;
-  border-radius: 6px;
-}
-.active a {
-  fill: #00a700 !important;
-}
-.sidebar_navigation a.nuxt-link-active {
-  background-color: #00a700;
-  padding: 9px 12px;
-  border-radius: 6px;
-}
-a:hover {
-  background-color: #00a700;
-  padding: 9px 12px;
-  border-radius: 6px;
-}
-.navbtn a.nuxt-link-active {
-  background-color: #fff !important;
-  color: #009688;
-  padding: 10px 20px;
-  border-radius: 6px;
-}
-.navbtn a:hover {
-  background-color: #009688 !important;
-  color: #fff;
-}
-.navdelbtn a.nuxt-link-active {
-  background-color: #fff !important;
-  color: #f44336;
-  padding: 10px 20px;
-  border-radius: 6px;
-}
-.navdelbtn a:hover {
-  background-color: #f44336 !important;
-  color: #fff;
-}
-</style> -->
+

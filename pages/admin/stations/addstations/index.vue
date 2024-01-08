@@ -158,15 +158,19 @@ export default {
       store: "api/store",
     }),
     async addStation() {
-      let payload = {
-        text: "Станция добавлено!",
-        request: "/Station",
-        form: this.form,
-      };
-      await this.store(payload);
-      setTimeout(() => {
-        this.$router.back('');
-      }, 2000);
+      try {
+        let payload = {
+          text: "Станция добавлено!",
+          request: "/Station",
+          form: this.form,
+        };
+        await this.store(payload);
+        setTimeout(() => {
+          this.$router.back();
+        }, 2000);
+      } catch (error) {
+        console.error("Ошибка при выполнении запроса:", error);
+      }
     },
   },
 };

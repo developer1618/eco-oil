@@ -18,7 +18,6 @@
                 type="text"
                 v-model="form.name"
                 id="helper-text"
-                v-on:keypress="isLetter($event)"
                 aria-describedby="helper-text-explanation"
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Введите имя"
@@ -37,7 +36,6 @@
                 type="text"
                 v-model="form.surname"
                 id="helper-text"
-                v-on:keypress="isLetter($event)"
                 aria-describedby="helper-text-explanation"
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Введите Фамилию"
@@ -183,7 +181,11 @@
               class="text-[#4D5D7D] border border-[#009688] text-[#009688] hover:bg-[#009688] hover:text-[#fff] focus:outline-none focus:ring-gray-200 font-medium rounded-lg hover:rounded-lg text-sm px-8 py-2.5 hover:px-8 hover:py-2.5 mr-2 mb-2"
               >Назад</nuxt-link
             >
-            <p id="send-validate" class="text-red-600 pt-4 whitespace-nowrap" v-if="toast.open">
+            <p
+              id="send-validate"
+              class="text-red-600 pt-4 whitespace-nowrap"
+              v-if="toast.open"
+            >
               {{ toast.text }}
             </p>
           </div>
@@ -201,6 +203,8 @@ export default {
       typePassword: true,
       typePassword2: true,
       form: {
+        id:null,
+        username: "",
         name: "",
         surname: "",
         email: "",
@@ -217,23 +221,18 @@ export default {
     }),
   },
   methods: {
-    isLetter(e) {b
-      let char = String.fromCharCode(e.keyCode);
-      if (/^[A-Za-z,А-Яа-я]+$/.test(char)) return true;
-      else e.preventDefault();
-    },
     ...mapActions({
       edit: "api/edit",
       get_page: "api/get_page",
-      edit: "api/edit",
     }),
     ...mapMutations({
       change_modal: "api/SET_MODAL",
     }),
     async getSettings() {
       let request = await this.$axios.get(
-        `/AdminEdit/${this.$route.params.slug}`
+        `/AdminEdit`,
       );
+
       return Object.keys(this.form).map((item) => {
         this.form[item] = request.data[item];
       });
@@ -241,7 +240,7 @@ export default {
     async editSettings() {
       let payload = {
         text: "Настройки изменены!",
-        request: `/AdminEdit/${this.$route.params.slug}`,
+        request: `/AdminEdit`,
         form: this.form,
       };
       await this.edit(payload);

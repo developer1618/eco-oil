@@ -109,17 +109,16 @@ export default {
             get_page:"api/get_page",
             edit:"api/edit",
         }),
-        async getPartner()
-        {
-        let payload = {
-            text:"ПАРТНЁРЫ добавлено!",
-            request:"/PartnerRegistration",
-            form:this.form,
-        }
-        await this.store(payload);
-        setTimeout(() => {
-          this.$router.back();
-        }, 2000); 
+        async getPartner() {
+          let payload = {
+              text:"ПАРТНЁРЫ добавлено!",
+              request:"/PartnerRegistration",
+              form:this.form,
+          }
+          await this.store(payload);
+          setTimeout(() => {
+            this.$router.back();
+          }, 2000); 
         },
     },
 }

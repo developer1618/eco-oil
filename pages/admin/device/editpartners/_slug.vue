@@ -109,7 +109,6 @@ export default {
     ...mapActions({
       edit: "api/edit",
       get_page: "api/get_page",
-      edit: "api/edit",
     }),
     async getPartner() {
       let request = await this.$axios.get(
