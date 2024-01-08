@@ -91,7 +91,6 @@ export default {
         const response = await this.$axios.get('/ReportSomoni/export/', {
           responseType: 'arraybuffer', // указываем, что ожидаем массив байтов
         });
-
         const blob = new Blob([response.data], { type: 'application/octet-stream' });
         const link = document.createElement('a');
         link.href = window.URL.createObjectURL(blob);

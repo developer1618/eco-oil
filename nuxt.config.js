@@ -79,9 +79,9 @@ export default {
       home: "/admin/",
     },
   },
-  // router: {
-  //   middleware: ["auth"],
-  // },
+  router: {
+    middleware: ["auth"],
+  },
 
   axios: {
     baseUrl: baseUrl,
