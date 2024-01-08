@@ -217,7 +217,7 @@ export default {
     }),
   },
   methods: {
-    isLetter(e) {
+    isLetter(e) {b
       let char = String.fromCharCode(e.keyCode);
       if (/^[A-Za-z,А-Яа-я]+$/.test(char)) return true;
       else e.preventDefault();
