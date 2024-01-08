@@ -18,7 +18,6 @@
                 type="text"
                 v-model="form.name"
                 id="helper-text"
-                v-on:keypress="isLetter($event)"
                 aria-describedby="helper-text-explanation"
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Введите имя"
@@ -37,7 +36,6 @@
                 type="text"
                 v-model="form.surname"
                 id="helper-text"
-                v-on:keypress="isLetter($event)"
                 aria-describedby="helper-text-explanation"
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Введите Фамилию"
@@ -205,6 +203,7 @@ export default {
       typePassword: true,
       typePassword2: true,
       form: {
+        id:null,
         username: "",
         name: "",
         surname: "",
@@ -231,8 +230,9 @@ export default {
     }),
     async getSettings() {
       let request = await this.$axios.get(
-        `/AdminEdit/${this.$route.params.slug}`,
+        `/AdminEdit`,
       );
+
       return Object.keys(this.form).map((item) => {
         this.form[item] = request.data[item];
       });
@@ -240,7 +240,7 @@ export default {
     async editSettings() {
       let payload = {
         text: "Настройки изменены!",
-        request: `/AdminEdit/${this.$route.params.slug}`,
+        request: `/AdminEdit`,
         form: this.form,
       };
       await this.edit(payload);
