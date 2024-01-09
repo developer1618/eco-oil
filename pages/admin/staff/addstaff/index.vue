@@ -19,6 +19,7 @@
               <input
                 type="text"
                 v-model="form.name"
+                rules="required"
                 id="helper-text"
                 v-on:keypress="isLetter($event)"
                 aria-describedby="helper-text-explanation"
@@ -57,13 +58,14 @@
               <input
                 type="date"
                 :max="maxDate"
+                rules="required"
                 v-model="form.date_of_birth"
                 id="helper-text"
                 aria-describedby="helper-text-explanation"
                 class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                 value="MM/DD/YYYY"
               />
-              <!-- <CalendarInput /> -->
+              <p class="text-red-600">{{ errors[0] }}</p>
             </ValidationProvider>
           </div>
           <div class="col-span-3">
@@ -135,7 +137,9 @@
                 >Должность <span class="text-red-600"></span
               ></label>
               <select
+                placeholder="Выберите станцию"
                 id="job"
+                rules="required"
                 v-model="form.role"
                 class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500"
               >
@@ -358,9 +362,9 @@ export default {
         date_of_birth: "",
         gender: "",
         phone: "",
+        station: null,
         status: null,
         address: "",
-        station: null,
         role: "",
         min: 9,
         max: 9,

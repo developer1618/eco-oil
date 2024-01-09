@@ -44,6 +44,16 @@
                           ? "М"
                           : key === "gender" && title[key] === "F"
                           ? "Ж"
+                          : key === "fuel_type" && title[key] === "GAS"
+                          ? "ГАЗ"
+                          : key === "fuel_type" && title[key] === "SOPUTKA"
+                          ? "СОПУТКА"
+                          : key === "fuel_type" && title[key] === "AI95"
+                          ? "АИ-95"
+                          : key === "fuel_type" && title[key] === "AI92"
+                          ? "АИ-92"
+                          : key === "fuel_type" && title[key] === "DT"
+                          ? "ДТ"
                           : title[key]
                       }}
                     </p>
