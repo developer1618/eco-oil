@@ -8,7 +8,7 @@
         <div class="flex">
           <div class="pr-4 w-64">
             <select  placeholder="Выберите станцию"  id="address" v-model="station" class="bg-white border border-gray-300 text-[#4D5D7D] text-sm rounded-lg block w-full p-2.5 focus:ring-blue-500 focus:border-blue-500">
-              <option :value="null" disabled selected>Выберите станцию</option>
+              <option :value="null" selected>Выберите станцию</option>
               <option :value="item?.id" v-for="item in stations?.results">
                 {{ item.station_address }}
               </option>
