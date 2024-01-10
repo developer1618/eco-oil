@@ -87,7 +87,6 @@
           </div>
           <div class="col-span-2">
             <ValidationProvider
-              rules="required"
               vid="password"
               v-slot="{ errors }"
             >
@@ -129,7 +128,7 @@
           </div>
           <div class="col-span-2">
             <ValidationProvider
-              rules="required|confirmed:password"
+              rules="confirmed:password"
               v-slot="{ errors }"
             >
               <div class="relative">
