@@ -12,17 +12,22 @@
         </div>
       </div>
       <div class="pb-4">
-        <Table :titles="thead" :bodies="scoreboard.results" :isIcon="false" :keys="[
-          ['client_data', 'full_name'],
-          'staff_name',
-          ['station', 'station_address'],
-          'fuel_type',
-          'amount_per_liter',
-          'payment_type',
-          'total_bonus',
-          'client_bonus',
-          ['client_data', 'registration_date']
-        ]" :icon="true" />
+        <Table :titles="thead" :bodies="scoreboard.results ? scoreboard.results.map(row => ({
+  ...row,
+  prev_bonus: row.prev_bonus.toFixed(2)
+})) : []" :isIcon="false" :keys="[
+  ['client_data', 'full_name'],
+  'staff_name',
+  ['station', 'station_address'],
+  'fuel_type',
+  'amount_per_liter',
+  'payment_type',
+  'client_bonus',
+  'prev_bonus',
+  'total_bonus',
+  ['client_data', 'registration_date']
+]" :icon="true" />
+
       </div>
       <div>
         <Pagination :currentPage="page" :totalPage="Number(scoreboard.count)" @pageChangeHandler="pageChangeHandler" />
@@ -56,8 +61,9 @@ export default {
         "ТИП ТОВАРА",
         "ЛИТР",
         "ТИП ОПЛАТЫ",
-        "СУММА БОНУСОВ",
+        "ПРЕДЫДУЩИЙ БОНУС",
         "НАЧИСЛЕНО БОНУСОВ",
+        "СУММА БОНУСОВ",
         "ДАТА",
       ],
     };
