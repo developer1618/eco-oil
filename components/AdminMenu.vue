@@ -5,8 +5,9 @@
     <ExitModal :modal="modal" @onClose="modal = $event" />
     <div class="flex items-center 2xl:gap-4 xl:gap-0">
       <div class="sidebar_user-info flex items-center">
-        <a href="/admin/scoreboard" class="image-bg">
-          <img src="../static/logo.png" alt="Logo" class="w-36" />
+        <a href="/admin/scoreboard" class="image-bg font-bold text-3xl">
+          <!-- <img src="../static/logo.png" alt="Logo" class="w-36" /> -->
+          PVA
         </a>
       </div>
       <div class="sidebar_navigation">

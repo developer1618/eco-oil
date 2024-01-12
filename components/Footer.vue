@@ -1,6 +1,6 @@
 <template>
     <div class="footer bg-[#009688] w-full">
-        <p class="text-white flex justify-center py-6">Все права защищены &copy; 2023 ECO OIL</p>
+        <p class="text-white flex justify-center py-4 items-center">Все права защищены &copy; 2024 <a class="hover:underline" href="https://livo.tj/">LIVO.TJ</a></p>
     </div>
 </template>
 <script>

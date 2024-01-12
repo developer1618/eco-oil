@@ -130,7 +130,7 @@
             </ValidationProvider>
           </div>
           <div class="col-span-3">
-            <ValidationProvider v-slot="{ errors }">
+            <ValidationProvider rules="required" v-slot="{ errors }">
               <label
                 for="helper-text"
                 class="block mb-2 text-sm font-medium text-[#4D5D7D]"
@@ -360,12 +360,12 @@ export default {
         name: "",
         surname: "",
         date_of_birth: "",
-        gender: "",
+        gender: null,
         phone: "",
         station: null,
         status: null,
         address: "",
-        role: "",
+        role: null,
         min: 9,
         max: 9,
       },
