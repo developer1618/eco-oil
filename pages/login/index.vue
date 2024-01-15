@@ -5,11 +5,7 @@
         class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen sm:px-6 lg:px-8"
       >
         <div class="sm:mx-auto sm:w-full sm:max-w-md pb-8">
-          <img
-            class="mx-auto h-12 w-auto"
-            src="../../static/logo.png"
-            alt="Your Company"
-          />
+          <h1 class="flex justify-center text-white text-5xl font-bold">PVP</h1>
         </div>
         <div
           class="w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0"

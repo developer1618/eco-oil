@@ -62,7 +62,7 @@
             'amount_per_liter',
             'total_bonus',
             'client_bonus',
-            ['client_data', 'registration_date']
+            'created_at',
         ]" :icon="true" />
 
       </div>

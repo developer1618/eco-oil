@@ -201,8 +201,6 @@ export default {
         plate_number: "",
         card_number: "",
         phone: "",
-        registration_date: "",
-        bonus: null,
         status: null,
       },
       statuses: ["Активный", "Неактивный"],

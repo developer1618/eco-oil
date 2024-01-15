@@ -17,16 +17,17 @@
             prev_bonus: row.prev_bonus.toFixed(2),
             total_bonus: row.total_bonus.toFixed(2)
           })) : []" :isIcon="false" :keys="[
-            ['client_data', 'full_name'],
-            'staff_name',
             ['station', 'station_address'],
+            'staff_name',
+            ['client_data', 'full_name'],
             'fuel_type',
-            'amount_per_liter',
             'payment_type',
+            'amount_per_liter',
+            'amount',
             'prev_bonus',
             'client_bonus',
             'total_bonus',
-            ['client_data', 'registration_date']
+            'created_at',
           ]" :icon="true" />
       </div>
       <div>
@@ -55,12 +56,13 @@ export default {
       search: "",
       liter: "",
       thead: [
-        "ВОДИТЕЛЬ",
-        "КАССИР",
         "СТАНЦИЯ",
+        "КАССИР",
+        "ВОДИТЕЛЬ",
         "ТИП ТОВАРА",
-        "ЛИТР",
         "ТИП ОПЛАТЫ",
+        "ЛИТР",
+        "СУММА ОПЛАТЫ",
         "ПРЕДЫДУЩИЙ БОНУС",
         "ЗАЧИСЛЕНО БОНУСОВ",
         "БОНУС (ИТОГ)",
