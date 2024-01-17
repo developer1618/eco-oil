@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>PVP</h1>
+    <h1>PVP OIL</h1>
   </div>
 </template>
 <script>
